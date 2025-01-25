@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import "@/style/pretendard.css";
 import "@/style/global.css";
 import { Analytics } from '@vercel/analytics/react';
-//import { SpeedInsights } from '@vercel-speed-insights'; 배포 후 연동동
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -32,7 +31,6 @@ export default function RootLayout({
         </main>
         {/* Vercel 측정도구 */}
         <Analytics />
-        {/* <SpeedInsights /> 배포 후 연동동 */}
       </body>
     </html>
   );
