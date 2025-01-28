@@ -1,0 +1,4 @@
+@keyframes move_forever {
+	0% { transform: translate(-90px);	}
+	100% { transform: translate(85px); }
+}
