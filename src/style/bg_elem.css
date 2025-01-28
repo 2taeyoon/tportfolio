@@ -1,0 +1,13 @@
+.bg_elem { position: absolute; inset: 0; }
+
+.bg_big_compass { position: absolute; inset: 0; overflow: hidden; }
+.bg_big_compass svg { display: block; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); transform-origin: center; }
+.bg_big_compass svg circle { fill: none; stroke: #1f1f1f; stroke-miterlimit: 10; }
+.bg_big_compass svg line { stroke: #1f1f1f; stroke-width: 1; }
+
+.bg_small_compass { position: absolute; inset: 0; overflow: hidden; display: flex ; justify-content: space-between; align-items: center; padding: 0 120px 0;}
+.bg_small_compass svg line { stroke: #1f1f1f; stroke-width: 1; }
+.bg_small_compass svg rect { stroke: #1f1f1f; stroke-width: 1; }
+
+.bg_noise { position: fixed; overflow: hidden; inset: 0; z-index: 100; pointer-events: none; opacity: 0.04; }
+.bg_noise::after { content: ""; position: absolute; inset: 0; background-image: url("/images/noise.png"); pointer-events: none; }
