@@ -1,0 +1,50 @@
+@font-face {
+	font-family: 'Gridular';
+	src: url('https://uploads-ssl.webflow.com/650de8ea3917894f41e8ac69/650e0bf14e7849cf219388eb_Gridular-Regular.woff2') format('woff2'),
+		url('https://uploads-ssl.webflow.com/650de8ea3917894f41e8ac69/650e0bf1be7d6832b5005f76_Gridular-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Cuteoff';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('https://fonts.cdnfonts.com/s/123716/Cuteoff-KV86y.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'NCL_Kemgor';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('https://fonts.cdnfonts.com/s/107511/NCLKemgor-Demo-BF654c38727cef0.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'NCL_Broesq';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('https://fonts.cdnfonts.com/s/107512/NCLBroesq-Demo-BF654c380aa9b46.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'NCL_Rabegs';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('https://fonts.cdnfonts.com/s/107510/NCLRabegs-Demo-BF654c390d38cda.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'JUMBOTRON';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('https://fonts.cdnfonts.com/s/107548/jumbotron.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'GEMSEAtrial';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('https://fonts.cdnfonts.com/s/107556/GEMSEAtrial.woff') format('woff');
+}
