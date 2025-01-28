@@ -24,6 +24,7 @@ time, mark, audio, video, textarea, input, button {
   box-sizing: border-box;
 	line-height: 150%;
 	word-break: keep-all;
+	letter-spacing: -0.5px;
 	font-size: 1.6rem;
   font-weight: 400;
   font-family: "Pretendard", "Malgun Gothic", sans-serif;
@@ -31,7 +32,6 @@ time, mark, audio, video, textarea, input, button {
 
 html {
 	font-size: 62.5%;
-	letter-spacing: -0.5px;
 }
 
 /* 대략 15px */
