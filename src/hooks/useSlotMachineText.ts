@@ -2,13 +2,8 @@
 
 import { useRef, useEffect } from 'react'
 import gsap from "gsap";
+import { SlotMachineTextProps } from "@/types/props";
 
-interface SlotMachineTextProps {
-	firstText: string;
-	secondText: string;
-	IterationCount: number;
-	RunningInterval: number;
-}
 //https://gsap.com/docs/v3/Eases
 export default function useSlotMachineText({firstText, secondText, IterationCount, RunningInterval}: SlotMachineTextProps) {
 	const textRefs = useRef<(HTMLDivElement | null)[]>([]); // 개별 문자 요소들의 ref 배열
