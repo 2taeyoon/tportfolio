@@ -9,7 +9,7 @@ interface SlotMachineTextProps {
 	IterationCount: number;
 	RunningInterval: number;
 }
-
+//https://gsap.com/docs/v3/Eases
 export default function useSlotMachineText({firstText, secondText, IterationCount, RunningInterval}: SlotMachineTextProps) {
 	const textRefs = useRef<(HTMLDivElement | null)[]>([]); // 개별 문자 요소들의 ref 배열
 	const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; // 랜덤 문자 집합
