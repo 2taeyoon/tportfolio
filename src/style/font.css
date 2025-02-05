@@ -15,6 +15,20 @@
 }
 
 @font-face {
+	font-family: 'JUMBOTRON';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('https://fonts.cdnfonts.com/s/107548/jumbotron.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'GEMSEAtrial';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('https://fonts.cdnfonts.com/s/107556/GEMSEAtrial.woff') format('woff');
+}
+
+@font-face {
 	font-family: 'NCL_Kemgor';
 	font-style: normal;
 	font-weight: 400;
@@ -36,15 +50,29 @@
 }
 
 @font-face {
-	font-family: 'JUMBOTRON';
+	font-family: 'Skomelr_Quantum';
 	font-style: normal;
 	font-weight: 400;
-	src: local(''), url('https://fonts.cdnfonts.com/s/107548/jumbotron.woff') format('woff');
+	src: url('https://fonts.cdnfonts.com/s/106795/SkomelrQuantum-yw8pY.woff') format('woff');
 }
 
 @font-face {
-	font-family: 'GEMSEAtrial';
+	font-family: 'Novaria_Vista';
 	font-style: normal;
 	font-weight: 400;
-	src: local(''), url('https://fonts.cdnfonts.com/s/107556/GEMSEAtrial.woff') format('woff');
+	src: local('Novaria Vista'), url('https://fonts.cdnfonts.com/s/106766/NovariaVista-K7l2y.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Glitch_Goblin';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Glitch Goblin'), url('https://fonts.cdnfonts.com/s/96763/GlitchGoblin-nR0PR.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Lunar_Escape';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('https://fonts.cdnfonts.com/s/118779/LunarEscape-1jXvB.woff') format('woff');
 }
