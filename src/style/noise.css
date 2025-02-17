@@ -1,0 +1,2 @@
+.noise { position: absolute; overflow: hidden; inset: 0; z-index: 100; pointer-events: none; opacity: 0.1; }
+.noise::after { content: ""; position: absolute; inset: 0; background-image: url("/images/noise.png"); pointer-events: none; }
