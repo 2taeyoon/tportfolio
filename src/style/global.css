@@ -27,26 +27,30 @@ time, mark, audio, video, textarea, input, button {
 	letter-spacing: -0.5px;
 	font-size: 1.6rem;
   font-weight: 400;
-  font-family: "Pretendard", "Malgun Gothic", sans-serif;
+  font-family: "Galmuri11", "Gridular", "Pretendard", "Malgun Gothic", Arial, sans-serif;
 }
 
-html {
-	font-size: 62.5%;
-}
+/* 1.6rem = 16px */
+html { font-size: 62.5%; }
 
-/* 대략 15px */
+/* 1.6rem = 15px */
 @media (max-width: 1280px) { 
-	html { font-size: 58.5%; }
+	html { font-size: 58.6%; }
 }
 
-/* 대략 14px */
+/* 1.6rem = 14px */
+@media (max-width: 1024px) { 
+	html { font-size: 54.7%; }
+}
+
+/* 1.6rem = 13px */
 @media (max-width: 768px) { 
-	html { font-size: 54.5%; }
+	html { font-size: 50.8%; }
 }
 
-/* 대략 13px */
+/* 1.6rem = 12px */
 @media (max-width: 640px) { 
-	html { font-size: 50.5%; }
+	html { font-size: 46.9%; }
 }
 
 article, aside, details, figcaption, figure,
