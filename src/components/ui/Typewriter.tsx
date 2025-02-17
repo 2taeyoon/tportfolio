@@ -2,7 +2,7 @@
 
 import { RefObject, useRef } from "react";
 import { useRegisterHTMLRef } from "@/hooks/useArrayRef";
-import { useTypewriterAnimation } from "@/hooks/useTypewriterEffect";
+import { useTypewriterEffect } from "@/hooks/useTypewriterEffect";
 
 export default function TypewriterAnimation({typewriterRefs}: { typewriterRefs: RefObject<(HTMLDivElement | null)>; }) {
   const firstRowRefs = useRef<HTMLDivElement[]>([]);
@@ -17,7 +17,7 @@ export default function TypewriterAnimation({typewriterRefs}: { typewriterRefs: 
 	const setFourthRowRef = useRegisterHTMLRef(fourthRowRefs);
 
 	// 애니메이션 실행
-	useTypewriterAnimation(firstRowRefs, secondRowRefs, thirdRowRefs, fourthRowRefs);
+	useTypewriterEffect(firstRowRefs, secondRowRefs, thirdRowRefs, fourthRowRefs);
 
   return (
     <div className="typewriter" ref={typewriterRefs}>
