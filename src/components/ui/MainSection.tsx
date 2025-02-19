@@ -51,7 +51,7 @@ export default function MainSection() {
 					start: "top top", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
 					end: "bottom+=10000 top", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료 
 					//end: `"+= ${document.querySelector('.main_section')?.scrollHeight}"`,
-					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)
+					scrub: 5, // 값이 클수록 더 부드럽게 움직임(기본값 true)
 					pin: true, // 스크롤 애니메이션 진행 중 스크롤 고정
 					markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
@@ -92,7 +92,7 @@ export default function MainSection() {
 			}, "<");
 			// small_compass2 클래스 rotate 변경
 			mainScroll.to(smallCompassRef2.current, {
-				rotate: 180,
+				rotate: 270,
 				duration: 2,
 			}, "<");
 
@@ -115,7 +115,7 @@ export default function MainSection() {
 			}, "<");
 			// small_compass2 클래스 rotate 변경
 			mainScroll.to(smallCompassRef2.current, {
-				rotate: 360,
+				rotate: 450,
 				duration: 2,
 			}, "<");
 
@@ -123,21 +123,46 @@ export default function MainSection() {
 			// Wave 컴포넌트의 height 클래스, line_black 클래스 참조
 			mainScroll.to(waveHeightRef.current, {
 				height: '20rem',
+				duration: 2,
 			});
 			mainScroll.to(waveLineBlockRef.current, {
 				height: '21rem',
+				duration: 2,
 			}, "<");
+
+
+			// big_compass rotate 변경
+			mainScroll.to(bigCompassRef.current, {
+				rotate: 540,
+				duration: 2,
+			})
+			// small_compass 클래스 rotate 변경
+			mainScroll.to(smallCompassRef.current, {
+				rotate: 540,
+				duration: 2,
+			}, "<");
+			// small_compass2 클래스 rotate 변경
+			mainScroll.to(smallCompassRef2.current, {
+				rotate: 630,
+				duration: 2,
+			}, "<");
+
+
 			mainScroll.to(waveHeightRef.current, {
 				height: '40rem',
+				duration: 2,
 			});
 			mainScroll.to(waveLineBlockRef.current, {
 				height: '41rem',
+				duration: 2,
 			}, "<");
 			mainScroll.to(waveHeightRef.current, {
 				height: '80rem',
+				duration: 2,
 			});
 			mainScroll.to(waveLineBlockRef.current, {
 				height: '81rem',
+				duration: 2,
 			}, "<");
 
 		});
