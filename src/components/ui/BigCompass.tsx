@@ -4,7 +4,7 @@ import { useDashAnimation } from "@/hooks/useDashAnimation";
 import { Matrix } from "@/types/props";
 
 export default function BigCompass({ gMatrix, circleMatrix }: { gMatrix: Matrix, circleMatrix: Matrix }) {
-	const { dashArray, isVisible } = useDashAnimation({ delay: 2000, duration: 2000, intervalTime: 10, startValue: 100, intervalCount: 20 });
+	const { dashArray, isVisible } = useDashAnimation({ delay: 2000, duration: 2000, intervalTime: 10, startValue: 100, intervalCount: 10 });
 
 	return (
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1441.21 1441.21" style={{ visibility: isVisible ? "visible" : "hidden", strokeDasharray: `1px, ${dashArray}px`}}>
