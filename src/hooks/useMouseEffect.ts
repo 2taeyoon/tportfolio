@@ -18,6 +18,8 @@ const useMouseEffect = () => {
       setGMatrix({ ...gMatrixRef.current });
       setCircleMatrix({ ...circleMatrixRef.current });
       setRotation(rotationRef.current);
+
+			// 다음 프레임에서 updateMouseEffect 다시 실행 (애니메이션 루프)
       animationFrameId = requestAnimationFrame(updateMouseEffect);
     };
 
