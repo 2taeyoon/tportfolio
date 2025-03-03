@@ -5,6 +5,7 @@ body {
 	background: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 
 html, body, div, span, applet, object, iframe,
