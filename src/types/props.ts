@@ -35,8 +35,7 @@ export interface GridColumnProps {
   gap: string; // 컬럼 간 간격 rem으로 정의
   paddingTop: string; // 상단 여백 rem으로 정의
   listConfig: number[]; // 각 grid_list 안에 몇 개의 grid_item을 넣을지 결정(ex: [3, 4] → 첫 번째 grid_list에 3개 두 번째 grid_list에 4개
-	gridListRefs: React.RefObject<(HTMLDivElement | null)[]>;
-	scrollStartRef: React.RefObject<HTMLDivElement | null>;
+	mainScrollRef: React.RefObject<HTMLDivElement | null>;
 }
 
 export interface GridProps {
@@ -48,3 +47,10 @@ export interface TypewriterEffectProps {
   textAlign?: CSSProperties["textAlign"]; // ✅ 올바른 타입 지정
 	delay?: number;
 }
+
+export type SquareGridProps = {
+	count?: number; // 기본값: 12줄
+  direction: "horizontal" | "vertical";
+	horRefs?: RefObject<(HTMLDivElement | null)[]>;
+	verRefs?: RefObject<(HTMLDivElement | null)[]>;
+};

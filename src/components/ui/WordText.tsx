@@ -1,13 +1,12 @@
 import { useDashAnimation } from "@/hooks/useDashAnimation";
-import React, { RefObject } from 'react'
 
-export default function WordText({wordRefs}: { wordRefs: RefObject<(SVGSVGElement | null)[]>; }) {
+export default function WordText() {
 	const { dashArray, isVisible } = useDashAnimation({ delay: 0, duration: 1000, intervalTime: 50, startValue: 25, intervalCount: 0 });
 
 	return (
 		<>
 			<div className="word_p">
-				<svg ref={(el) => { wordRefs.current[0] = el; }}
+				<svg className="word_svg"
 					xmlns="http://www.w3.org/2000/svg" viewBox="0 0 627 954" width="100%" height="100%" style={{ visibility: isVisible ? "visible" : "hidden", strokeDasharray: `1px, ${dashArray}px` }}>
 					<defs>
 						<linearGradient id="linear-p" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
@@ -20,7 +19,7 @@ export default function WordText({wordRefs}: { wordRefs: RefObject<(SVGSVGElemen
 				</svg>
 			</div>
 			<div className="word_u">				
-				<svg ref={(el) => { wordRefs.current[1] = el; }}
+				<svg className="word_svg"
 					xmlns="http://www.w3.org/2000/svg" viewBox="0 0 708 954" width="100%" height="100%" style={{ visibility: isVisible ? "visible" : "hidden", strokeDasharray: `1px, ${dashArray}px`}}>
 					<defs>
 						<linearGradient id="linear-u" x1="0" y1="0" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
@@ -33,7 +32,7 @@ export default function WordText({wordRefs}: { wordRefs: RefObject<(SVGSVGElemen
 				</svg>
 			</div>
 			<div className="word_b">
-				<svg ref={(el) => { wordRefs.current[2] = el; }}
+				<svg className="word_svg"
 					xmlns="http://www.w3.org/2000/svg" viewBox="0 0 627 954" width="100%" height="100%" style={{ visibility: isVisible ? "visible" : "hidden", strokeDasharray: `1px, ${dashArray}px`}}>
 					<defs>
 						<linearGradient id="linear-b" x1="0" y1="0" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
@@ -46,7 +45,7 @@ export default function WordText({wordRefs}: { wordRefs: RefObject<(SVGSVGElemen
 				</svg>
 			</div>
 			<div className="word_l">
-				<svg ref={(el) => { wordRefs.current[3] = el; }}
+				<svg className="word_svg"
 					xmlns="http://www.w3.org/2000/svg" viewBox="0 0 545 954" width="100%" height="100%" style={{ visibility: isVisible ? "visible" : "hidden", strokeDasharray: `1px, ${dashArray}px`}}>
 					<defs>
 						<linearGradient id="linear-l" x1="0" y1="0" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
@@ -59,7 +58,7 @@ export default function WordText({wordRefs}: { wordRefs: RefObject<(SVGSVGElemen
 				</svg>
 			</div>
 			<div className="word_i">
-				<svg ref={(el) => { wordRefs.current[4] = el; }}
+				<svg className="word_svg"
 					xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299 954" width="100%" height="100%" style={{ visibility: isVisible ? "visible" : "hidden", strokeDasharray: `1px, ${dashArray}px`}}>
 					<defs>
 						<linearGradient id="linear-i" x1="0" y1="0" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
@@ -72,7 +71,7 @@ export default function WordText({wordRefs}: { wordRefs: RefObject<(SVGSVGElemen
 				</svg>
 			</div>
 			<div className="word_s">
-				<svg ref={(el) => { wordRefs.current[5] = el; }}
+				<svg className="word_svg"
 					xmlns="http://www.w3.org/2000/svg" viewBox="0 0 627 954" width="100%" height="100%" style={{ visibility: isVisible ? "visible" : "hidden", strokeDasharray: `1px, ${dashArray}px`}}>
 					<defs>
 						<linearGradient id="linear-s" x1="0" y1="0" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
@@ -85,7 +84,7 @@ export default function WordText({wordRefs}: { wordRefs: RefObject<(SVGSVGElemen
 				</svg>
 			</div>
 			<div className="word_h">
-				<svg ref={(el) => { wordRefs.current[6] = el; }}
+				<svg className="word_svg"
 					xmlns="http://www.w3.org/2000/svg" viewBox="0 0 627 954" width="100%" height="100%" style={{ visibility: isVisible ? "visible" : "hidden", strokeDasharray: `1px, ${dashArray}px`}}>
 					<defs>
 						<linearGradient id="linear-h" x1="0" y1="0" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
@@ -98,7 +97,7 @@ export default function WordText({wordRefs}: { wordRefs: RefObject<(SVGSVGElemen
 				</svg>
 			</div>
 			<div className="word_e">
-				<svg ref={(el) => { wordRefs.current[7] = el; }}
+				<svg className="word_svg"
 					xmlns="http://www.w3.org/2000/svg" viewBox="0 0 545 954" width="100%" height="100%" style={{ visibility: isVisible ? "visible" : "hidden", strokeDasharray: `1px, ${dashArray}px`}}>
 					<defs>
 						<linearGradient id="linear-e" x1="0" y1="0" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
@@ -111,7 +110,7 @@ export default function WordText({wordRefs}: { wordRefs: RefObject<(SVGSVGElemen
 				</svg>
 			</div>
 			<div className="word_r">
-				<svg ref={(el) => { wordRefs.current[8] = el; }}
+				<svg className="word_svg"
 					xmlns="http://www.w3.org/2000/svg" viewBox="0 0 627 954" width="100%" height="100%" style={{ visibility: isVisible ? "visible" : "hidden", strokeDasharray: `1px, ${dashArray}px`}}>
 					<defs>
 						<linearGradient id="linear-r" x1="0" y1="0" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">

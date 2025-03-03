@@ -15,7 +15,7 @@ export default function Grid({ gridColumns }: GridProps) {
   return (
     <div className="grid">
       {gridColumns.map((col, colIndex) => (
-        <GridColumn key={colIndex} gap={col.gap} paddingTop={col.paddingTop} listConfig={col.listConfig} gridListRefs={col.gridListRefs} scrollStartRef={col.scrollStartRef}/>
+        <GridColumn key={colIndex} gap={col.gap} paddingTop={col.paddingTop} listConfig={col.listConfig} mainScrollRef={col.mainScrollRef}/>
       ))}
     </div>
   );
@@ -24,18 +24,17 @@ export default function Grid({ gridColumns }: GridProps) {
 
 
 // 📌 개별 `GridColumn` 컴포넌트 START!
-const GridColumn: React.FC<GridColumnProps> = ({ gap, paddingTop, listConfig, gridListRefs, scrollStartRef }) => {
+const GridColumn: React.FC<GridColumnProps> = ({ gap, paddingTop, listConfig, mainScrollRef }) => {
 	const pxRefs = useRef<HTMLDivElement[]>([]); // grid_item 요소의 위치를 저장하는 배열
-  const yPositions = useYPositions(pxRefs, listConfig, scrollStartRef);
+  const yPositions = useYPositions(pxRefs, listConfig, mainScrollRef);
 
-	const setGridItemRef = useRegisterHTMLRef(gridListRefs);
 	const setGridPxRef = useRegisterHTMLRef(pxRefs);
 
   return (
 		<div className="grid_col" style={{ gap, paddingTop }}>
 
       {listConfig.map((itemCount, listIndex) => (
-        <div ref={setGridItemRef} className="grid_list" key={listIndex}>
+        <div className="grid_list" key={listIndex}>
 
           {Array.from({ length: itemCount }, (_, itemIndex) => { // 길이가 itemCount인 배열을 생성
             const itemPosIndex = listConfig.slice(0, listIndex) // listConfig 배열의 0 ~ listIndex의 이전까지 자르고

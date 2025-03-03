@@ -1,10 +1,10 @@
 "use client";
 
-import { RefObject, useRef } from "react";
+import { useRef } from "react";
 import { useRegisterHTMLRef } from "@/hooks/useArrayRef";
 import { useTypewriterEffect } from "@/hooks/useTypewriterEffect";
 
-export default function TypewriterAnimation({typewriterRefs}: { typewriterRefs: RefObject<(HTMLDivElement | null)>; }) {
+export default function TypewriterAnimation() {
   const firstRowRefs = useRef<HTMLDivElement[]>([]);
   const secondRowRefs = useRef<HTMLDivElement[]>([]);
 	const thirdRowRefs = useRef<HTMLDivElement[]>([]);
@@ -20,7 +20,7 @@ export default function TypewriterAnimation({typewriterRefs}: { typewriterRefs: 
 	useTypewriterEffect(firstRowRefs, secondRowRefs, thirdRowRefs, fourthRowRefs);
 
   return (
-    <div className="typewriter" ref={typewriterRefs}>
+    <div className="typewriter">
       <div className="typewriter_row row1" style={{ whiteSpace: "pre-line" }}>
         <div className="text" ref={setFirstRowRef}>{`Creative Web \n Publisher`}</div>
         <div className="text" ref={setSecondRowRef} style={{ textAlign: 'right' }}>{`Innovative Frontend \n Publisher`}</div>
