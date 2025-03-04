@@ -12,7 +12,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import Grid from "@/components/ui/Grid";
 import WordText from "@/components/ui/WordText";
-import Typewriter from "@/components/ui/Typewriter";
 
 export default function MainSection() {
 	const { gMatrix, circleMatrix, rotation, handleMouseMove } = useMouseEffect(); // 마우스 이펙트 훅
@@ -24,6 +23,7 @@ export default function MainSection() {
 	
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
+		const mm = gsap.matchMedia();
 
 		const ctx = gsap.context(() => {
 			const q = gsap.utils.selector(mainScrollRef.current); // mainScrollRef.current 내부에서 CSS 선택자를 기반으로 요소 선택하는 함수수
@@ -93,10 +93,18 @@ export default function MainSection() {
 				rotate: 270,
 				duration: 2,
 			}, "<");
-			// Wave 컴포넌트의 height 클래스 참조
-			mainScroll.to(waveRef, {
-				height: '36rem',
-			}, "<");
+			mm.add("(min-width: 1280px)", ()=>{
+				// Wave 컴포넌트의 wave 클래스 참조
+				mainScroll.to(waveRef, {
+					height: '26rem',
+				}, "<");
+			});
+			mm.add("(min-width: 1536px)", ()=>{
+				// Wave 컴포넌트의 wave 클래스 참조
+				mainScroll.to(waveRef, {
+					height: '29rem',
+				}, "<");
+			});
 
 
 			// big_compass rotate 변경
@@ -165,9 +173,9 @@ export default function MainSection() {
 			<div className="word_wrap">
 				<WordText/>
 			</div>
-			<div className="typewriter_wrap">
+			{/* <div className="typewriter_wrap">
 				<Typewriter/>
-			</div>
+			</div> */}
 		<Noise/>
 	</div>
 	)
