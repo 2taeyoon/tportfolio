@@ -22,10 +22,19 @@
 .wave_wrap .line_block { position: absolute; bottom: 0; width: 100svw; height: 1rem; background-color: var(--thema);}
 
 .grid_wrap { position: absolute; inset: 0; }
-.grid { display: flex; justify-content: space-between; height: 100%; padding: 0 12rem 0; }
-.grid .grid_col { display: flex; flex-direction: column; width: 4.5rem; }
-.grid .grid_col .grid_list .grid_item { padding-top: 3rem; }
-.grid .grid_col .grid_list .grid_px { color: var(--thema); opacity: 0.25; font-size: 1.4rem; font-family: 'Gridular', 'Malgun Gothic', Arial, sans-serif; user-select: none; }
+.grid_wrap .grid { display: flex; justify-content: space-between; gap: 1rem; height: 100%; padding: 0 12rem 0; }
+.grid_wrap .grid .grid_col { display: flex; flex-direction: column; width: 4.5rem; }
+.grid_wrap .grid .grid_col .grid_list .grid_item { padding-top: 3rem; }
+.grid_wrap .grid .grid_col .grid_list .grid_px { color: var(--thema); opacity: 0.25; font-size: 1.4rem; font-family: 'Gridular', 'Malgun Gothic', Arial, sans-serif; user-select: none; }
+
+.grid_wrap .grid .typewriter .typewriter_row { display: flex ; flex-direction: column; align-items: center; width: 18rem; }
+.grid_wrap .grid .typewriter .typewriter_row.row1 { gap: 20rem; padding-top: 20rem; }
+.grid_wrap .grid .typewriter .typewriter_row.row2 { gap: 30rem; padding-top: 15rem; }
+.grid_wrap .grid .typewriter .typewriter_row.row3 { gap: 35rem; padding-top: 10rem; }
+.grid_wrap .grid .typewriter .typewriter_row.row4 { gap: 25rem; padding-top: 15rem; }
+.grid_wrap .grid .typewriter .typewriter_row.row5 { gap: 30rem; padding-top: 20rem; }
+.grid_wrap .grid .typewriter .typewriter_row.row5 .text_scroll_down span { display: inline-block; }
+.grid_wrap .grid .typewriter .typewriter_row .text span { margin: 0 0.2rem 0 0; color: var(--thema); font-size: 1.8rem; font-family: 'Galmuri11', 'Malgun Gothic', Arial, sans-serif;  }
 
 
 .word_wrap { display: flex; align-items: flex-end; justify-content: center; gap: 3rem; position: relative; z-index: var(--z50); width: 100vw; height: 33svh; padding: 0 8rem 0; margin-top: calc(100svh - 33svh); }
@@ -44,32 +53,19 @@
 .word_wrap .word_e { width: 15.7rem; }
 .word_wrap .word_r { width: 18rem; }
 
-.typewriter_wrap { position: absolute; inset: 0; }
-.typewriter_wrap .typewriter { display: flex; gap: 6.4rem; padding-left: 18rem; }
-.typewriter_wrap .typewriter .typewriter_row { display: flex ; flex-direction: column; align-items: center; width: 26rem; }
-.typewriter_wrap .typewriter .typewriter_row.row1 { gap: 20rem; padding-top: 20rem; }
-.typewriter_wrap .typewriter .typewriter_row.row2 { gap: 30rem; padding-top: 15rem; }
-.typewriter_wrap .typewriter .typewriter_row.row3 { gap: 35rem; padding-top: 10rem; }
-.typewriter_wrap .typewriter .typewriter_row.row4 { gap: 25rem; padding-top: 15rem; }
-.typewriter_wrap .typewriter .typewriter_row.row5 { gap: 30rem; padding-top: 20rem; }
-.typewriter_wrap .typewriter .typewriter_row.row5 .text_scroll_down span { display: inline-block; }
-
-/* .typewriter_wrap .typewriter .typewriter_row .text { line-height: 220%; } */
-.typewriter_wrap .typewriter .typewriter_row .text span { margin: 0 0.2rem 0 0; color: var(--thema); font-size: 1.8rem; font-family: 'Galmuri11', 'Malgun Gothic', Arial, sans-serif;  }
-
 @media (max-width: 1536px) {
-	.word_wrap { height: 22svh; margin-top: calc(100svh - 22svh); }
-  .word_wrap .word_p { width: 12rem; }
-	.word_wrap .word_u { width: 14rem; }
-	.word_wrap .word_b { width: 12.5rem; }
-	.word_wrap .word_l { width: 11rem; }
-	.word_wrap .word_i { width: 6rem; }
-	.word_wrap .word_s { width: 12.5rem; }
-	.word_wrap .word_h { width: 12.5rem; }
-	.word_wrap .word_e { width: 10.8rem; }
-	.word_wrap .word_r { width: 12.3rem; }
+	.grid_wrap .grid .typewriter .typewriter_row { width: 13rem; }
+	.grid_wrap .grid .typewriter .typewriter_row .text.text_scroll_down { width: 15rem; }
+	.grid_wrap .grid .typewriter .typewriter_row .text span { font-size: 1.4rem; }
 
-	.typewriter_wrap .typewriter .typewriter_row { width: 13rem; }
-	.typewriter_wrap .typewriter .typewriter_row .text.text_scroll_down { width: 15rem; }
-	.typewriter_wrap .typewriter .typewriter_row .text span { font-size: 1.4rem; }
+	.word_wrap { height: 22svh; margin-top: calc(100svh - 22svh); }
+  .word_wrap .word_p { width: 12rem; min-width: 12rem; }
+	.word_wrap .word_u { width: 14rem; min-width: 14rem; }
+	.word_wrap .word_b { width: 12.5rem; min-width: 12.5rem; }
+	.word_wrap .word_l { width: 11rem; min-width: 11rem; }
+	.word_wrap .word_i { width: 6rem; min-width: 6rem; }
+	.word_wrap .word_s { width: 12.5rem; min-width: 12.5rem; }
+	.word_wrap .word_h { width: 12.5rem; min-width: 12.5rem; }
+	.word_wrap .word_e { width: 10.8rem; min-width: 10.8rem; }
+	.word_wrap .word_r { width: 12.3rem; min-width: 12.3rem; }
 }
