@@ -8,8 +8,8 @@ export default function Wave() {
 					</defs>
 					<g className="parallax">
 						<use xlinkHref="#gentle-wave" x="50" y="0" fill="var(--thema)"></use>
-						<use xlinkHref="#gentle-wave" x="50" y="4" fill="#07aa77d1"></use>
-						<use xlinkHref="#gentle-wave" x="50" y="8" fill="#07aa77a3"></use>
+						<use xlinkHref="#gentle-wave" x="50" y="4" fill="#068da8d1"></use>
+						<use xlinkHref="#gentle-wave" x="50" y="8" fill="#068da8a3"></use>
 					</g>
 				</svg>
 			</div>
