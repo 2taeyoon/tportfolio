@@ -2,15 +2,24 @@
 @import "./galmuri11.css";
 @import "./font.css";
 @import "./keyframes.css";
+@import "./common.css";
 @import "./main_section.css";
 @import "./profile_section.css";
-@import "./noise.css";
 
 :root {
-	--thema: #07aa77;
+	--thema: #95BC97;
+	--themaDeep: #138318;
+	--themaDark: #033606;
+	--themaDarkTrans: #03360650;
+	--themaSub: #D5DBBA;
+	--themaSubDark: #99a06c;
 	--black: #111;
+	--black333: #333;
+	--black666: #666;
+	--black999: #999;
 	--white: white;
-	--whiteBg: #ebeae4;
+	--whiteBg: #EBEAE4;
+	--z-1: -1;
 	--z10: 10;
 	--z30: 30;
 	--z50: 50;
@@ -18,4 +27,23 @@
 	--z100: 100;
 }
 
-.section { position: relative; overflow: hidden; min-height: 100svh; background-color: var(--black); }
+/* ::-webkit-scrollbar { width: 0px; } */
+/* ::-webkit-scrollbar-thumb { border-radius: 999px; background-color: var(--themabright); }
+::-webkit-scrollbar-thumb:hover { background-color: var(--thema); } */
+
+.grid-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr); /* 10x10 그리드 */
+  grid-template-rows: repeat(15, 1fr);
+  z-index: 10;
+}
+
+.grid-box {
+  background-color: black;
+  opacity: 0;
+}
