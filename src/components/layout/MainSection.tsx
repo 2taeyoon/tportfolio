@@ -1,10 +1,10 @@
 'use client';
 
-import Noise from "@/components/ui/Noise";
+import Noise from "@/components/common/Noise";
 //import SlotMachineText from "@/components/ui/SlotMachineText";
 import BigCompass from "@/components/ui/BigCompass";
 import SmallCompass from "@/components/ui/SmallCompass";
-import Wave from "@/components/ui/Wave";
+import Wave from "@/components/common/Wave";
 import useMouseEffect from "@/hooks/useMouseEffect";
 
 import gsap from "gsap";
@@ -96,13 +96,13 @@ export default function MainSection() {
 			mm.add("(min-width: 1280px)", ()=>{
 				// Wave 컴포넌트의 wave 클래스 참조
 				mainScroll.to(waveRef, {
-					height: '26rem',
+					height: '24rem',
 				}, "<");
 			});
 			mm.add("(min-width: 1536px)", ()=>{
 				// Wave 컴포넌트의 wave 클래스 참조
 				mainScroll.to(waveRef, {
-					height: '29rem',
+					height: 'auto',
 				}, "<");
 			});
 
@@ -124,12 +124,10 @@ export default function MainSection() {
 			}, "<");
 			// Wave 컴포넌트의 height 클래스, line_black 클래스 참조
 			mainScroll.to(waveHeightRef, {
-				//height: '20rem',
 				height: '80rem',
 				duration: 2,
 			}, "<");
 			mainScroll.to(waveLineBlockRef, {
-				//height: '21rem',
 				height: '81rem',
 				duration: 2,
 			}, "<");
@@ -157,6 +155,8 @@ export default function MainSection() {
 			</div>
 			<div className="wave_wrap">
 				<Wave/>
+				<div className="height"></div>
+				<div className="line_block"></div>
 			</div>
 			<div className="grid_wrap">
 				<Grid
