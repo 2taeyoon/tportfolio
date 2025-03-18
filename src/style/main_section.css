@@ -12,15 +12,6 @@
 .small_compass { display: flex ; justify-content: space-between; align-items: center; position: absolute; inset: 0; overflow: hidden; z-index: var(--z30); padding: 0 12rem 0rem; }
 .small_compass svg { opacity: 0.8; }
 
-.wave_wrap { position: absolute; bottom: -0; overflow: hidden; z-index: var(--z70); width: 100svw; }
-.wave_wrap .wave { height: 0; }
-.wave_wrap .wave .parallax use {	animation: move_forever 12s linear infinite; }
-.wave_wrap .wave .parallax use:nth-child(1) { animation-delay: -2s; }
-.wave_wrap .wave .parallax use:nth-child(2) { animation-delay: -2s; animation-duration: 5s; }
-.wave_wrap .wave .parallax use:nth-child(3) { animation-delay: -2s; animation-duration: 3s; }
-.wave_wrap .height { width: 100svw; background-color: var(--thema); height: 0; }
-.wave_wrap .line_block { position: absolute; bottom: 0; width: 100svw; height: 1rem; background-color: var(--thema);}
-
 .grid_wrap { position: absolute; inset: 0; }
 .grid_wrap .grid { display: flex; justify-content: space-between; gap: 1rem; height: 100%; padding: 0 12rem 0; }
 .grid_wrap .grid .grid_col { display: flex; flex-direction: column; width: 4.5rem; }
@@ -35,7 +26,6 @@
 .grid_wrap .grid .typewriter .typewriter_row.row5 { gap: 30rem; padding-top: 20rem; }
 .grid_wrap .grid .typewriter .typewriter_row.row5 .text_scroll_down span { display: inline-block; }
 .grid_wrap .grid .typewriter .typewriter_row .text span { margin: 0 0.2rem 0 0; color: var(--thema); font-size: 1.8rem; font-family: 'Galmuri11', 'Malgun Gothic', Arial, sans-serif;  }
-
 
 .word_wrap { display: flex; align-items: flex-end; justify-content: center; gap: 3rem; position: relative; z-index: var(--z50); width: 100vw; height: 33svh; padding: 0 8rem 0; margin-top: calc(100svh - 33svh); }
 .word_wrap .word_p, .word_wrap .word_u, .word_wrap .word_b, .word_wrap .word_l, .word_wrap .word_i,
