@@ -1,0 +1,131 @@
+.profile_section { background-color: var(--thema); padding: 12rem 16rem 0; transition: background-color .3s; }
+
+.profile_title { display: flex; position: absolute; top: 1rem; left: 0rem; z-index: var(--z10); mix-blend-mode: luminosity; }
+.profile_title .profile_title_span { visibility: hidden; display: inline-block; transform: rotate(-150deg); margin: 0 4rem; color: var(--themaDark); font-size: 14.4rem; font-weight: bold; font-family: "Gridular", "Galmuri11", "Pretendard", "Malgun Gothic", Arial, sans-serif; user-select: none; }
+.profile_wrap { display: flex; flex-direction: column; background-color: var(--themaSub); transition: background-color .3s;
+	/* clip-path: polygon(
+		0% 0%, 12% 0%, 12% 12%, 24% 12%, 24% 0%, 36% 0%, 36% 12%, 48% 12%, 48% 0%, 60% 0%,
+		60% 12%, 72% 12%, 72% 0%, 84% 0%, 84% 12%, 96% 12%, 96% 0%, 100% 0%, 100% 24%, 88% 24%,
+		88% 36%, 100% 36%, 100% 48%, 88% 48%, 88% 60%, 100% 60%, 100% 72%, 88% 72%, 88% 84%, 100% 84%,
+		100% 100%, 88% 100%, 76% 100%, 76% 88%, 64% 88%, 64% 100%, 52% 100%, 52% 88%, 40% 88%,
+		40% 100%, 28% 100%, 28% 88%, 16% 88%, 16% 100%, 4% 100%, 4% 88%, 0% 88%, 0% 76%,
+		12% 76%, 12% 64%, 0% 64%, 0% 52%, 12% 52%, 12% 40%, 0% 40%, 0% 28%, 12% 28%, 12% 16%, 0% 16%
+	); */
+}
+/* .profile_wrap .video_wrap { background-color: var(--themaSub); } */
+.profile_wrap .video_wrap { position: relative; padding: 0 4rem; }
+.profile_wrap .video_wrap video { width: 100%; height: 100%; }
+.profile_wrap .video_wrap .video_overlay { position: absolute; inset: 0; background: var(--themaSub); mix-blend-mode: color; }
+.profile_wrap .introduce_wrap { display: flex; align-items: center; gap: 8rem; }
+.profile_wrap .introduce_wrap .profile_card { display: flex; flex-direction: column; gap: 1.2rem; padding: 2rem; border-radius: 2.8rem; background-color: var(--whiteBg); transition: background-color .3s; }
+.profile_wrap .introduce_wrap .profile_card .profile_image { position: relative; width: 35rem; height: 45rem; filter: brightness(0.9); }
+.profile_wrap .introduce_wrap .profile_card .profile_image img { border-radius: 0.8rem 0.8rem 0 0; }
+
+.profile_wrap .introduce_wrap .profile_card .profile_content { display: flex; flex-direction: column; }
+.profile_wrap .introduce_wrap .profile_card .profile_content .profile_header { display: flex; justify-content: space-between; }
+.profile_wrap .introduce_wrap .profile_card .profile_content .profile_header .name { font-size: 2.0rem; color: var(--black666); transition: color .3s; }
+.profile_wrap .introduce_wrap .profile_card .profile_content .profile_header .profile_info { display: flex; flex-direction: column; align-items: flex-end; }
+.profile_wrap .introduce_wrap .profile_card .profile_content .profile_header .profile_info .age { color: var(--black999); font-size: 1.6rem; transition: color .3s; }
+.profile_wrap .introduce_wrap .profile_card .profile_content .profile_header .profile_info .location { color: var(--black999); font-size: 1.6rem; transition: color .3s; }
+.profile_wrap .introduce_wrap .profile_card .profile_content .contact { margin-top: 1.2rem; color: var(--black999); font-size: 1.6rem; text-align: right; transition: color .3s; }
+
+.profile_wrap .introduce_wrap .introduce_list { display: flex; flex-direction: column; gap: 6rem }
+.profile_wrap .introduce_wrap .introduce_list .qa_item { display: flex; flex-direction: column; gap: 2rem; }
+.profile_wrap .introduce_wrap .introduce_list .qa_item .title .clip { font-size: 2.6rem; font-weight: 700; }
+.profile_wrap .introduce_wrap .introduce_list .qa_item .text .clip { line-height: 170%; font-size: 1.8rem; }
+.profile_wrap .introduce_wrap .introduce_list .qa_item .title .clip,
+.profile_wrap .introduce_wrap .introduce_list .qa_item .text .clip { background-size: 0; background-clip: text; -webkit-background-clip: text; background-image: linear-gradient(to right, var(--themaDark), var(--themaDark)); background-repeat: no-repeat; color: var(--themaDarkTrans); transition: background-image .3s; }
+.profile_wrap .introduce_wrap .introduce_list .quotes_wrap { display: flex; justify-content: flex-start; }
+.profile_wrap .introduce_wrap .introduce_list .quotes_wrap .quotes_svg { position: relative; height: 5rem; stroke-dasharray: 3px 1px; }
+.profile_wrap .introduce_wrap .introduce_list .quotes_wrap .margin { margin-left: 2.8rem; }
+.profile_wrap .introduce_wrap .introduce_list .quotes_wrap.right { justify-content: flex-end; }
+.profile_wrap .introduce_wrap .introduce_list .quotes_wrap.left .quotes_svg { transform: rotate(180deg); }
+
+.profile_wrap .divider_wrap { display: flex; align-items: center; justify-content: space-between; }
+.profile_wrap .divider_wrap .divider { position: relative; width: 5rem; height: 5rem; }
+.profile_wrap .divider_wrap .divider_bar { width: 90%; border-top-style: dotted; border-top-width: 1px; border-top-color: var(--themaDark); transition: border-top-color .3s; }
+
+.profile_wrap .experience_wrap { display: flex; flex-direction: column; gap: 4.8rem; position: relative; padding: 5rem 38rem; }
+
+.profile_wrap .experience_wrap .shape_quote_dots_wrap { display: flex; align-items: center; justify-content: space-between; position: absolute; inset: 0; width: 100%; }
+.profile_wrap .experience_wrap .shape_quote_dots_wrap .shape_quote_dots { position: relative; width: 30rem; height: 70%; }
+.profile_wrap .experience_wrap .shape_quote_dots_wrap .shape_quote_dots.left { left: -11%; transform: rotate(180deg); }
+.profile_wrap .experience_wrap .shape_quote_dots_wrap .shape_quote_dots.right { right: -11%; }
+
+.profile_wrap .experience_wrap .experience_item { display: flex; flex-direction: column; gap: 2rem; z-index: var(--z10); }
+.profile_wrap .experience_wrap .experience_item .experience_title { color: var(--themaDark); font-size: 2.6rem; font-weight: 700; transition: .3s; }
+.profile_wrap .experience_wrap .experience_item .experience_title:hover { font-size: 3rem; }
+.profile_wrap .experience_wrap .experience_item .experience_title span { font-size: 2.2rem; transition: .3s; }
+.profile_wrap .experience_wrap .experience_item .experience_title:hover span { font-size: 2.6rem; }
+
+.profile_wrap .experience_wrap .experience_item .content_wrap { display: flex; flex-direction: column; gap: 2.8rem; }
+.profile_wrap .experience_wrap .experience_item .content_wrap .content { display: flex; flex-direction: column; gap: 1.6rem; }
+.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_sub_title { color: var(--themaDeep); font-size: 2.2rem; font-weight: 700; transition: .3s; }
+.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_sub_title:hover { font-size: 2.6rem; }
+.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_detail { font-size: 1.8rem; transition: .3s; }
+.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_detail:hover { font-size: 2.0rem; }
+.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_meta { display: flex; gap: 1.2rem; }
+.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_meta .content_meta_item { padding: 0.4rem 0.8rem; border-radius: 0.4rem; background-color: var(--black); color: var(--black999); font-size: 1.5rem; transition: .3s; }
+.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_meta .content_meta_item:hover { transform: scale(1.1); }
+
+.profile_wrap .experience_wrap .copyright { display: flex ; justify-content: center; z-index: var(--z10); }
+.profile_wrap .experience_wrap .copyright .text { padding: 1.2rem 2rem; border-radius: 1.6rem; background-color: var(--themaSubDark);
+	background-image: linear-gradient(
+		-60deg, 
+		#ffffff00 0%,
+		#ffffff00 40%,
+		#ffffff44 40%,
+		#ffffff44 60%,
+		#ffffff00 60%,
+		#ffffff00 100%
+	); background-size: 200% 100%; background-position-x: 150%; transition: scale .3s; color: var(--themaSub); font-size: 3.6rem; }
+	.profile_wrap .experience_wrap .copyright .text:hover { scale: 1.01; animation: shimmering 1s forwards; }
+
+.square_grid_wrap .square_grid { display: flex ; flex-direction: column; justify-content: space-between; position: absolute; inset: 0; }
+.square_grid_wrap .square_grid.vertical { flex-direction: unset; }
+.square_grid_wrap .square_grid .line_horizontal { width: 0%; border-bottom: 1px solid var(--themaCloudy); }
+.square_grid_wrap .square_grid .line_vertical { height: 0%; border-right: 1px solid var(--themaCloudy); }
+
+/* .line_mask { position: absolute; top: 0; right: 0; background-color: #030303; opacity: 0.8; height: 105%; width: 105%; z-index: 2; } */
+
+@media (max-width: 1536px) {
+	.profile_section { padding: 8rem 12rem 0; }
+
+	.profile_title .profile_title_span { font-size: 9.6rem; margin: 0 2.5rem; }
+
+	.profile_wrap .introduce_wrap { gap: 6rem; }
+	.profile_wrap .introduce_wrap .profile_card { padding: 1.6rem; border-radius: 2rem; }
+	.profile_wrap .introduce_wrap .profile_card .profile_image { width: 28rem; height: 36rem; }
+	.profile_wrap .introduce_wrap .profile_card .profile_image img { border-radius: 0.4rem 0.4rem 0 0; }
+	.profile_wrap .introduce_wrap .profile_card .profile_content .profile_header .name { font-size: 1.8rem; }
+	.profile_wrap .introduce_wrap .profile_card .profile_content .profile_header .profile_info .age { font-size: 1.5rem; }
+	.profile_wrap .introduce_wrap .profile_card .profile_content .profile_header .profile_info .location { font-size: 1.5rem; }
+	.profile_wrap .introduce_wrap .profile_card .profile_content .profile_contact { margin-top: 0.6rem; font-size: 1.5rem; }
+	.profile_wrap .introduce_wrap .introduce_list { gap: 3.2rem }
+	.profile_wrap .introduce_wrap .introduce_list .qa_item { gap: 1.2rem; }
+	.profile_wrap .introduce_wrap .introduce_list .qa_item .title .clip { font-size: 2.2rem; }
+	.profile_wrap .introduce_wrap .introduce_list .qa_item .text .clip { font-size: 1.6rem; }
+	.profile_wrap .introduce_wrap .introduce_list .quotes_wrap .margin { margin-left: 1.6rem; }
+
+	.profile_wrap .experience_wrap { gap: 2.8rem; padding: 3rem 21.6rem; }
+	.profile_wrap .experience_wrap .experience_item { gap: 1.2rem; }
+
+	.profile_wrap .experience_wrap .experience_item .experience_title { font-size: 2.2rem; }
+	.profile_wrap .experience_wrap .experience_item .experience_title span { font-size: 1.8rem; }
+	.profile_wrap .experience_wrap .experience_item .experience_title:hover { font-size: 2.6rem; }
+	.profile_wrap .experience_wrap .experience_item .experience_title:hover span { font-size: 2.2rem; }
+
+	.profile_wrap .experience_wrap .experience_item .content_wrap { gap: 2.4rem; }
+	.profile_wrap .experience_wrap .experience_item .content_wrap .content { gap: 1.2rem; }
+	.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_sub_title { font-size: 2.0rem; }
+	.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_sub_title:hover { font-size: 2.4rem; }
+	.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_detail { font-size: 1.6rem; }
+	.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_detail:hover { font-size: 1.8rem; }
+	.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_meta { gap: 0.8rem; }
+	.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_meta .content_meta_item { font-size: 1.3rem; }
+
+	.profile_wrap .experience_wrap .copyright .text { padding: 0.8rem 1.6rem; border-radius: 1.2rem; font-size: 2.6rem; }
+
+	.profile_wrap .experience_wrap .shape_quote_dots_wrap .shape_quote_dots.left { left: -20%; }
+	.profile_wrap .experience_wrap .shape_quote_dots_wrap .shape_quote_dots.right { right: -20%; }
+}
