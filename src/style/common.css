@@ -1,0 +1,36 @@
+.section { position: relative; overflow: hidden; min-height: 100svh; min-width: 1280px; }
+.inner { max-width: 100%; width: 100%; height: 100%; padding: 12rem 16rem; }
+.pd_box { padding: 5rem 8rem; }
+
+.noise { position: absolute; overflow: hidden; inset: 0; z-index: 100; pointer-events: none; opacity: 0.1; }
+.noise::after { content: ""; position: absolute; inset: 0; background-image: url("/images/noise.png"); pointer-events: none; }
+
+/* wave 컴포넌트 공통 코드 START!! */
+.wave .parallax use {	animation: move_forever 12s linear infinite; }
+.wave .parallax use:nth-child(1) { animation-delay: -2s; }
+.wave .parallax use:nth-child(2) { animation-delay: -2s; animation-duration: 5s; }
+.wave .parallax use:nth-child(3) { animation-delay: -2s; animation-duration: 3s; }
+/* wave 컴포넌트 공통 코드 END!! */
+
+/* 차오르는 물결을 표시하기 위한 main_section내의 wave START!! */
+.main_section .wave_wrap { position: absolute; left: 0; bottom: 0; overflow: hidden; z-index: var(--z70); width: 100svw; }
+.main_section .wave_wrap .height { width: 100svw; background-color: var(--thema); height: 0; }
+.main_section .wave_wrap .line_block { position: absolute; bottom: 0; width: 100svw; height: 1rem; background-color: var(--thema);}
+.main_section .wave_wrap .wave { height: 0; }
+/* 차오르는 물결을 표시하기 위한 main_section내의 wave END!! */
+
+.profile_section .wave svg { position: absolute; bottom: 0; left: 50%; transform: translate(-50%); width: 300vw; height: 10vmin; }
+
+.main_section .wave .parallax use:nth-child(1) { fill: #95bc97; }
+.main_section .wave .parallax use:nth-child(2) { fill: #95bc97d1; }
+.main_section .wave .parallax use:nth-child(3) { fill: #95bc97a3; }
+
+.profile_section .wave .parallax use:nth-child(1) { fill: #99a06c; }
+.profile_section .wave .parallax use:nth-child(2) { fill: #99a06cd1; }
+.profile_section .wave .parallax use:nth-child(3) { fill: #99a06ca3; }
+
+@media (max-width: 1536px) {
+	.inner { padding: 8rem 12rem; }
+	.pd_box { padding: 3rem 6rem; }
+	/* .wave_wrap.thema.profile_wave .wave { height: 25rem; } */
+}
