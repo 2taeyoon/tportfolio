@@ -2,3 +2,8 @@
 	0% { transform: translate(-90px);	}
 	100% { transform: translate(85px); }
 }
+
+@keyframes shimmering {
+	0% { background-position-x: 150%;	}
+	100% { background-position-x: -50%; }
+}
