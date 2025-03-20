@@ -2,7 +2,7 @@ import React from "react";
 import ExperienceItem from "@/components/list/ExperienceItem";
 import useMouseEffect from "@/hooks/useMouseEffect";
 import ShapeQuoteDots from "@/components/ui/ShapeQuoteDots";
-import Copyright from "../common/Copyright";
+import Copyright from "@/components/common/Copyright";
 
 const schoolData = [
   {
