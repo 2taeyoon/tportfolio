@@ -2,17 +2,8 @@
 
 .profile_title { display: flex; position: absolute; top: 1rem; left: 0rem; z-index: var(--z10); mix-blend-mode: luminosity; }
 .profile_title .profile_title_span { visibility: hidden; display: inline-block; transform: rotate(-150deg); margin: 0 4rem; color: var(--themaDark); font-size: 14.4rem; font-weight: bold; font-family: "Gridular", "Galmuri11", "Pretendard", "Malgun Gothic", Arial, sans-serif; user-select: none; }
-.profile_wrap { display: flex; flex-direction: column; background-color: var(--themaSub); transition: background-color .3s;
-	/* clip-path: polygon(
-		0% 0%, 12% 0%, 12% 12%, 24% 12%, 24% 0%, 36% 0%, 36% 12%, 48% 12%, 48% 0%, 60% 0%,
-		60% 12%, 72% 12%, 72% 0%, 84% 0%, 84% 12%, 96% 12%, 96% 0%, 100% 0%, 100% 24%, 88% 24%,
-		88% 36%, 100% 36%, 100% 48%, 88% 48%, 88% 60%, 100% 60%, 100% 72%, 88% 72%, 88% 84%, 100% 84%,
-		100% 100%, 88% 100%, 76% 100%, 76% 88%, 64% 88%, 64% 100%, 52% 100%, 52% 88%, 40% 88%,
-		40% 100%, 28% 100%, 28% 88%, 16% 88%, 16% 100%, 4% 100%, 4% 88%, 0% 88%, 0% 76%,
-		12% 76%, 12% 64%, 0% 64%, 0% 52%, 12% 52%, 12% 40%, 0% 40%, 0% 28%, 12% 28%, 12% 16%, 0% 16%
-	); */
-}
-/* .profile_wrap .video_wrap { background-color: var(--themaSub); } */
+.profile_wrap { display: flex; flex-direction: column; background-color: var(--themaSub); transition: background-color .3s; }
+
 .profile_wrap .video_wrap { position: relative; padding: 0 4rem; }
 .profile_wrap .video_wrap video { width: 100%; height: 100%; }
 .profile_wrap .video_wrap .video_overlay { position: absolute; inset: 0; background: var(--themaSub); mix-blend-mode: color; }
