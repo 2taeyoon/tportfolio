@@ -10,7 +10,6 @@ import ProfileVideo from "@/components/ui/ProfileVideo";
 import ExperienceList from "@/components/list/ExperienceList";
 import DividerWithIcons from "../ui/DividerWithIcons";
 import Wave from "../common/Wave";
-//import SquareGrid from "@/components/ui/SquareGrid";
 
 export default function ProfileSection() {
 	const profileScrollRef = useRef<HTMLDivElement | null>(null); // 스크롤 애니메이션이 적용될 요소
@@ -22,9 +21,6 @@ export default function ProfileSection() {
 
 		const ctx = gsap.context(() => {
 			const q = gsap.utils.selector(profileScrollRef.current);
-			//const squareGridRef = q('.square_grid');
-			//const horRefs = q('.line_horizontal'); // SquareGrid 컴포넌트의 가로 줄
-			//const verRefs = q('.line_vertical'); // SquareGrid 컴포넌트의 세로 줄
 			const profileWrapRef = q('.profile_wrap'); 
 			const profileTitleRef = q('.profile_title'); // profile_title 클래스 텍스트
 			const profileTitleSpanRef = q('.profile_title_span'); // profile_title_span 클래스 텍스트
@@ -278,10 +274,6 @@ export default function ProfileSection() {
 				<ExperienceList/>
 			</div>
 			<Wave/>
-			{/* <div className="square_grid_wrap">
-				<SquareGrid direction="horizontal" count={12}/>
-				<SquareGrid direction="vertical" count={12}/>
-			</div> */}
 			<Noise/>
 		</div>
 	)
