@@ -1,5 +1,5 @@
-import IntroduceItem from "@/components/list/IntroduceItem";
-import QuotesSvg from "../ui/QuotesSvg";
+import IntroduceItem from "@/components/profile/list/IntroduceItem";
+import QuotesSvg from "@/components/profile/QuotesSvg";
 
 const introduceData = [
   {

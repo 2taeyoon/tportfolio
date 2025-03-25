@@ -1,7 +1,7 @@
 import React from "react";
-import ExperienceItem from "@/components/list/ExperienceItem";
+import ExperienceItem from "@/components/profile/list/ExperienceItem";
 import useMouseEffect from "@/hooks/useMouseEffect";
-import ShapeQuoteDots from "@/components/ui/ShapeQuoteDots";
+import ShapeQuoteDots from "@/components/profile/ShapeQuoteDots";
 import Copyright from "@/components/common/Copyright";
 
 const schoolData = [
