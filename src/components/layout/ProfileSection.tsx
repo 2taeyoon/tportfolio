@@ -4,12 +4,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import Noise from "@/components/common/Noise";
-import ProfileIntroduction from "@/components/ui/ProfileIntroduction";
+import ProfileIntroduction from "@/components/profile/ProfileIntroduction";
 import { characterTextSplit } from "@/util/textSplit";
-import ProfileVideo from "@/components/ui/ProfileVideo";
-import ExperienceList from "@/components/list/ExperienceList";
-import DividerWithIcons from "../ui/DividerWithIcons";
-import Wave from "../common/Wave";
+import ProfileVideo from "@/components/profile/ProfileVideo";
+import ExperienceList from "@/components/profile/list/ExperienceList";
+import DividerWithIcons from "@/components/common/DividerWithIcons";
 
 export default function ProfileSection() {
 	const profileScrollRef = useRef<HTMLDivElement | null>(null); // 스크롤 애니메이션이 적용될 요소
@@ -273,7 +272,6 @@ export default function ProfileSection() {
 				<DividerWithIcons dividerSrc={dividerSrc}/>
 				<ExperienceList/>
 			</div>
-			<Wave/>
 			<Noise/>
 		</div>
 	)
