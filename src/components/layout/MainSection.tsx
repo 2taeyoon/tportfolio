@@ -2,16 +2,16 @@
 
 import Noise from "@/components/common/Noise";
 //import SlotMachineText from "@/components/ui/SlotMachineText";
-import BigCompass from "@/components/ui/BigCompass";
-import SmallCompass from "@/components/ui/SmallCompass";
+import BigCompass from "@/components/main/BigCompass";
+import SmallCompass from "@/components/main/SmallCompass";
 import Wave from "@/components/common/Wave";
 import useMouseEffect from "@/hooks/useMouseEffect";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-import Grid from "@/components/ui/Grid";
-import WordText from "@/components/ui/WordText";
+import Grid from "@/components/main/Grid";
+import WordText from "@/components/main/WordText";
 
 export default function MainSection() {
 	const { gMatrix, circleMatrix, rotation, handleMouseMove } = useMouseEffect(); // 마우스 이펙트 훅
