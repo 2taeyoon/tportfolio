@@ -29,6 +29,10 @@
 .profile_section .wave .parallax use:nth-child(2) { fill: #99a06cd1; }
 .profile_section .wave .parallax use:nth-child(3) { fill: #99a06ca3; }
 
+.divider_wrap { display: flex; align-items: center; justify-content: space-between; }
+.divider_wrap .divider { position: relative; width: 5rem; height: 5rem; }
+.divider_wrap .divider_bar { width: 90%; border-top-style: dotted; border-top-width: 1px; transition: border-top-color .3s; }
+
 @media (max-width: 1536px) {
 	.inner { padding: 8rem 12rem; }
 	.pd_box { padding: 3rem 6rem; }
