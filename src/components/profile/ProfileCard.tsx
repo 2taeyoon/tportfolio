@@ -8,6 +8,7 @@ export default function ProfileCard() {
 		<div className="profile_card" onMouseMove={handleMouseMove} onMouseLeave={profileHandleMouseLeave}>
 			<div className="profile_image">
 				<Image src={`/images/profile/profile${imageNumber}.jpg`} alt="profile_image" draggable={false} fill
+					sizes="(max-width: 1536px) 28rem, 35rem"
 					style={{ objectFit: "cover" }}
 					onDragStart={(e) => e.preventDefault()}
 					onContextMenu={(e) => e.preventDefault()}
