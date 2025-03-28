@@ -3,6 +3,7 @@ import "@/style/style.css";
 import MainSection from "@/components/layout/MainSection";
 import ProfileSection from "@/components/layout/ProfileSection";
 import SkillSection from "@/components/layout/SkillSection";
+import ProjectSection from "@/components/layout/ProjectSection";
 // import { useEffect } from "react";
 // import gsap from "gsap";
 export default function Home() {
@@ -39,6 +40,7 @@ export default function Home() {
 			<MainSection/>
 			<ProfileSection/>
 			<SkillSection/>
+			<ProjectSection/>
 			<div style={{ height: "100vh", backgroundColor: "blueviolet" }}></div>
 			{/* <div className="grid-container"></div> */}
     </div>
