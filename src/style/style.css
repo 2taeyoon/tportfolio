@@ -5,6 +5,8 @@
 @import "./common.css";
 @import "./main_section.css";
 @import "./profile_section.css";
+@import "./skill_section.css";
+@import "./project_section.css";
 
 :root {
 	--thema: #95BC97;
