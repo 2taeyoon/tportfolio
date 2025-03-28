@@ -173,9 +173,6 @@ export default function MainSection() {
 			<div className="word_wrap">
 				<WordText/>
 			</div>
-			{/* <div className="typewriter_wrap">
-				<Typewriter/>
-			</div> */}
 		<Noise/>
 	</div>
 	)
