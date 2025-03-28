@@ -17,6 +17,7 @@ const useMouseEffect = () => {
   const circleMatrixRef = useRef({ a: 0, b: 1, c: -1, d: 0, e: 1440, f: 0 });
   const rotationRef = useRef(0);
 	const translateRef = useRef({ x: "7%", y: "0%" });
+	const translateRef2 = useRef({ x: "0%", y: "0%" });
 	const lastUpdateTimeRef = useRef(0); // 이미지 변경 시간 제한을 위한 ref
 	const lastBlendModeUpdateRef = useRef(0); // 블렌드 모드 변경 시간 제한을 위한 ref
   
@@ -25,6 +26,7 @@ const useMouseEffect = () => {
   const [circleMatrix, setCircleMatrix] = useState(circleMatrixRef.current);
   const [rotation, setRotation] = useState(rotationRef.current);
 	const [translate, setTranslate] = useState(translateRef.current);
+	const [translate2, setTranslate2] = useState(translateRef.current);
 	const [imageNumber, setImageNumber] = useState(1);
 	const [blendMode, setBlendMode] = useState<CSSProperties['mixBlendMode']>("normal");
 
@@ -38,6 +40,7 @@ const useMouseEffect = () => {
       setCircleMatrix({ ...circleMatrixRef.current });
       setRotation(rotationRef.current);
 			setTranslate({ ...translateRef.current });
+			setTranslate2({ ...translateRef2.current });
 
 			// 다음 프레임에서 updateMouseEffect 다시 실행 (애니메이션 루프)
       animationFrameId = requestAnimationFrame(updateMouseEffect);
@@ -91,6 +94,11 @@ const useMouseEffect = () => {
 			y: (deltaY * 1.5).toFixed(4) + "%" // Y축 비율 보정
 		};
 
+		translateRef2.current = {
+			x: (deltaX * 20).toFixed(4) + "%", // X축 비율 보정
+			y: (deltaY * 15).toFixed(4) + "%" // Y축 비율 보정
+		};
+
 		const now = Date.now();
 
 		// 📌 profile_image 랜덤값으로 변경 (100ms 간격으로만 변경)
@@ -118,6 +126,6 @@ const useMouseEffect = () => {
 	};
 
   // 상태와 함수 반환
-	return { gMatrix, circleMatrix, rotation, translate, imageNumber, blendMode, profileHandleMouseLeave, videoHandleMouseLeave, handleMouseMove, };
+	return { gMatrix, circleMatrix, rotation, translate, translate2, imageNumber, blendMode, profileHandleMouseLeave, videoHandleMouseLeave, handleMouseMove, };
 }
 export default useMouseEffect;
