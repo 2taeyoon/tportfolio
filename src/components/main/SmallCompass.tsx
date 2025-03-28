@@ -14,7 +14,6 @@ export default function SmallCompass({rotation}: { rotation: number}) {
 			<line x1="24.5" y1="24.5" x2="13.5" y2="13.5" stroke="var(--thema)" strokeWidth={3} vectorEffect="non-scaling-stroke" data-svg-origin="19 19" transform="matrix(1,0,0,1,0,0)"/>
 			<line x1="24.5" y1="24.5" x2="35.5" y2="35.5" stroke="var(--thema)" strokeWidth={3} vectorEffect="non-scaling-stroke" data-svg-origin="30 30" transform="matrix(1,0,0,1,0,0)"/>
 			<line x1="24.5" y1="24.5" x2="13.5" y2="35.5" stroke="var(--thema)" strokeWidth={3} vectorEffect="non-scaling-stroke" data-svg-origin="19 30" transform="matrix(1,0,0,1,0,0)"/>
-			{/* <rect x="16.5" y="16.5" width="16" height="16" stroke="var(--thema)" strokeWidth={3} vectorEffect="non-scaling-stroke" data-svg-origin="24.5 24.5" transform="matrix(1,0,0,1,0,0)"/> */}
 		</svg>
 	)
 }
