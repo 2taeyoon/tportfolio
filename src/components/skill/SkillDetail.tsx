@@ -1,4 +1,4 @@
-import { skillItemsData } from "@/data/skillItemdata";
+import { skillItemsData } from "@/data/skillData";
 import { SkillDetailProps } from "@/types/props";
 import SkillDetailImageItem from "./list/SkillDetailImageItem";
 
