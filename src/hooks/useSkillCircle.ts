@@ -1,4 +1,4 @@
-import { skillItemsData } from "@/data/skillItemdata";
+import { skillItemsData } from "@/data/skillData";
 import { useCallback, useRef, useState } from "react";
 
 export function useSkillCircle({setActiveIndex}: {setActiveIndex: React.Dispatch<React.SetStateAction<number>>}){
