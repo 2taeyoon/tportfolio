@@ -17,12 +17,12 @@ export default function ScreenshotGallery({ project, title, images, modalProps, 
         spaceBetween={10}
         freeMode={true}
       >
-        {images.map((screenshot, index) => (
+        {images.map((image, index) => (
           <SwiperSlide key={index}>
             <div className="screenshot_image" onClick={() => onImageClick(index)}>
               <Image 
-                src={screenshot.src} 
-                alt={screenshot.alt} 
+                src={image.src} 
+                alt={image.alt} 
                 draggable={false} 
                 fill
                 sizes="100%"
