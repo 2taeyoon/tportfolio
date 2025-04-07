@@ -24,6 +24,12 @@ export const skillItemsData = [
 		body: "코드 작성 시 변수와 함수에 명확한 타입을 지정하여 에러를 사전에 방지할 수 있습니다. 협업 시에는 코드의 의도를 파악할 수 있어 유지보수가 수월합니다.",
 	},
 	{
+		src: "/images/skill/skill_jquery.png",
+		shadowColors: "#386CCA",
+		title: "jQuery",
+		body: "위젯과 기능을 사용하여 UI를 커스터마이징할 수 있으며 이를 통해 직관적 사용자 인터페이스를 구현할 수 있습니다.",
+	},
+	{
 		src: "/images/skill/skill_scss.png",
 		shadowColors: "#C6177B",
 		title: "SCSS",
