@@ -196,19 +196,19 @@ export const projectData: ProjectCardProps[] = [
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project/yoondesign/screenshot1.jpg",
+					src: "/images/project/yoondesign1.jpg",
 					alt: "screenshot1"
 				},
 				{
-					src: "/images/project/yoondesign/screenshot2.jpg",
+					src: "/images/project/yoondesign2.jpg",
 					alt: "screenshot2"
 				},
 				{
-					src: "/images/project/yoondesign/screenshot3.jpg",
+					src: "/images/project/yoondesign3.jpg",
 					alt: "screenshot3"
 				},
 				{
-					src: "/images/project/yoondesign/screenshot4.jpg",
+					src: "/images/project/yoondesign4.jpg",
 					alt: "screenshot4"
 				},
 			]
@@ -285,23 +285,23 @@ export const projectData: ProjectCardProps[] = [
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project/netmarble/screenshot1.jpg",
+					src: "/images/project/netmarble1.jpg",
 					alt: "screenshot1"
 				},
 				{
-					src: "/images/project/netmarble/screenshot2.jpg",
+					src: "/images/project/netmarble2.jpg",
 					alt: "screenshot2"
 				},
 				{
-					src: "/images/project/netmarble/screenshot3.jpg",
+					src: "/images/project/netmarble3.jpg",
 					alt: "screenshot3"
 				},
 				{
-					src: "/images/project/netmarble/screenshot4.jpg",
+					src: "/images/project/netmarble4.jpg",
 					alt: "screenshot4"
 				},
 				{
-					src: "/images/project/netmarble/screenshot5.jpg",
+					src: "/images/project/netmarble5.jpg",
 					alt: "screenshot5"
 				}
 			]
