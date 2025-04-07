@@ -82,40 +82,40 @@ export const projectData: ProjectCardProps[] = [
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project/mydays/screenshot1.jpg",
-					alt: "screenshot1"
+					src: "/images/project/mydays1.jpg",
+					alt: "mydays1"
 				},
 				{
-					src: "/images/project/mydays/screenshot2.jpg",
-					alt: "screenshot2"
+					src: "/images/project/mydays2.jpg",
+					alt: "mydays2"
 				},
 				{
-					src: "/images/project/mydays/screenshot3.jpg",
-					alt: "screenshot3"
+					src: "/images/project/mydays3.jpg",
+					alt: "mydays3"
 				},
 				{
-					src: "/images/project/mydays/screenshot4.jpg",
-					alt: "screenshot4"
+					src: "/images/project/mydays4.jpg",
+					alt: "mydays4"
 				},
 				{
-					src: "/images/project/mydays/screenshot5.jpg",
-					alt: "screenshot5"
+					src: "/images/project/mydays5.jpg",
+					alt: "mydays5"
 				},
 				{
-					src: "/images/project/mydays/screenshot6.jpg",
-					alt: "screenshot6"
+					src: "/images/project/mydays6.jpg",
+					alt: "mydays6"
 				},
 				{
-					src: "/images/project/mydays/screenshot7.jpg",
-					alt: "screenshot7"
+					src: "/images/project/mydays7.jpg",
+					alt: "mydays7"
 				},
 				{
-					src: "/images/project/mydays/screenshot8.jpg",
-					alt: "screenshot8"
+					src: "/images/project/mydays8.jpg",
+					alt: "mydays8"
 				},
 				{
-					src: "/images/project/mydays/screenshot9.jpg",
-					alt: "screenshot9"
+					src: "/images/project/mydays9.jpg",
+					alt: "mydays9"
 				},
 			]
     },
