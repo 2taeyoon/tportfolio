@@ -1,13 +1,13 @@
 import { SkillListProps } from "@/types/projectProps";
 import Image from 'next/image';
 
-export default function SkillList({ title, images }: SkillListProps) {
+export default function SkillList({ project, title, images }: SkillListProps) {
   return (
     <div className="skill_container">
-      <div className="skill_title" style={{ color: 'var(--black)' }}>{title}</div>
+      <div className="skill_title" style={{ color: project?.fontColor }}>{title}</div>
       <div className="skill_list">
         {images.map((skill, index) => (
-          <div key={index} className="skill_item" style={{ backgroundColor: 'var(--themaDeep)' }}>
+          <div key={index} className="skill_item" style={{ backgroundColor: project?.skillBoxColor }}>
             <div className="skill_icon">
               <Image 
                 src={skill.src} 
@@ -20,7 +20,7 @@ export default function SkillList({ title, images }: SkillListProps) {
                 onContextMenu={(e) => e.preventDefault()}
               />
             </div>
-            <div className="skill_name_text" style={{ color: 'var(--whiteBg)' }}>{skill.name}</div>
+            <div className="skill_name_text" style={{ color: project?.skillFontColor }}>{skill.name}</div>
           </div>
         ))}
       </div>
