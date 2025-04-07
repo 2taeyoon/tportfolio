@@ -1,38 +1,37 @@
-// 기술 스택 타입
-interface TechStack {
+export interface TechStackProps {
+	project?: ProjectCardProps;
   rows: {
-		title: string;
-		items: string[];
-	}[];
+    title: string;
+    items: string[];
+  }[];
 }
 
-// 스킬 이미지 타입
-interface SkillItem {
+export interface SkillListProps {
+	project?: ProjectCardProps;
   title: string;
   images: {
-		src: string;
-		alt: string;
-		name: string;
-	}[];
+    src: string;
+    alt: string;
+    name: string;
+  }[];
 }
 
-// 주요 기능 및 특징 타입
-interface featureItem {
-	title: string;
-	body: string[];
-}
-
-// 스크린샷 타입
-interface ScreenshotItem {
+export interface FeatureListProps {
+	project?: ProjectCardProps;
   title: string;
-	images: {
-		src: string;
-		alt: string;
-	}[];
+  body: string[];
 }
 
-// 링크 타입
-interface ProjectLink {
+export interface ScreenshotProps {
+  title: string;
+  images: {
+    src: string;
+    alt: string;
+  }[];
+}
+
+export interface ProjectLinksProps {
+	project?: ProjectCardProps;
   site?: {
     href: string;
     text: string;
@@ -45,10 +44,42 @@ interface ProjectLink {
 
 // 프로젝트 카드 타입
 export interface ProjectCardProps {
+	title: string;
+	type: string;
+	boxColor: string;
+	fontColor: string;
+	skillBoxColor: string;
+	skillFontColor: string;
+	badgeBoxColor: string;
+	badgeFontColor: string;
+	linkBoxColor: string;
+  techStack: TechStackProps;
+  skills: SkillListProps;
+  features: FeatureListProps;
+  screenshots: ScreenshotProps;
+  links: ProjectLinksProps;
+}
+
+// ProjectCardItem 컴포넌트에서 쓰이는 props
+export interface ProjectCardItemProps {
+	project: ProjectCardProps;
+	index: number;
+}
+
+// ScreenshotGallery 컴포넌트에서 쓰이는 props
+export interface ScreenshotGalleryProps {
+	project: ProjectCardProps;
   title: string;
-  techStack: TechStack;
-  skills: SkillItem;
-  features: featureItem;
-  screenshots: ScreenshotItem;
-  links: ProjectLink;
+  images: {
+    src: string;
+    alt: string;
+  }[];
+  modalProps: {
+    isModalOpen: boolean;
+    currentImageIndex: number;
+    handleCloseModal: () => void;
+    handlePrevImage: () => void;
+    handleNextImage: () => void;
+  };
+  onImageClick: (index: number) => void;
 }
