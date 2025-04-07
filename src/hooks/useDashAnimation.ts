@@ -1,4 +1,4 @@
-import { UseDashAnimationProps } from "@/types/props";
+import { UseDashAnimationProps } from "@/types/mainProps";
 import { useState, useEffect } from 'react';
 
 export function useDashAnimation({ delay = 2000, duration = 2000, intervalTime = 20, startValue = 25, intervalCount = 0 }: UseDashAnimationProps) {
