@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { skillItemsData } from "@/data/skillData";
-import { SkillCircleProps } from "@/types/props";
+import { SkillCircleProps } from "@/types/skillProps";
 import { useSkillCircle } from "@/hooks/useSkillCircle";
 import SkillCircleImageItem from "@/components/skill/list/SkillCircleImageItem";
 

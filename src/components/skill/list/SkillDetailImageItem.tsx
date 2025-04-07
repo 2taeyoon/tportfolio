@@ -1,4 +1,4 @@
-import { SkillDetailImageProps } from "@/types/props";
+import { SkillDetailImageProps } from "@/types/skillProps";
 import Image from "next/image";
 
 export default function SkillDetailImageItem({itemSize, skillItemsData, activeIndex}: SkillDetailImageProps) {

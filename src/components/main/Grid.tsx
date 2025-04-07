@@ -3,7 +3,7 @@
 import { useRegisterHTMLRef } from "@/hooks/useArrayRef";
 import { useTypewriterEffect } from "@/hooks/useTypewriterEffect";
 import { useYPositions } from "@/hooks/useYPositions";
-import { GridProps, GridColumnProps } from "@/types/props";
+import { GridProps, GridColumnProps } from "@/types/mainProps";
 import React, { useRef } from 'react';
 
 // 📌 메인 BgGrid 컴포넌트 START!

@@ -1,7 +1,7 @@
 'use client';
 
 import { useDashAnimation } from "@/hooks/useDashAnimation";
-import { Matrix } from "@/types/props";
+import { Matrix } from "@/types/mainProps";
 
 export default function BigCompass({ gMatrix, circleMatrix }: { gMatrix: Matrix, circleMatrix: Matrix }) {
 	const { dashArray, isVisible } = useDashAnimation({ delay: 2000, duration: 2000, intervalTime: 10, startValue: 100, intervalCount: 10 });

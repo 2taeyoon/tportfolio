@@ -1,4 +1,4 @@
-import { ExperienceItemProps } from "@/types/props";
+import { ExperienceItemProps } from "@/types/profileProps";
 
 export default function ExperienceItem({ title, items, extra, translate }: ExperienceItemProps) {
   return (

@@ -1,5 +1,5 @@
 import { skillItemsData } from "@/data/skillData";
-import { SkillDetailProps } from "@/types/props";
+import { SkillDetailProps } from "@/types/skillProps";
 import SkillDetailImageItem from "./list/SkillDetailImageItem";
 
 export default function SkillDetail({radius, itemSize, activeIndex}: SkillDetailProps) {

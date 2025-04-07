@@ -1,4 +1,4 @@
-import { SkillCircleImageItemProps } from "@/types/props";
+import { SkillCircleImageItemProps } from "@/types/skillProps";
 import Image from "next/image";
 
 export default function SkillImageItem({ items, index, angleStep, isDraggingRef, radius, itemSize, rotation, activeIndex }: SkillCircleImageItemProps) {
