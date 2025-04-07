@@ -4,21 +4,18 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from 'react';
 import Noise from '@/components/common/Noise';
-
-
+import ProjectCard from "../project/ProjectCard";
 
 export default function ProjectSection() {
 	const projectScrollRef = useRef<HTMLDivElement | null>(null); // 스크롤 애니메이션이 적용될 요소
-
 
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
 		const ctx = gsap.context(() => {
-			/*
-			const q = gsap.utils.selector(projectScrollRef.current);
+			//const q = gsap.utils.selector(projectScrollRef.current);
 			//const titleCharRef = q('.my_skill_title .char');
-
+/*
 			const projectScroll = gsap.timeline({
 				scrollTrigger: {
 					trigger: projectScrollRef.current,
@@ -29,8 +26,7 @@ export default function ProjectSection() {
 					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
 			});
-			*/
-
+*/
 			// mainScroll.to(typewriterRefs, {
 			// 	opacity: 0,
 			// 	duration: 2,
@@ -63,7 +59,7 @@ export default function ProjectSection() {
 
   return (
     <div className="project_section section inner" ref={projectScrollRef}>
-
+			<ProjectCard/>
       <Noise />
     </div>
   );
