@@ -1,3 +1,5 @@
+import { RefObject } from "react";
+
 export interface SlotMachineTextProps {
 	firstText: string;
 	secondText: string;
