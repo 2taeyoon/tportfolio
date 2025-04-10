@@ -45,6 +45,7 @@ export interface ProjectLinksProps {
 // 프로젝트 카드 타입
 export interface ProjectCardProps {
 	title: string;
+	className: string;
 	type: string;
 	boxColor: string;
 	fontColor: string;
@@ -53,6 +54,7 @@ export interface ProjectCardProps {
 	badgeBoxColor: string;
 	badgeFontColor: string;
 	linkBoxColor: string;
+	linkFontColor: string;
   techStack: TechStackProps;
   skills: SkillListProps;
   features: FeatureListProps;
