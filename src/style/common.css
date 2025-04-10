@@ -21,9 +21,9 @@
 
 .skill_section .wave svg { position: absolute; bottom: 0; width: 150vw; left: 0; height: 5vmin; }
 
-.main_section .wave .parallax use:nth-child(1) { fill: #95bc97; }
-.main_section .wave .parallax use:nth-child(2) { fill: #95bc97d1; }
-.main_section .wave .parallax use:nth-child(3) { fill: #95bc97a3; }
+.main_section .wave .parallax use:nth-child(1) { fill: #87BD89; }
+.main_section .wave .parallax use:nth-child(2) { fill: #87BD89d1; }
+.main_section .wave .parallax use:nth-child(3) { fill: #87BD89a3; }
 
 .skill_section .wave .parallax use:nth-child(1) { fill: #99a06c; }
 .skill_section .wave .parallax use:nth-child(2) { fill: #99a06cd1; }
