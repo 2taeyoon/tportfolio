@@ -9,8 +9,27 @@ import { ProjectCardItemProps } from "@/types/projectProps";
 export default function ProjectCardItem({ project, index }: ProjectCardItemProps) {
 	const { isModalOpen, currentImageIndex, handleImageClick, handlePrevImage, handleNextImage, handleCloseModal } = useImageModal();
 
+	const getCardClass = (baseClass: string) => {
+		if (project?.className === 'niweb'){
+      return `${baseClass} niweb`;
+    }
+    if (project?.className === 'tycode'){
+      return `${baseClass} tycode`;
+    }
+    if (project?.className === 'mydays'){
+      return `${baseClass} mydays`;
+    }
+		if (project?.className === 'yoondesign'){
+      return `${baseClass} yoondesign`;
+    }
+		if (project?.className === 'netmarble'){
+      return `${baseClass} netmarble`;
+    }
+    return baseClass;
+  };
+
 	return (
-		<div key={index} className="project_card" style={{ backgroundColor: project.boxColor }}>
+		<div key={index} className={getCardClass('project_card')} style={{ backgroundColor: project.boxColor }}>
 			<div className="project_card_title" style={{ color: project.fontColor }}>{project.title}</div>
 			<div className="project_card_type" style={{ backgroundColor: project.badgeBoxColor, color: project.badgeFontColor }}>{project.type}</div>
 			<TechStack project={project} rows={project.techStack.rows}/>
