@@ -5,29 +5,32 @@ export default function ProjectLinks({ project, site, github }: ProjectLinksProp
   if (!site && !github) return null;
 
   const getLinkClass = (baseClass: string) => {
-    if (project?.linkBoxColor === 'var(--thema)') {
-      return `${baseClass} thema`;
+		const widthClass = site && github ? 'width49' : 'width100'
+		let themaClass = '';
+
+    if (project?.linkBoxColor === 'var(--whiteDE)') {
+      themaClass = 'whiteDE';
+    } else if (project?.linkBoxColor === 'var(--themaDeep)') {
+      themaClass = 'themaDeep';
+    } else if (project?.linkBoxColor === 'var(--thema)') {
+      themaClass = 'thema';
+    } else if (project?.linkBoxColor === 'var(--black333)') {
+      themaClass = 'black333';
     }
-    if (project?.linkBoxColor === 'var(--themaDeep)') {
-      return `${baseClass} themaDeep`;
-    }
-		if (project?.linkBoxColor === 'var(--whiteDE)') {
-      return `${baseClass} whiteDE`;
-    }
-    return baseClass;
+    return `${baseClass} ${themaClass} ${widthClass}`;
   };
 
   return (
     <div className="link_shortcut">
       {site && (
         <Link href={site.href} className={getLinkClass('site')} target="_blank" rel="noopener noreferrer"
-					style={{ backgroundColor: project?.linkBoxColor, color: project?.fontColor, }}>
+					style={{ backgroundColor: project?.linkBoxColor, color: project?.linkFontColor, }}>
           {site.text}
         </Link>
       )}
       {github && (
         <Link href={github.href} className={getLinkClass('github')} target="_blank" rel="noopener noreferrer"
-					style={{ backgroundColor: project?.linkBoxColor, color: project?.fontColor, }}>
+					style={{ backgroundColor: project?.linkBoxColor, color: project?.linkFontColor, }}>
           {github.text}
         </Link>
       )}
