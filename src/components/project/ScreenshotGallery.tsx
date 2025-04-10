@@ -26,7 +26,7 @@ export default function ScreenshotGallery({ project, title, images, modalProps, 
                 draggable={false} 
                 fill
                 sizes="100%"
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'cover', objectPosition: 'top' }}
                 onDragStart={(e) => e.preventDefault()}
                 onContextMenu={(e) => e.preventDefault()}
               />
