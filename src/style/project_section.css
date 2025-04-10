@@ -30,6 +30,8 @@
 
 .project_card_wrap .project_card .link_shortcut { display: flex ; justify-content: space-between; align-items: center; }
 .project_card_wrap .project_card .link_shortcut a { display: flex; align-items: center; justify-content: center; position: relative;	width: 49%;	padding: 1.2rem 3.2rem;	overflow: hidden; border-radius: 1.2rem; will-change: color, font-weight, transform, opacity, background-color; }
+.project_card_wrap .project_card .link_shortcut a.width49 { width: 49%; }
+.project_card_wrap .project_card .link_shortcut a.width100 { width: 100%; }
 .project_card_wrap .project_card .link_shortcut a:hover { transition: opacity 0.3s ease, transform 0.3s ease, ease, color 1s ease, font-weight 1s ease, background-color 1s ease 0.75s; }
 .project_card_wrap .project_card .link_shortcut a:before { transform: translate3d(-10%, 15%, 0) rotate(330deg); }
 .project_card_wrap .project_card .link_shortcut a:after { transform: translate3d(10%, 15%, 0) rotate(0deg); }
@@ -41,17 +43,21 @@
 .project_card_wrap .project_card .link_shortcut a:hover:after { transition: transform 2s ease, opacity 0.2s ease; opacity: 1; }
 
 /* 테마별 호버 효과 START!! */
+.project_card_wrap .project_card .link_shortcut .whiteDE:hover { background-color: var(--themaDark) !important; color: var(--whiteEB) !important; font-weight: bold !important; }
+.project_card_wrap .project_card .link_shortcut a.whiteDE:before { background: linear-gradient(25deg, var(--themaDark), #9638d800); }
+.project_card_wrap .project_card .link_shortcut a.whiteDE:after { background: linear-gradient(70deg, var(--themaDark), #7c38d800); }
+
 .project_card_wrap .project_card .link_shortcut .thema:hover { background-color: var(--themaDeep) !important; color: var(--whiteEB) !important; font-weight: bold !important; }
 .project_card_wrap .project_card .link_shortcut a.thema:before { background: linear-gradient(25deg, var(--themaDeep), #9638d800); }
 .project_card_wrap .project_card .link_shortcut a.thema:after { background: linear-gradient(70deg, var(--themaDeep), #7c38d800); }
 
-.project_card_wrap .project_card .link_shortcut .themaDeep:hover { background-color: var(--themaSub) !important; color: var(--black) !important; font-weight: bold !important; }
-.project_card_wrap .project_card .link_shortcut a.themaDeep:before { background: linear-gradient(25deg, var(--themaSub), #9638d800); }
-.project_card_wrap .project_card .link_shortcut a.themaDeep:after { background: linear-gradient(70deg, var(--themaSub), #7c38d800); }
+.project_card_wrap .project_card .link_shortcut .themaDeep:hover { background-color: var(--thema) !important; color: var(--black) !important; font-weight: bold !important; }
+.project_card_wrap .project_card .link_shortcut a.themaDeep:before { background: linear-gradient(25deg, var(--thema), #9638d800); }
+.project_card_wrap .project_card .link_shortcut a.themaDeep:after { background: linear-gradient(70deg, var(--thema), #7c38d800); }
 
-.project_card_wrap .project_card .link_shortcut .whiteDE:hover { background-color: var(--themaDark) !important; color: var(--whiteEB) !important; font-weight: bold !important; }
-.project_card_wrap .project_card .link_shortcut a.whiteDE:before { background: linear-gradient(25deg, var(--themaDark), #9638d800); }
-.project_card_wrap .project_card .link_shortcut a.whiteDE:after { background: linear-gradient(70deg, var(--themaDark), #7c38d800); }
+.project_card_wrap .project_card .link_shortcut .black333:hover { background-color: var(--black999) !important; color: var(--whiteEB) !important; font-weight: bold !important; }
+.project_card_wrap .project_card .link_shortcut a.black333:before { background: linear-gradient(25deg, var(--black999), #9638d800); }
+.project_card_wrap .project_card .link_shortcut a.black333:after { background: linear-gradient(70deg, var(--black999), #7c38d800); }
 /* 테마별 호버 효과 END!! */
 
 
