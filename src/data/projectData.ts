@@ -1,19 +1,19 @@
-import { ProjectCardProps } from "@/types/projectProps";
+import { ProjectDetailProps } from "@/types/projectProps";
 
 // 프로젝트 데이터 배열 START!!
-export const projectData: ProjectCardProps[] = [
+export const projectData: ProjectDetailProps[] = [
 	{
-    title: "T Portfolio",
-		className: "tportfolio",
+    title: "TY Portfolio",
+		className: "typortfolio",
 		type: "개인",
-		boxColor: "var(--black)",
-		fontColor: "var(--whiteDE)",
-		skillBoxColor: "var(--black333)",
-		skillFontColor: "var(--whiteEB)",
-		badgeBoxColor: "var(--black333)",
-		badgeFontColor: "var(--whiteEB)",
-		linkBoxColor: "var(--black333)",
-		linkFontColor: "var(--whiteEB)",
+		boxColor: "var(--thema)",
+		fontColor: "var(--black)",
+		skillBoxColor: "var(--whiteDE)",
+		skillFontColor: "var(--black)",
+		badgeBoxColor: "var(--whiteDE)",
+		badgeFontColor: "var(--black)",
+		linkBoxColor: "var(--whiteDE)",
+		linkFontColor: "var(--black)",
     techStack: {
       rows: [
         {
@@ -31,6 +31,99 @@ export const projectData: ProjectCardProps[] = [
         {
           title: "라이브러리",
           items: ["Gsap", "Swiper"]
+        },
+				{
+          title: "기여도",
+          items: ["전체 100%"]
+        }
+      ]
+    },
+    skills: {
+			title: "사용 기술",
+			images: [
+				{
+					src: "/images/skill/skill_html.png",
+					alt: "skill_html",
+					name: "HTML"
+				},
+				{
+					src: "/images/skill/skill_css.png",
+					alt: "skill_css",
+					name: "CSS"
+				},
+				{
+					src: "/images/skill/skill_javascript.png",
+					alt: "skill_javascript",
+					name: "JavaScript"
+				},
+				{
+					src: "/images/skill/skill_typescript.png",
+					alt: "skill_typescript",
+					name: "TypeScript"
+				},
+				{
+					src: "/images/skill/skill_nextjs.png",
+					alt: "skill_nextjs",
+					name: "NextJS"
+				},
+			]
+		},
+    features: {
+			title: "프로젝트 설명",
+			body: [
+				"프로젝트는 NextJS 기반의 반응형 SPA 포트폴리오 웹사이트로, 자기소개, 기술 스택, 프로젝트, 경험 등 개발자의 역량을 시각적으로 표현하기 위해 제작되었습니다.",
+				"다양한 애니메이션 효과(스크롤 트리거, 텍스트 타이핑, 키프레임 효과 등)와 함께, SVG 일러스트 및 커스텀 레이아웃 구성요소(Wave, RadialGradient, ShapeQuote 등)를 통해 감각적인 사용자 경험을 제공합니다. 또한 JSON 기반의 데이터 구조를 활용하여 프로젝트 및 기술 스택 정보를 자동 렌더링하여 유지보수에 용이하도록 하였습니다.",
+			],
+		},
+    screenshots: {
+			title: "스크린샷",
+			images: [
+				{
+					src: "/images/project/niweb1.jpg",
+					alt: "niweb1"
+				},
+			]
+    },
+    links: {
+      site: {
+        href: "https://typortfolio.vercel.app/",
+        text: "사이트"
+      },
+      github: {
+        href: "https://github.com/2taeyoon/typortfolio",
+        text: "깃허브"
+      }
+    }
+  },
+	{
+    title: "2taeyoon",
+		className: "2taeyoon",
+		type: "개인",
+		boxColor: "var(--black)",
+		fontColor: "var(--whiteDE)",
+		skillBoxColor: "var(--black333)",
+		skillFontColor: "var(--whiteEB)",
+		badgeBoxColor: "var(--black333)",
+		badgeFontColor: "var(--whiteEB)",
+		linkBoxColor: "var(--black333)",
+		linkFontColor: "var(--whiteEB)",
+    techStack: {
+      rows: [
+        {
+          title: "디바이스",
+          items: ["반응형"]
+        },
+				{
+          title: "프레임워크",
+          items: ["NextJS"]
+        },
+        {
+          title: "개발 언어",
+          items: ["TypeScript"]
+        },
+        {
+          title: "라이브러리",
+          items: ["Swiper"]
         },
 				{
           title: "기여도",
@@ -71,39 +164,48 @@ export const projectData: ProjectCardProps[] = [
 					alt: "skill_nextjs",
 					name: "NextJS"
 				},
+				{
+					src: "/images/skill/skill_markdown.png",
+					alt: "skill_markdown",
+					name: "Markdown"
+				},
 			]
 		},
     features: {
 			title: "프로젝트 설명",
 			body: [
-				"엔아이 자사웹 사이트는 Next.js 기반으로 제작된 반응형 공식 웹사이트로 주식회사 엔아이의 브랜딩과 비전, 마케팅 역량을 소개하는 마케팅 중심의 기업 사이트입니다.",
-			],
-		},
-		contribution: {
-			title: "기여도",
-			body: [
-				"디자인 100%: 웹사이트 UI/UX 전체 디자인, 반응형 구조 설계, 스타일 가이드 적용 등",
-				"프론트 100%: Next.js 구조 설계, Swiper 슬라이더, AOS 애니메이션, TailwindCSS 기반 반응형 구현, 카카오 지도 연동, Channel Talk 연동 등 모든 페이지 및 주요 인터랙션 구현",
-				"배포 및 테스트 100%: Vercel 배포, 기기별 크로스브라우징 테스트 및 버그 수정 등",
-				"백엔드 연동 제외: 이메일 전송 기능인 Nodemailer + MongoDB 연동은 타 개발자 담당",
+				"2taeyoon은 퍼블리셔 및 프론트엔드 개발자로서의 학습 및 프로젝트 결과물을 아카이빙한 개인 포트폴리오 웹사이트로 디자인 스터디, 퍼블리싱 스터디, 기타 기술 정리 등 실전 기반의 실습 내용과 프로젝트 사례를 분류해 보여주는 콘텐츠 중심형의 사이트입니다.",
+				"App Router 기반으로 /ds, /ps, /es 경로별 스터디 구분과 JSON 기반 콘텐츠 자동 로딩, 디자인 중심의 Markdown 구성, 카드형 리스트 및 페이지네이션, SVG 기반 기술 스택 시각화, 통일된 Markdown 스타일링 적용을 구현한 프로젝트입니다.",
 			],
 		},
     screenshots: {
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project/niweb1.jpg",
-					alt: "niweb1"
+					src: "/images/project/2taeyoon1.jpg",
+					alt: "2taeyoon1"
+				},
+				{
+					src: "/images/project/2taeyoon2.jpg",
+					alt: "2taeyoon2"
+				},
+				{
+					src: "/images/project/2taeyoon3.jpg",
+					alt: "2taeyoon3"
+				},
+				{
+					src: "/images/project/2taeyoon4.jpg",
+					alt: "2taeyoon4"
 				},
 			]
     },
     links: {
       site: {
-        href: "https://2taeyoon.github.io/task/netmable/",
+        href: "https://www.2taeyoon.com/",
         text: "사이트"
       },
       github: {
-        href: "https://github.com/2taeyoon/task/tree/master/netmable",
+        href: "https://github.com/2taeyoon/tyblog",
         text: "깃허브"
       }
     }
@@ -182,7 +284,7 @@ export const projectData: ProjectCardProps[] = [
     features: {
 			title: "프로젝트 개요",
 			body: [
-				"KRMX는 골프장 회원권 매매 중개 전문 플랫폼으로, 회원권 시세 정보 제공, 매매 등록 및 관리, 관심 리스트, 1:1 문의 기능 등 거래 중심 기능과 함께 회원가입부터 탈퇴까지의 전반적인 회원 프로세스를 포함한 기업형 B2C 웹서비스입니다. Next.js 기반으로 설계된 이 프로젝트는 관리자 없이 사용자가 직접 회원권을 등록하고 매매할 수 있는 구조로, 직관적인 UI/UX와 실시간 시세 차트, 단계별 거래 절차 안내 등을 제공합니다.",
+				"KRMX는 골프장 회원권 매매 중개 전문 플랫폼으로, 회원권 시세 정보 제공, 매매 등록 및 관리, 관심 리스트, 1:1 문의 기능 등 거래 중심 기능과 함께 회원가입부터 탈퇴까지의 전반적인 회원 프로세스를 포함한 기업형 B2C 웹서비스입니다. NextJS 기반으로 설계된 이 프로젝트는 관리자 없이 사용자가 직접 회원권을 등록하고 매매할 수 있는 구조로, 직관적인 UI/UX와 실시간 시세 차트, 단계별 거래 절차 안내 등을 제공합니다.",
 			],
 		},
 		contribution: {
@@ -482,14 +584,14 @@ export const projectData: ProjectCardProps[] = [
     features: {
 			title: "프로젝트 설명",
 			body: [
-				"엔아이 자사웹 사이트는 Next.js 기반으로 제작된 반응형 공식 웹사이트로 주식회사 엔아이의 브랜딩과 비전, 마케팅 역량을 소개하는 마케팅 중심의 기업 사이트입니다.",
+				"엔아이 자사웹 사이트는 NextJS 기반으로 제작된 반응형 공식 웹사이트로 주식회사 엔아이의 브랜딩과 비전, 마케팅 역량을 소개하는 마케팅 중심의 기업 사이트입니다.",
 			],
 		},
 		contribution: {
 			title: "기여도",
 			body: [
 				"디자인 100%: 웹사이트 UI/UX 전체 디자인, 반응형 구조 설계, 스타일 가이드 적용 등",
-				"프론트 100%: Next.js 구조 설계, Swiper 슬라이더, AOS 애니메이션, TailwindCSS 기반 반응형 구현, 카카오 지도 연동, Channel Talk 연동 등 모든 페이지 및 주요 인터랙션 구현",
+				"프론트 100%: NextJS 구조 설계, Swiper 슬라이더, AOS 애니메이션, TailwindCSS 기반 반응형 구현, 카카오 지도 연동, Channel Talk 연동 등 모든 페이지 및 주요 인터랙션 구현",
 				"배포 및 테스트 100%: Vercel 배포, 기기별 크로스브라우징 테스트 및 버그 수정 등",
 				"백엔드 연동 제외: 이메일 전송 기능인 Nodemailer + MongoDB 연동은 타 개발자 담당",
 			],
