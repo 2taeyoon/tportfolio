@@ -4,7 +4,7 @@ import "@/style/global.css";
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
-  title: "T Portfolio",
+  title: "TY Portfolio",
   description: "2taeyoon의 포트폴리오 페이지입니다.",
 };
 
