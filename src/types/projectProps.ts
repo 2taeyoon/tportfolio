@@ -1,5 +1,5 @@
 export interface TechStackProps {
-	project?: ProjectCardProps;
+	project?: ProjectDetailProps;
   rows: {
     title: string;
     items: string[];
@@ -7,7 +7,7 @@ export interface TechStackProps {
 }
 
 export interface SkillListProps {
-	project?: ProjectCardProps;
+	project?: ProjectDetailProps;
   title: string;
   images: {
     src: string;
@@ -17,13 +17,13 @@ export interface SkillListProps {
 }
 
 export interface FeatureListProps {
-	project?: ProjectCardProps;
+	project?: ProjectDetailProps;
   title: string;
   body: string[];
 }
 
 export interface ContributionProps {
-	project?: ProjectCardProps;
+	project?: ProjectDetailProps;
   title: string;
   body: string[];
 }
@@ -37,7 +37,7 @@ export interface ScreenshotProps {
 }
 
 export interface ProjectLinksProps {
-	project?: ProjectCardProps;
+	project?: ProjectDetailProps;
   site?: {
     href: string;
     text: string;
@@ -49,7 +49,7 @@ export interface ProjectLinksProps {
 }
 
 // 프로젝트 카드 타입
-export interface ProjectCardProps {
+export interface ProjectDetailProps {
 	title: string;
 	className: string;
 	type: string;
@@ -69,15 +69,18 @@ export interface ProjectCardProps {
   links?: ProjectLinksProps;
 }
 
-// ProjectCardItem 컴포넌트에서 쓰이는 props
-export interface ProjectCardItemProps {
-	project: ProjectCardProps;
-	index: number;
+// ProjectDetailCard와 DescriptionList 컴포넌트에서 쓰이는 props
+export interface ProjectDetailCardProps {
+  project: ProjectDetailProps;
+  index?: number;
+	title?: string;
+  body?: string[];
+  listType?: 'features' | 'contributions';
 }
 
 // ScreenshotGallery 컴포넌트에서 쓰이는 props
 export interface ScreenshotGalleryProps {
-	project: ProjectCardProps;
+	project: ProjectDetailProps;
   title: string;
   images: {
     src: string;
