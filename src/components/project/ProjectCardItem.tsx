@@ -5,6 +5,7 @@ import FeatureList from "@/components/project/FeatureList";
 import ScreenshotGallery from "@/components/project/ScreenshotGallery";
 import ProjectLinks from "@/components/project/ProjectLinks";
 import { ProjectCardItemProps } from "@/types/projectProps";
+import ContributionList from "./ContributionList";
 
 export default function ProjectCardItem({ project, index }: ProjectCardItemProps) {
 	const { isModalOpen, currentImageIndex, handleImageClick, handlePrevImage, handleNextImage, handleCloseModal } = useImageModal();
@@ -34,12 +35,15 @@ export default function ProjectCardItem({ project, index }: ProjectCardItemProps
 			<div className="project_card_type" style={{ backgroundColor: project.badgeBoxColor, color: project.badgeFontColor }}>{project.type}</div>
 			<TechStack project={project} rows={project.techStack.rows}/>
 			<SkillList project={project} title={project.skills.title} images={project.skills.images}/>
-			<FeatureList project={project} title={project.features.title} body={project.features.body}/>
+			<FeatureList project={project} title={project.features.title || ''} body={project.features.body || []}/>
+			{project.contribution && (
+				<ContributionList project={project} title={project.contribution.title || ''} body={project.contribution.body || []}/>
+			)}
 			<ScreenshotGallery project={project} title={project.screenshots.title} images={project.screenshots.images}
 				modalProps={{ isModalOpen, currentImageIndex, handleCloseModal, handlePrevImage, handleNextImage }}
 				onImageClick={handleImageClick}
 			/>
-			<ProjectLinks project={project} site={project.links.site} github={project.links.github}/>
+			<ProjectLinks project={project} site={project.links?.site} github={project.links?.github}/>
 		</div>
 	)
 }
