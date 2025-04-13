@@ -1,6 +1,6 @@
 .project_section { background-color: var(--themaSubDark); }
 
-.project_card_wrap { display: grid ; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: start; }
+.project_card_wrap { display: grid ; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: center; }
 .project_card_wrap .project_card { position: relative; padding: 4rem 6rem; border-radius: 1.2rem; overflow: hidden; }
 
 .project_card_wrap .project_card .project_card_title { margin-bottom: 1.2rem; font-size: 40px; font-weight: bold; font-family: "Gridular", "Galmuri11", "Pretendard", "Malgun Gothic", Arial, sans-serif; }
@@ -20,6 +20,12 @@
 .project_card_wrap .project_card .features_container .features_title { margin-bottom: 1.2rem; font-size: 1.6rem; font-weight: bold; }
 .project_card_wrap .project_card .features_container .features .features_item { font-size: 1.4rem; line-height: 180%; }
 .project_card_wrap .project_card .features_container .features .features_item:not(:last-child) { margin-bottom: 1.2rem; }
+
+.project_card_wrap .project_card .contributions_container { margin-bottom: 2rem; }
+.project_card_wrap .project_card .contributions_container .contributions_title { margin-bottom: 1.2rem; font-size: 1.6rem; font-weight: bold; }
+.project_card_wrap .project_card .contributions_container .contributions { padding-left: 1.6rem; list-style: disc; }
+.project_card_wrap .project_card .contributions_container .contributions .contributions_item { font-size: 1.4rem; line-height: 180%; }
+/* .project_card_wrap .project_card .contributions_container .contributions .contributions_item:not(:last-child) { margin-bottom: 1.2rem; } */
 
 .project_card_wrap .project_card .screenshot_container { margin-bottom: 2rem; }
 .project_card_wrap .project_card .screenshot_container .screenshot_title { margin-bottom: 1.2rem; font-size: 1.6rem; font-weight: bold; }
