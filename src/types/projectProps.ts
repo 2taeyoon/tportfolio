@@ -22,6 +22,12 @@ export interface FeatureListProps {
   body: string[];
 }
 
+export interface ContributionProps {
+	project?: ProjectCardProps;
+  title: string;
+  body: string[];
+}
+
 export interface ScreenshotProps {
   title: string;
   images: {
@@ -58,8 +64,9 @@ export interface ProjectCardProps {
   techStack: TechStackProps;
   skills: SkillListProps;
   features: FeatureListProps;
+	contribution?: ContributionProps;
   screenshots: ScreenshotProps;
-  links: ProjectLinksProps;
+  links?: ProjectLinksProps;
 }
 
 // ProjectCardItem 컴포넌트에서 쓰이는 props
