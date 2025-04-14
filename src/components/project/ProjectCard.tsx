@@ -1,15 +1,30 @@
-import 'swiper/css';
-import 'swiper/css/pagination';
+import { useImageModal } from "@/hooks/useImageModal";
+import TechStack from "@/components/project/TechStack";
+import SkillList from "@/components/project/SkillList";
+import ScreenshotGallery from "@/components/project/ScreenshotGallery";
+import ProjectLinks from "@/components/project/ProjectLinks";
+import { ProjectCardProps } from "@/types/projectProps";
+import DescriptionList from "@/components/project/DescriptionList";
+import getClassName from "@/utils/getClassName";
 
-import { projectData } from "@/data/projectData";
-import ProjectDetailCard from "@/components/project/ProjectDetailCard";
+export default function ProjectCard({ project, index }: ProjectCardProps) {
+	const { isModalOpen, currentImageIndex, handleImageClick, handlePrevImage, handleNextImage, handleCloseModal } = useImageModal();
 
-export default function ProjectCard() {
 	return (
-		<div className="project_card_wrap">
-			{projectData.map((project, index) => (
-				<ProjectDetailCard key={index} index={index} project={project}/>
-			))}
+		<div key={index} className={getClassName('project_card', project)} style={{ backgroundColor: project.boxColor }}>
+			<div className="project_card_title" style={{ color: project.fontColor }}>{project.title}</div>
+			<div className="project_card_type" style={{ backgroundColor: project.badgeBoxColor, color: project.badgeFontColor }}>{project.type}</div>
+			<TechStack project={project} rows={project.techStack.rows}/>
+			<SkillList project={project} title={project.skills.title} images={project.skills.images}/>
+			<DescriptionList project={project} title={project.features.title || ''} body={project.features.body || []} listType="features"/>
+			{project.contribution && (
+				<DescriptionList project={project} title={project.contribution.title || ''} body={project.contribution.body || []} listType="contributions"/>
+			)}
+			<ScreenshotGallery project={project} title={project.screenshots.title} images={project.screenshots.images}
+				modalProps={{ isModalOpen, currentImageIndex, handleCloseModal, handlePrevImage, handleNextImage }}
+				onImageClick={handleImageClick}
+			/>
+			<ProjectLinks project={project} site={project.links?.site} github={project.links?.github}/>
 		</div>
 	)
 }
