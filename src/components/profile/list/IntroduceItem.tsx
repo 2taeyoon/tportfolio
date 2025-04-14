@@ -1,4 +1,4 @@
-import { spaceTextSplit } from "@/util/textSplit";
+import { spaceTextSplit } from "@/utils/textSplit";
 
 export default function IntroduceItem({ question, answer }: { question: string, answer: string }) {
   return (
