@@ -1,7 +1,7 @@
 .profile_section { background-color: var(--thema); padding: 12rem 16rem 0; transition: background-color .3s; }
 
 .profile_title { display: flex; position: absolute; top: 1rem; left: 0rem; z-index: var(--z10); mix-blend-mode: luminosity; }
-.profile_title .profile_title_span { visibility: hidden; transform: rotate(-150deg); margin: 0 4rem; color: var(--themaDark); font-size: 14.4rem; font-weight: bold; font-family: "Gridular", "Galmuri11", "Pretendard", "Malgun Gothic", Arial, sans-serif; user-select: none; }
+.profile_title .char { visibility: hidden; transform: rotate(-150deg); margin: 0 4rem; color: var(--themaDark); font-size: 14.4rem; font-weight: bold; user-select: none; }
 .profile_wrap { display: flex; flex-direction: column; background-color: var(--themaSub); transition: background-color .3s; }
 
 .profile_wrap .video_wrap { position: relative; padding: 0 4rem; }
