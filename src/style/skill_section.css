@@ -11,11 +11,11 @@
 .skill_circle_wrap .skill_detail_wrap .skill_detail .skill_detail_image { position: relative; }
 .skill_circle_wrap .skill_detail_wrap .skill_detail .skill_detail_image img { user-select: none; }
 .skill_circle_wrap .skill_detail_wrap .skill_detail .skill_detail_text { display: flex; flex-direction: column; width: 50%; }
-.skill_circle_wrap .skill_detail_wrap .skill_detail .skill_detail_text .skill_detail_title { color: var(--white); font-size: 3.2rem; font-weight: 700; font-family: "Gridular", "Galmuri11", "Pretendard", "Malgun Gothic", Arial, sans-serif; user-select: none; }
+.skill_circle_wrap .skill_detail_wrap .skill_detail .skill_detail_text .skill_detail_title { color: var(--white); font-size: 3.2rem; font-weight: 700; user-select: none; }
 .skill_circle_wrap .skill_detail_wrap .skill_detail .skill_detail_text .skill_detail_body { color: var(--whiteEB); font-size: 1.6rem; user-select: none; }
 
 .my_skill_wrap .my_skill_title { display: flex; flex-wrap: wrap; white-space: pre-wrap; }
-.my_skill_wrap .my_skill_title .char { display: inline-block; transform: translateY(100%) skewY(10deg); color: var(--themaSub); font-size: 14.4rem; font-weight: 700; font-family: "Gridular", "Galmuri11", "Pretendard", "Malgun Gothic", Arial, sans-serif; user-select: none; }
+.my_skill_wrap .my_skill_title .char { display: inline-block; transform: translateY(100%) skewY(10deg); color: var(--themaSub); font-size: 14.4rem; font-weight: 700; user-select: none; }
 .my_skill_wrap .my_skill_body { display: flex; flex-wrap: wrap; white-space: pre-wrap; }
 .my_skill_wrap .my_skill_body .char { display: inline-block; transform: translateY(100%) skewY(3deg); color: var(--whiteEB); font-size: 1.8rem; user-select: none; }
 
