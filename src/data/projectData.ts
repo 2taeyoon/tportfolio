@@ -1,7 +1,7 @@
-import { ProjectDetailProps } from "@/types/projectProps";
+import { ProjectDataType } from "@/types/projectProps";
 
 // 프로젝트 데이터 배열 START!!
-export const projectData: ProjectDetailProps[] = [
+export const projectData: ProjectDataType[] = [
 	{
     title: "TY Portfolio",
 		className: "typortfolio",
