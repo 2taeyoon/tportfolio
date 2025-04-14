@@ -28,7 +28,7 @@ time, mark, audio, video, textarea, input, button {
 	letter-spacing: -0.5px;
 	font-size: 1.6rem;
   font-weight: 400;
-  font-family: "Galmuri11", "Gridular", "Pretendard", "Malgun Gothic", Arial, sans-serif;
+  font-family: "Gridular", "Galmuri11", "Pretendard", "Malgun Gothic", Arial, sans-serif;
 }
 
 /* 1.6rem = 16px */
