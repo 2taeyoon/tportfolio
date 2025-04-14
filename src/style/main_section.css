@@ -3,7 +3,7 @@
 .slot_machine_text { display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; z-index: var(--z50); height: 100svh; padding-bottom: 10rem; }
 .slot_machine_text .title_wrap { display: flex; flex-direction: column; align-items: center; }
 .slot_machine_text .title_wrap .title_row { display: flex; }
-.slot_machine_text .title_wrap .title_row .text { color: var(--thema); line-height: 100%; text-align: center; font-size: 7.2rem; font-family: 'Gridular', 'Malgun Gothic', Arial, sans-serif; user-select: none; }
+.slot_machine_text .title_wrap .title_row .text { color: var(--thema); line-height: 100%; text-align: center; font-size: 7.2rem; user-select: none; }
 
 .big_compass { position: absolute; inset: 0; z-index: var(--z10); }
 .big_compass svg { display: block; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.4; }
@@ -16,7 +16,7 @@
 .grid_wrap .grid { display: flex; justify-content: space-between; gap: 1rem; height: 100%; padding: 0 12rem 0; }
 .grid_wrap .grid .grid_col { display: flex; flex-direction: column; width: 4.5rem; }
 .grid_wrap .grid .grid_col .grid_list .grid_item { padding-top: 3rem; }
-.grid_wrap .grid .grid_col .grid_list .grid_px { color: var(--thema); opacity: 0.25; font-size: 1.4rem; font-family: 'Gridular', 'Malgun Gothic', Arial, sans-serif; user-select: none; }
+.grid_wrap .grid .grid_col .grid_list .grid_px { color: var(--thema); opacity: 0.25; font-size: 1.4rem; user-select: none; }
 
 .grid_wrap .grid .typewriter .typewriter_row { display: flex ; flex-direction: column; align-items: center; width: 18rem; }
 .grid_wrap .grid .typewriter .typewriter_row.row1 { gap: 20rem; padding-top: 20rem; }
@@ -25,7 +25,7 @@
 .grid_wrap .grid .typewriter .typewriter_row.row4 { gap: 25rem; padding-top: 15rem; }
 .grid_wrap .grid .typewriter .typewriter_row.row5 { gap: 30rem; padding-top: 20rem; }
 .grid_wrap .grid .typewriter .typewriter_row.row5 .text_scroll_down span { display: inline-block; }
-.grid_wrap .grid .typewriter .typewriter_row .text span { margin: 0 0.2rem 0 0; color: var(--thema); font-size: 1.8rem; font-family: 'Galmuri11', 'Malgun Gothic', Arial, sans-serif;  }
+.grid_wrap .grid .typewriter .typewriter_row .text span { margin: 0 0.2rem 0 0; color: var(--thema); font-size: 1.8rem; }
 
 .word_wrap { display: flex; align-items: flex-end; justify-content: center; gap: 3rem; position: relative; z-index: var(--z50); width: 100vw; height: 33svh; padding: 0 8rem 0; margin-top: calc(100svh - 33svh); }
 .word_wrap .word_p, .word_wrap .word_u, .word_wrap .word_b, .word_wrap .word_l, .word_wrap .word_i,
