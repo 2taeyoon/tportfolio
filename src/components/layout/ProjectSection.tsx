@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from 'react';
 import Noise from '@/components/common/Noise';
-import ProjectCard from "../project/ProjectCard";
+import ProjectCardWrap from "../project/ProjectCardWrap";
 
 export default function ProjectSection() {
 	const projectScrollRef = useRef<HTMLDivElement | null>(null); // 스크롤 애니메이션이 적용될 요소
@@ -59,7 +59,7 @@ export default function ProjectSection() {
 
   return (
     <div className="project_section section inner" ref={projectScrollRef}>
-			<ProjectCard/>
+			<ProjectCardWrap/>
       <Noise />
     </div>
   );
