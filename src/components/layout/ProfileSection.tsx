@@ -5,12 +5,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import Noise from "@/components/common/Noise";
 import ProfileIntroduction from "@/components/profile/ProfileIntroduction";
-import { characterTextSplit } from "@/util/textSplit";
+import { characterTextSplit } from "@/utils/textSplit";
 import ProfileVideo from "@/components/profile/ProfileVideo";
 import ExperienceList from "@/components/profile/list/ExperienceList";
 import DividerWithIcons from "@/components/common/DividerWithIcons";
+import TextSplitWrap from "../common/TextSplitWrap";
 
 export default function ProfileSection() {
+	const title = `PROFILE`;
 	const profileScrollRef = useRef<HTMLDivElement | null>(null); // 스크롤 애니메이션이 적용될 요소
 
 	const [dividerSrc, setDividerSrc] = useState('/images/divider_dark.png'); // 초기 이미지
@@ -22,7 +24,7 @@ export default function ProfileSection() {
 			const q = gsap.utils.selector(profileScrollRef.current);
 			const profileWrapRef = q('.profile_wrap'); 
 			const profileTitleRef = q('.profile_title'); // profile_title 클래스 텍스트
-			const profileTitleSpanRef = q('.profile_title_span'); // profile_title_span 클래스 텍스트
+			const profileTitleCharRef = q('.profile_title .char'); // profile_title_span 클래스 텍스트
 			const clipRef = q('.clip'); // IntroduceItem 컴포넌트의 clip 클래스 텍스트
 			const profileCardRef = q('.profile_card'); // IntroduceItem 컴포넌트의 profile_card 클래스
 			const profileCardNameRef = q('.name'); // IntroduceItem 컴포넌트의 name 클래스
@@ -62,13 +64,13 @@ export default function ProfileSection() {
 			});
 
 			// PROFILE 텍스트 참조(profile_title_span 클래스)
-			profileScroll.to(profileTitleSpanRef, {
+			profileScroll.to(profileTitleCharRef, {
 				visibility: 'visible',
 				transform: 'scale(1.5) rotate(0deg)',
 				stagger: 0.3,
 				duration: 3,
 				scrollTrigger: {
-					trigger: profileTitleSpanRef,
+					trigger: profileTitleCharRef,
 					start: "bottom-=100 bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
 					end: "top-=200 top", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
@@ -265,7 +267,8 @@ export default function ProfileSection() {
 
 	return (
 		<div className="profile_section section inner" ref={profileScrollRef}>
-			<div className="profile_title">{characterTextSplit('PROFILE', 'profile_title_span')}</div>
+			<TextSplitWrap text={title} className="profile_title" splitFunction={characterTextSplit}/>
+			{/* <div className="profile_title">{characterTextSplit('PROFILE', 'profile_title_span')}</div> */}
 			<div className="profile_wrap">
 				<ProfileVideo/>
 				<ProfileIntroduction/>
