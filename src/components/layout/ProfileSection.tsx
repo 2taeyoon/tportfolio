@@ -268,7 +268,6 @@ export default function ProfileSection() {
 	return (
 		<div className="profile_section section inner" ref={profileScrollRef}>
 			<TextSplitWrap text={title} className="profile_title" splitFunction={characterTextSplit}/>
-			{/* <div className="profile_title">{characterTextSplit('PROFILE', 'profile_title_span')}</div> */}
 			<div className="profile_wrap">
 				<ProfileVideo/>
 				<ProfileIntroduction/>
