@@ -3,17 +3,17 @@ import TechStack from "@/components/project/TechStack";
 import SkillList from "@/components/project/SkillList";
 import ScreenshotGallery from "@/components/project/ScreenshotGallery";
 import ProjectLinks from "@/components/project/ProjectLinks";
-import { ProjectCardProps } from "@/types/projectProps";
+import { CodeCardProps } from "@/types/projectProps";
 import DescriptionList from "@/components/project/DescriptionList";
 import getClassName from "@/utils/getClassName";
 
-export default function ProjectCard({ project, index }: ProjectCardProps) {
+export default function CodeCard({ project, index }: CodeCardProps) {
 	const { isModalOpen, currentImageIndex, handleImageClick, handlePrevImage, handleNextImage, handleCloseModal } = useImageModal();
 
 	return (
-		<div key={index} className={getClassName('project_card', project)} style={{ backgroundColor: project.boxColor }}>
-			<div className="project_card_title" style={{ color: project.fontColor }}>{project.title}</div>
-			<div className="project_card_type" style={{ backgroundColor: project.badgeBoxColor, color: project.badgeFontColor }}>{project.type}</div>
+		<div key={index} className={getClassName('code_card', project)} style={{ backgroundColor: project.boxColor }}>
+			<div className="card_title" style={{ color: project.fontColor }}>{project.title}</div>
+			<div className="card_type" style={{ backgroundColor: project.badgeBoxColor, color: project.badgeFontColor }}>{project.type}</div>
 			<TechStack project={project} rows={project.techStack.rows}/>
 			<SkillList project={project} title={project.skills.title} images={project.skills.images}/>
 			<DescriptionList project={project} title={project.features.title || ''} body={project.features.body || []} listType="features"/>
