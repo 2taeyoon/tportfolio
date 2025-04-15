@@ -107,8 +107,8 @@ export default function SkillSection() {
     <div className="skill_section section inner" ref={skillScrollRef} onMouseMove={handleMouseMove}>
 			<DividerWithIcons/>
 			<div className="my_skill_wrap pd_box">
-				<TextSplitWrap text={title} className="my_skill_title" splitFunction={spaceTextSplit}/>
-				<TextSplitWrap text={body} className="my_skill_body" splitFunction={spaceTextSplit}/>
+				<TextSplitWrap text={title} className="my_skill_title" wrap={true} splitFunction={spaceTextSplit}/>
+				<TextSplitWrap text={body} className="my_skill_body" wrap={true} splitFunction={spaceTextSplit}/>
 			</div>
 			<RadialGradient translate2={translate2} className="left"/>
 			<RadialGradient translate2={translate2} className="right"/>
