@@ -1,77 +1,101 @@
 .project_section { padding: 36rem 16rem; background-color: var(--themaSubDark); }
-.project_card_wrap .project_card_title { display: flex; position: absolute; top: 0; left: 3%; }
-.project_card_wrap .project_card_title .char { font-weight: bold; font-size: 14.4rem; }
-.project_card_wrap .project_card_subtitle { display: flex; position: absolute; top: 0; right: 3%; }
-.project_card_wrap .project_card_subtitle .char { font-weight: bold; font-size: 14.4rem; }
-.project_card_wrap .project_card_list { display: grid ; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: center; }
-.project_card_wrap .project_card_list .project_card { position: relative; padding: 4rem 6rem; border-radius: 1.2rem; overflow: hidden; }
+.project_card_wrap .code_card_list { display: grid ; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: center; position: relative; }
+.project_card_wrap .code_card_list .code_card_title { display: flex; position: absolute; top: -35rem; left: 0; scale: 0.5; user-select: none; }
+.project_card_wrap .code_card_list .code_card_title .char { position: relative; left: 100%; rotate: 180deg; }
+.project_card_wrap .code_card_list .code_card_subtitle { display: flex; position: absolute; top: -20rem; right: 0; scale: 0.5; user-select: none; }
+.project_card_wrap .code_card_list .code_card_subtitle .char { position: relative; right: 100%; rotate: -180deg; }
 
-.project_card_wrap .project_card_list .project_card .project_card_title { margin-bottom: 1.2rem; font-size: 40px; font-weight: bold; }
-.project_card_wrap .project_card_list .project_card .project_card_type { position: absolute; top: 3rem; right: -11rem; transform: rotate(45deg); width: 30rem; text-align: center; font-size: 2.2rem; font-weight: 700; }
-.project_card_wrap .project_card_list .project_card .tech_stack { display: flex; justify-content: space-between; margin-bottom: 2rem; }
-.project_card_wrap .project_card_list .project_card .tech_stack .tech_row { display: flex; flex-direction: column; }
-.project_card_wrap .project_card_list .project_card .tech_stack .tech_row .tech_row_title { margin-bottom: 0.8rem; font-size: 1.6rem; font-weight: bold; }
-.project_card_wrap .project_card_list .project_card .tech_stack .tech_row .tech_row_text { margin-bottom: 0.4rem; border-radius: 0.4rem; font-size: 1.4rem; }
 
-.project_card_wrap .project_card_list .project_card .skill_container .skill_title { margin-bottom: 1.2rem; font-size: 1.6rem; font-weight: bold; }
-.project_card_wrap .project_card_list .project_card .skill_container .skill_list { display: flex; flex-wrap: wrap; margin-bottom: 2rem; }
-.project_card_wrap .project_card_list .project_card .skill_container .skill_list .skill_item { display: flex; align-items: center; padding: 0.4rem 0.8rem; margin: 0 8px 8px 0; border-radius: 4px; }
-.project_card_wrap .project_card_list .project_card .skill_container .skill_list .skill_item .skill_icon { position: relative; width: 2rem; height: 2rem; }
-.project_card_wrap .project_card_list .project_card .skill_container .skill_list .skill_item .skill_name_text { margin-left: 0.4rem; letter-spacing: 0; font-size: 1.2rem; }
+/* code_card 공통 코드 START!! */
+.project_card_wrap .code_card_list .code_card_title .char,
+.project_card_wrap .code_card_list .code_card_subtitle .char
+{ color: var(--black); font-size: 14.4rem; font-weight: 400; transition: .3s font-weight ease, .3s font-size ease; }
 
-.project_card_wrap .project_card_list .project_card .features_container { margin-bottom: 2rem; }
-.project_card_wrap .project_card_list .project_card .features_container .features_title { margin-bottom: 1.2rem; font-size: 1.6rem; font-weight: bold; }
-.project_card_wrap .project_card_list .project_card .features_container .features .features_item { font-size: 1.4rem; line-height: 180%; }
-.project_card_wrap .project_card_list .project_card .features_container .features .features_item:not(:last-child) { margin-bottom: 1.2rem; }
+.project_card_wrap .code_card_list .code_card_title .char:hover,
+.project_card_wrap .code_card_list .code_card_subtitle .char:hover
+{ color: var(--themaDark); font-weight: 900; font-size: 16rem; }
 
-.project_card_wrap .project_card_list .project_card .contributions_container { margin-bottom: 2rem; }
-.project_card_wrap .project_card_list .project_card .contributions_container .contributions_title { margin-bottom: 1.2rem; font-size: 1.6rem; font-weight: bold; }
-.project_card_wrap .project_card_list .project_card .contributions_container .contributions { padding-left: 1.6rem; list-style: disc; }
-.project_card_wrap .project_card_list .project_card .contributions_container .contributions .contributions_item { font-size: 1.4rem; line-height: 180%; }
+.project_card_wrap .code_card_list .code_card_title .char:hover + .char,
+.project_card_wrap .code_card_list .code_card_subtitle .char:hover + .char
+{ color: var(--themaDeep); font-weight: 700; } /* 현재 문자에 마우스를 올렸을 때, 바로 다음 문자의 스타일 변경 */
 
-.project_card_wrap .project_card_list .project_card .screenshot_container { margin-bottom: 2rem; }
-.project_card_wrap .project_card_list .project_card .screenshot_container .screenshot_title { margin-bottom: 1.2rem; font-size: 1.6rem; font-weight: bold; }
-.project_card_wrap .project_card_list .project_card .screenshot_container .swiper-wrapper { cursor: pointer; }
-.project_card_wrap .project_card_list .project_card .screenshot_container .swiper-slide { width: calc( ((100% - 10px) / 3.6)) !important; cursor: pointer; }
-.project_card_wrap .project_card_list .project_card .screenshot_container .swiper-slide .screenshot_image { position: relative; width: 100%; padding-bottom: 56.25%; filter: brightness(0.9); }
-.project_card_wrap .project_card_list .project_card .screenshot_container .swiper-slide .screenshot_image img { border-radius: 0.4rem; }
+.project_card_wrap .code_card_list .code_card_title .char:hover + .char + .char,
+.project_card_wrap .code_card_list .code_card_subtitle .char:hover + .char + .char
+{ color: var(--thema); font-weight: 400; } /* 현재 문자에 마우스를 올렸을 때, 다음다음 문자의 스타일 변경 */
 
-.project_card_wrap .project_card_list .project_card .link_shortcut { display: flex ; justify-content: space-between; align-items: center; }
-.project_card_wrap .project_card_list .project_card .link_shortcut a { display: flex; align-items: center; justify-content: center; position: relative;	width: 49%;	padding: 1.2rem 3.2rem;	overflow: hidden; border-radius: 1.2rem; will-change: color, font-weight, transform, opacity, background-color; }
-.project_card_wrap .project_card_list .project_card .link_shortcut a.width49 { width: 49%; }
-.project_card_wrap .project_card_list .project_card .link_shortcut a.width100 { width: 100%; }
-.project_card_wrap .project_card_list .project_card .link_shortcut a:hover { transition: opacity 0.3s ease, transform 0.3s ease, ease, color 1s ease, font-weight 1s ease, background-color 1s ease 0.75s; }
-.project_card_wrap .project_card_list .project_card .link_shortcut a:before { transform: translate3d(-10%, 15%, 0) rotate(330deg); }
-.project_card_wrap .project_card_list .project_card .link_shortcut a:after { transform: translate3d(10%, 15%, 0) rotate(0deg); }
-.project_card_wrap .project_card_list .project_card .link_shortcut a:before,
-.project_card_wrap .project_card_list .project_card .link_shortcut a:after { content: ""; position: absolute; z-index: -1; pointer-events: none; top: 0; right: -50%; left: -50%; padding-bottom: 200%; border-radius: 40%; transition: transform 1s ease, opacity 0.5s ease; opacity: 0; }
-.project_card_wrap .project_card_list .project_card .link_shortcut a:hover:before { transform: translate3d(-10%, -10%, 0) rotate(100deg); }
-.project_card_wrap .project_card_list .project_card .link_shortcut a:hover:after { transform: translate3d(10%, -10%, 0) rotate(180deg); }
-.project_card_wrap .project_card_list .project_card .link_shortcut a:hover:before,
-.project_card_wrap .project_card_list .project_card .link_shortcut a:hover:after { transition: transform 2s ease, opacity 0.2s ease; opacity: 1; }
+.project_card_wrap .code_card_list .code_card_title .char:has(+ .char:hover),
+.project_card_wrap .code_card_list .code_card_subtitle .char:has(+ .char:hover)
+{ color: var(--themaDeep); font-weight: 700; } /* 현재 문자의 다음 문자에 마우스를 올렸을 때, 현재 문자의 스타일 변경 */
+
+.project_card_wrap .code_card_list .code_card_title .char:has(+ .char + .char:hover),
+.project_card_wrap .code_card_list .code_card_subtitle .char:has(+ .char + .char:hover)
+{ color: var(--thema); font-weight: 400; } /* 현재 문자의 다음다음 문자에 마우스를 올렸을 때, 현재 문자의 스타일 변경 */
+/* code_card 공통 코드 END!! */
+
+
+.project_card_wrap .code_card_list .code_card { position: relative; padding: 4rem 6rem; border-radius: 1.2rem; overflow: hidden; }
+
+.project_card_wrap .code_card_list .code_card .card_title { margin-bottom: 1.2rem; font-size: 40px; font-weight: bold; }
+.project_card_wrap .code_card_list .code_card .card_type { position: absolute; top: 3rem; right: -11rem; transform: rotate(45deg); width: 30rem; text-align: center; font-size: 2.2rem; font-weight: 700; }
+.project_card_wrap .code_card_list .code_card .tech_stack { display: flex; justify-content: space-between; margin-bottom: 2rem; }
+.project_card_wrap .code_card_list .code_card .tech_stack .tech_row { display: flex; flex-direction: column; }
+.project_card_wrap .code_card_list .code_card .tech_stack .tech_row .tech_row_title { margin-bottom: 0.8rem; font-size: 1.6rem; font-weight: bold; }
+.project_card_wrap .code_card_list .code_card .tech_stack .tech_row .tech_row_text { margin-bottom: 0.4rem; border-radius: 0.4rem; font-size: 1.4rem; }
+
+.project_card_wrap .code_card_list .code_card .skill_container .skill_title { margin-bottom: 1.2rem; font-size: 1.6rem; font-weight: bold; }
+.project_card_wrap .code_card_list .code_card .skill_container .skill_list { display: flex; flex-wrap: wrap; margin-bottom: 2rem; }
+.project_card_wrap .code_card_list .code_card .skill_container .skill_list .skill_item { display: flex; align-items: center; padding: 0.4rem 0.8rem; margin: 0 8px 8px 0; border-radius: 4px; }
+.project_card_wrap .code_card_list .code_card .skill_container .skill_list .skill_item .skill_icon { position: relative; width: 2rem; height: 2rem; }
+.project_card_wrap .code_card_list .code_card .skill_container .skill_list .skill_item .skill_name_text { margin-left: 0.4rem; letter-spacing: 0; font-size: 1.2rem; }
+
+.project_card_wrap .code_card_list .code_card .features_container { margin-bottom: 2rem; }
+.project_card_wrap .code_card_list .code_card .features_container .features_title { margin-bottom: 1.2rem; font-size: 1.6rem; font-weight: bold; }
+.project_card_wrap .code_card_list .code_card .features_container .features .features_item { font-size: 1.4rem; line-height: 180%; }
+.project_card_wrap .code_card_list .code_card .features_container .features .features_item:not(:last-child) { margin-bottom: 1.2rem; }
+
+.project_card_wrap .code_card_list .code_card .contributions_container { margin-bottom: 2rem; }
+.project_card_wrap .code_card_list .code_card .contributions_container .contributions_title { margin-bottom: 1.2rem; font-size: 1.6rem; font-weight: bold; }
+.project_card_wrap .code_card_list .code_card .contributions_container .contributions { padding-left: 1.6rem; list-style: disc; }
+.project_card_wrap .code_card_list .code_card .contributions_container .contributions .contributions_item { font-size: 1.4rem; line-height: 180%; }
+
+.project_card_wrap .code_card_list .code_card .screenshot_container { margin-bottom: 2rem; }
+.project_card_wrap .code_card_list .code_card .screenshot_container .screenshot_title { margin-bottom: 1.2rem; font-size: 1.6rem; font-weight: bold; }
+.project_card_wrap .code_card_list .code_card .screenshot_container .swiper-wrapper { cursor: pointer; }
+.project_card_wrap .code_card_list .code_card .screenshot_container .swiper-slide { width: calc( ((100% - 10px) / 3.6)) !important; cursor: pointer; }
+.project_card_wrap .code_card_list .code_card .screenshot_container .swiper-slide .screenshot_image { position: relative; width: 100%; padding-bottom: 56.25%; filter: brightness(0.9); }
+.project_card_wrap .code_card_list .code_card .screenshot_container .swiper-slide .screenshot_image img { border-radius: 0.4rem; }
+
+.project_card_wrap .code_card_list .code_card .link_shortcut { display: flex ; justify-content: space-between; align-items: center; }
+.project_card_wrap .code_card_list .code_card .link_shortcut a { display: flex; align-items: center; justify-content: center; position: relative;	width: 49%;	padding: 1.2rem 3.2rem;	overflow: hidden; border-radius: 1.2rem; will-change: color, font-weight, transform, opacity, background-color; }
+.project_card_wrap .code_card_list .code_card .link_shortcut a.width49 { width: 49%; }
+.project_card_wrap .code_card_list .code_card .link_shortcut a.width100 { width: 100%; }
+.project_card_wrap .code_card_list .code_card .link_shortcut a:hover { transition: opacity 0.3s ease, transform 0.3s ease, ease, color 1s ease, font-weight 1s ease, background-color 1s ease 0.75s; }
+.project_card_wrap .code_card_list .code_card .link_shortcut a:before { transform: translate3d(-10%, 15%, 0) rotate(330deg); }
+.project_card_wrap .code_card_list .code_card .link_shortcut a:after { transform: translate3d(10%, 15%, 0) rotate(0deg); }
+.project_card_wrap .code_card_list .code_card .link_shortcut a:before,
+.project_card_wrap .code_card_list .code_card .link_shortcut a:after { content: ""; position: absolute; z-index: -1; pointer-events: none; top: 0; right: -50%; left: -50%; padding-bottom: 200%; border-radius: 40%; transition: transform 1s ease, opacity 0.5s ease; opacity: 0; }
+.project_card_wrap .code_card_list .code_card .link_shortcut a:hover:before { transform: translate3d(-10%, -10%, 0) rotate(100deg); }
+.project_card_wrap .code_card_list .code_card .link_shortcut a:hover:after { transform: translate3d(10%, -10%, 0) rotate(180deg); }
+.project_card_wrap .code_card_list .code_card .link_shortcut a:hover:before,
+.project_card_wrap .code_card_list .code_card .link_shortcut a:hover:after { transition: transform 2s ease, opacity 0.2s ease; opacity: 1; }
 
 /* 테마별 호버 효과 START!! */
-.project_card_wrap .project_card_list .project_card .link_shortcut .whiteDE:hover { background-color: var(--themaDark) !important; color: var(--whiteEB) !important; font-weight: bold !important; }
-.project_card_wrap .project_card_list .project_card .link_shortcut a.whiteDE:before { background: linear-gradient(25deg, var(--themaDark), #9638d800); }
-.project_card_wrap .project_card_list .project_card .link_shortcut a.whiteDE:after { background: linear-gradient(70deg, var(--themaDark), #7c38d800); }
+.project_card_wrap .code_card_list .code_card .link_shortcut .whiteDE:hover { background-color: var(--themaDark) !important; color: var(--whiteEB) !important; font-weight: bold !important; }
+.project_card_wrap .code_card_list .code_card .link_shortcut a.whiteDE:before { background: linear-gradient(25deg, var(--themaDark), #9638d800); }
+.project_card_wrap .code_card_list .code_card .link_shortcut a.whiteDE:after { background: linear-gradient(70deg, var(--themaDark), #7c38d800); }
 
-.project_card_wrap .project_card_list .project_card .link_shortcut .thema:hover { background-color: var(--themaDeep) !important; color: var(--whiteEB) !important; font-weight: bold !important; }
-.project_card_wrap .project_card_list .project_card .link_shortcut a.thema:before { background: linear-gradient(25deg, var(--themaDeep), #9638d800); }
-.project_card_wrap .project_card_list .project_card .link_shortcut a.thema:after { background: linear-gradient(70deg, var(--themaDeep), #7c38d800); }
+.project_card_wrap .code_card_list .code_card .link_shortcut .thema:hover { background-color: var(--themaDeep) !important; color: var(--whiteEB) !important; font-weight: bold !important; }
+.project_card_wrap .code_card_list .code_card .link_shortcut a.thema:before { background: linear-gradient(25deg, var(--themaDeep), #9638d800); }
+.project_card_wrap .code_card_list .code_card .link_shortcut a.thema:after { background: linear-gradient(70deg, var(--themaDeep), #7c38d800); }
 
-.project_card_wrap .project_card_list .project_card .link_shortcut .themaDeep:hover { background-color: var(--thema) !important; color: var(--black) !important; font-weight: bold !important; }
-.project_card_wrap .project_card_list .project_card .link_shortcut a.themaDeep:before { background: linear-gradient(25deg, var(--thema), #9638d800); }
-.project_card_wrap .project_card_list .project_card .link_shortcut a.themaDeep:after { background: linear-gradient(70deg, var(--thema), #7c38d800); }
+.project_card_wrap .code_card_list .code_card .link_shortcut .themaDeep:hover { background-color: var(--thema) !important; color: var(--black) !important; font-weight: bold !important; }
+.project_card_wrap .code_card_list .code_card .link_shortcut a.themaDeep:before { background: linear-gradient(25deg, var(--thema), #9638d800); }
+.project_card_wrap .code_card_list .code_card .link_shortcut a.themaDeep:after { background: linear-gradient(70deg, var(--thema), #7c38d800); }
 
-.project_card_wrap .project_card_list .project_card .link_shortcut .black333:hover { background-color: var(--black999) !important; color: var(--whiteEB) !important; font-weight: bold !important; }
-.project_card_wrap .project_card_list .project_card .link_shortcut a.black333:before { background: linear-gradient(25deg, var(--black999), #9638d800); }
-.project_card_wrap .project_card_list .project_card .link_shortcut a.black333:after { background: linear-gradient(70deg, var(--black999), #7c38d800); }
+.project_card_wrap .code_card_list .code_card .link_shortcut .black333:hover { background-color: var(--black999) !important; color: var(--whiteEB) !important; font-weight: bold !important; }
+.project_card_wrap .code_card_list .code_card .link_shortcut a.black333:before { background: linear-gradient(25deg, var(--black999), #9638d800); }
+.project_card_wrap .code_card_list .code_card .link_shortcut a.black333:after { background: linear-gradient(70deg, var(--black999), #7c38d800); }
 /* 테마별 호버 효과 END!! */
-
-
-
-
-
 
 
 @media (max-width: 1536px) {
