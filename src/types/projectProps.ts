@@ -1,55 +1,5 @@
-export interface TechStackProps {
-	project?: ProjectDataType;
-  rows: {
-    title: string;
-    items: string[];
-  }[];
-}
-
-export interface SkillListProps {
-	project?: ProjectDataType;
-  title: string;
-  images: {
-    src: string;
-    alt: string;
-    name: string;
-  }[];
-}
-
-export interface FeatureListProps {
-	project?: ProjectDataType;
-  title: string;
-  body: string[];
-}
-
-export interface ContributionProps {
-	project?: ProjectDataType;
-  title: string;
-  body: string[];
-}
-
-export interface ScreenshotProps {
-  title: string;
-  images: {
-    src: string;
-    alt: string;
-  }[];
-}
-
-export interface ProjectLinksProps {
-	project?: ProjectDataType;
-  site?: {
-    href: string;
-    text: string;
-  };
-  github?: {
-    href: string;
-    text: string;
-  };
-}
-
 // 프로젝트 카드 타입
-export interface ProjectDataType {
+export interface CodeCardDataType {
 	title: string;
 	className: string;
 	type: string;
@@ -66,12 +16,62 @@ export interface ProjectDataType {
   features: FeatureListProps;
 	contribution?: ContributionProps;
   screenshots: ScreenshotProps;
-  links?: ProjectLinksProps;
+  links?: CodeLinksProps;
+}
+
+export interface TechStackProps {
+	project?: CodeCardDataType;
+  rows: {
+    title: string;
+    items: string[];
+  }[];
+}
+
+export interface SkillListProps {
+	project?: CodeCardDataType;
+  title: string;
+  images: {
+    src: string;
+    alt: string;
+    name: string;
+  }[];
+}
+
+export interface FeatureListProps {
+	project?: CodeCardDataType;
+  title: string;
+  body: string[];
+}
+
+export interface ContributionProps {
+	project?: CodeCardDataType;
+  title: string;
+  body: string[];
+}
+
+export interface ScreenshotProps {
+  title: string;
+  images: {
+    src: string;
+    alt: string;
+  }[];
+}
+
+export interface CodeLinksProps {
+	project?: CodeCardDataType;
+  site?: {
+    href: string;
+    text: string;
+  };
+  github?: {
+    href: string;
+    text: string;
+  };
 }
 
 // ProjectDetailCard와 DescriptionList 컴포넌트에서 쓰이는 props
-export interface ProjectCardProps {
-  project: ProjectDataType;
+export interface CodeCardProps {
+  project: CodeCardDataType;
   index?: number;
 	title?: string;
   body?: string[];
@@ -80,7 +80,7 @@ export interface ProjectCardProps {
 
 // ScreenshotGallery 컴포넌트에서 쓰이는 props
 export interface ScreenshotGalleryProps {
-	project: ProjectDataType;
+	project: CodeCardDataType;
   title: string;
   images: {
     src: string;
