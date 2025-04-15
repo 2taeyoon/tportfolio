@@ -1,7 +1,7 @@
-import { ProjectDataType } from "@/types/projectProps";
+import { CodeCardDataType } from "@/types/projectProps";
 
 // 프로젝트 데이터 배열 START!!
-export const projectData: ProjectDataType[] = [
+export const projectCodeData: CodeCardDataType[] = [
 	{
     title: "TY Portfolio",
 		className: "typortfolio",
