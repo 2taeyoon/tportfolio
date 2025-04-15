@@ -1,8 +1,8 @@
-import { ProjectLinksProps } from "@/types/projectProps";
+import { CodeLinksProps } from "@/types/projectProps";
 import getClassName from "@/utils/getClassName";
 import Link from 'next/link';
 
-export default function ProjectLinks({ project, site, github }: ProjectLinksProps) {
+export default function ProjectLinks({ project, site, github }: CodeLinksProps) {
   return (
     <div className="link_shortcut">
       {site && (
