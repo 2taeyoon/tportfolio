@@ -1,6 +1,6 @@
-import { ProjectDetailCardProps } from "@/types/projectProps";
+import { CodeCardProps } from "@/types/projectProps";
 
-export default function DescriptionList({ project, title, body, listType }: ProjectDetailCardProps) {
+export default function DescriptionList({ project, title, body, listType }: CodeCardProps) {
   const containerClass = `${listType}_container`;
   const titleClass = `${listType}_title`;
   const listClass = listType;
