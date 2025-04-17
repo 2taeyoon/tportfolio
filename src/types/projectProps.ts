@@ -1,6 +1,7 @@
-// 프로젝트 카드 타입
+// project code 카드 타입
 export interface CodeCardDataType {
 	title: string;
+	date: string;
 	className: string;
 	type: string;
 	boxColor: string;
@@ -17,6 +18,18 @@ export interface CodeCardDataType {
 	contribution?: ContributionProps;
   screenshots: ScreenshotProps;
   links?: CodeLinksProps;
+}
+
+// project design 카드 타입
+export interface DesignCardDataType {
+  thumbnail: string;
+  date: string;
+	contribution: string;
+	research?: string;
+  type: string;
+  title: string;
+  description: string;
+  images?: string[];
 }
 
 export interface TechStackProps {
@@ -69,13 +82,19 @@ export interface CodeLinksProps {
   };
 }
 
-// ProjectDetailCard와 DescriptionList 컴포넌트에서 쓰이는 props
+// CodeCard와와 DescriptionList 컴포넌트에서 쓰이는 props
 export interface CodeCardProps {
   project: CodeCardDataType;
-  index?: number;
 	title?: string;
   body?: string[];
   listType?: 'features' | 'contributions';
+}
+
+// DesignCard에서 쓰이는 props
+export interface DesignCardProps {
+  project: DesignCardDataType;
+  index: number;
+  onClick: () => void;
 }
 
 // ScreenshotGallery 컴포넌트에서 쓰이는 props
