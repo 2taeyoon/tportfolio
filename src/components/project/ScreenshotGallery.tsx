@@ -37,10 +37,11 @@ export default function ScreenshotGallery({ project, title, images, modalProps, 
       <ImageModal
         isOpen={modalProps.isModalOpen}
         onClose={modalProps.handleCloseModal}
-        screenshots={images.map(img => img.src)}
+        imageUrl={images.map(img => img.src)}
         currentImageIndex={modalProps.currentImageIndex}
         onPrev={modalProps.handlePrevImage}
         onNext={modalProps.handleNextImage}
+				className="code"
       />
     </div>
   );
