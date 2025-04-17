@@ -1,18 +1,19 @@
-import { CodeCardDataType } from "@/types/projectProps";
+import { CodeCardDataType, DesignCardDataType } from "@/types/projectProps";
 
-// 프로젝트 데이터 배열 START!!
+// project code 데이터 배열 START!!
 export const projectCodeData: CodeCardDataType[] = [
 	{
     title: "TY Portfolio",
+		date: "2025년 4월",
 		className: "typortfolio",
 		type: "개인",
 		boxColor: "var(--thema)",
 		fontColor: "var(--black)",
-		skillBoxColor: "var(--whiteDE)",
+		skillBoxColor: "var(--whiteD)",
 		skillFontColor: "var(--black)",
-		badgeBoxColor: "var(--whiteDE)",
+		badgeBoxColor: "var(--whiteD)",
 		badgeFontColor: "var(--black)",
-		linkBoxColor: "var(--whiteDE)",
+		linkBoxColor: "var(--whiteD)",
 		linkFontColor: "var(--black)",
     techStack: {
       rows: [
@@ -71,7 +72,7 @@ export const projectCodeData: CodeCardDataType[] = [
     features: {
 			title: "프로젝트 설명",
 			body: [
-				"프로젝트는 NextJS 기반의 반응형 SPA 포트폴리오 웹사이트로, 자기소개, 기술 스택, 프로젝트, 경험 등 개발자의 역량을 시각적으로 표현하기 위해 제작되었습니다.",
+				"TY Portfolio 프로젝트는 NextJS 기반의 반응형 SPA 포트폴리오 웹사이트로, 자기소개, 기술 스택, 프로젝트, 경험 등 개발자의 역량을 시각적으로 표현하기 위해 제작되었습니다.",
 				"다양한 애니메이션 효과(스크롤 트리거, 텍스트 타이핑, 키프레임 효과 등)와 함께, SVG 일러스트 및 커스텀 레이아웃 구성요소(Wave, RadialGradient, ShapeQuote 등)를 통해 감각적인 사용자 경험을 제공합니다. 또한 JSON 기반의 데이터 구조를 활용하여 프로젝트 및 기술 스택 정보를 자동 렌더링하여 유지보수에 용이하도록 하였습니다.",
 			],
 		},
@@ -79,7 +80,7 @@ export const projectCodeData: CodeCardDataType[] = [
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project/niweb1.jpg",
+					src: "/images/project_code/niweb1.jpg",
 					alt: "niweb1"
 				},
 			]
@@ -97,16 +98,17 @@ export const projectCodeData: CodeCardDataType[] = [
   },
 	{
     title: "2taeyoon",
-		className: "2taeyoon",
+		date: "2024년 6월",
+		className: "taeyoon",
 		type: "개인",
 		boxColor: "var(--black)",
-		fontColor: "var(--whiteDE)",
+		fontColor: "var(--whiteD)",
 		skillBoxColor: "var(--black333)",
-		skillFontColor: "var(--whiteEB)",
+		skillFontColor: "var(--whiteE)",
 		badgeBoxColor: "var(--black333)",
-		badgeFontColor: "var(--whiteEB)",
+		badgeFontColor: "var(--whiteE)",
 		linkBoxColor: "var(--black333)",
-		linkFontColor: "var(--whiteEB)",
+		linkFontColor: "var(--whiteE)",
     techStack: {
       rows: [
         {
@@ -182,19 +184,19 @@ export const projectCodeData: CodeCardDataType[] = [
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project/2taeyoon1.jpg",
+					src: "/images/project_code/2taeyoon1.jpg",
 					alt: "2taeyoon1"
 				},
 				{
-					src: "/images/project/2taeyoon2.jpg",
+					src: "/images/project_code/2taeyoon2.jpg",
 					alt: "2taeyoon2"
 				},
 				{
-					src: "/images/project/2taeyoon3.jpg",
+					src: "/images/project_code/2taeyoon3.jpg",
 					alt: "2taeyoon3"
 				},
 				{
-					src: "/images/project/2taeyoon4.jpg",
+					src: "/images/project_code/2taeyoon4.jpg",
 					alt: "2taeyoon4"
 				},
 			]
@@ -212,6 +214,7 @@ export const projectCodeData: CodeCardDataType[] = [
   },
 	{
     title: "KRMX",
+		date: "2024년 3월",
 		className: "krmx",
 		type: "회사",
 		boxColor: "var(--themaSub)",
@@ -298,226 +301,109 @@ export const projectCodeData: CodeCardDataType[] = [
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project/krmx1.jpg",
+					src: "/images/project_code/krmx1.jpg",
 					alt: "krmx1"
 				},
 				{
-					src: "/images/project/krmx2.jpg",
+					src: "/images/project_code/krmx2.jpg",
 					alt: "krmx2"
 				},
 				{
-					src: "/images/project/krmx3.jpg",
+					src: "/images/project_code/krmx3.jpg",
 					alt: "krmx3"
 				},
 				{
-					src: "/images/project/krmx4.jpg",
+					src: "/images/project_code/krmx4.jpg",
 					alt: "krmx4"
 				},
 				{
-					src: "/images/project/krmx5.jpg",
+					src: "/images/project_code/krmx5.jpg",
 					alt: "krmx5"
 				},
 				{
-					src: "/images/project/krmx6.jpg",
+					src: "/images/project_code/krmx6.jpg",
 					alt: "krmx6"
 				},
 				{
-					src: "/images/project/krmx7.jpg",
+					src: "/images/project_code/krmx7.jpg",
 					alt: "krmx7"
 				},
 				{
-					src: "/images/project/krmx8.jpg",
+					src: "/images/project_code/krmx8.jpg",
 					alt: "krmx8"
 				},
 				{
-					src: "/images/project/krmx9.jpg",
+					src: "/images/project_code/krmx9.jpg",
 					alt: "krmx9"
 				},
 				{
-					src: "/images/project/krmx10.jpg",
+					src: "/images/project_code/krmx10.jpg",
 					alt: "krmx10"
 				},
 				{
-					src: "/images/project/krmx11.jpg",
+					src: "/images/project_code/krmx11.jpg",
 					alt: "krmx11"
 				},
 				{
-					src: "/images/project/krmx12.jpg",
+					src: "/images/project_code/krmx12.jpg",
 					alt: "krmx12"
 				},
 				{
-					src: "/images/project/krmx13.jpg",
+					src: "/images/project_code/krmx13.jpg",
 					alt: "krmx13"
 				},
 				{
-					src: "/images/project/krmx14.jpg",
+					src: "/images/project_code/krmx14.jpg",
 					alt: "krmx14"
 				},
 				{
-					src: "/images/project/krmx15.jpg",
+					src: "/images/project_code/krmx15.jpg",
 					alt: "krmx15"
 				},
 				{
-					src: "/images/project/krmx16.jpg",
+					src: "/images/project_code/krmx16.jpg",
 					alt: "krmx16"
 				},
 				{
-					src: "/images/project/krmx17.jpg",
+					src: "/images/project_code/krmx17.jpg",
 					alt: "krmx17"
 				},
 				{
-					src: "/images/project/krmx18.jpg",
+					src: "/images/project_code/krmx18.jpg",
 					alt: "krmx18"
 				},
 				{
-					src: "/images/project/krmx19.jpg",
+					src: "/images/project_code/krmx19.jpg",
 					alt: "krmx19"
 				},
 				{
-					src: "/images/project/krmx20.jpg",
+					src: "/images/project_code/krmx20.jpg",
 					alt: "krmx20"
 				},
 				{
-					src: "/images/project/krmx21.jpg",
+					src: "/images/project_code/krmx21.jpg",
 					alt: "krmx21"
 				},
 				{
-					src: "/images/project/krmx22.jpg",
+					src: "/images/project_code/krmx22.jpg",
 					alt: "krmx22"
 				},
 			]
     },
   },
 	{
-    title: "hivu",
-		className: "hivu",
-		type: "회사",
-		boxColor: "var(--themaDark)",
-		fontColor: "var(--whiteDE)",
-		skillBoxColor: "var(--themaDeep)",
-		skillFontColor: "var(--whiteDE)",
-		badgeBoxColor: "var(--themaDeep)",
-		badgeFontColor: "var(--whiteDE)",
-		linkBoxColor: "var(--themaDeep)",
-		linkFontColor: "var(--whiteDE)",
-    techStack: {
-      rows: [
-        {
-          title: "디바이스",
-          items: ["적응형(PC/Mobile)"]
-        },
-        {
-          title: "개발 언어",
-          items: ["JavaScript", "PHP"]
-        },
-        {
-          title: "라이브러리",
-          items: ["Clipboard", "ApexCharts"]
-        },
-				{
-          title: "기여도",
-          items: ["디자인 30%", "퍼블리싱 30%"]
-        }
-      ]
-    },
-    skills: {
-			title: "사용 기술",
-			images: [
-				{
-					src: "/images/skill/skill_html.png",
-					alt: "skill_html",
-					name: "HTML"
-				},
-				{
-					src: "/images/skill/skill_css.png",
-					alt: "skill_css",
-					name: "CSS"
-				},
-				{
-					src: "/images/skill/skill_javascript.png",
-					alt: "skill_javascript",
-					name: "JavaScript"
-				},
-			]
-		},
-    features: {
-			title: "프로젝트 개요",
-			body: [
-				"hivu는 다양한 지역 기반 체험형 마케팅 캠페인을 제공하는 플랫폼으로, 기업과 인플루언서를 연결하여 실시간 리뷰, 참여형 이벤트, 지도 기반 검색, 리뷰 통계 등 다양한 기능을 제공합니다. 신규 캠페인과 추천 캠페인 등 마케팅 콘텐츠를 시각적으로 풍부하게 구성하였으며, 슈퍼리뷰어 전용 페이지와 사용자 커뮤니티가 포함되어 있습니다.",
-			],
-		},
-		contribution: {
-			title: "기여도",
-			body: [
-				"디자인 30%: 캠페인 및 메인 배너 등 상시 작업, 플랫폼 UI 요소 중 아이콘 리디자인, 슈페리어 크리에이터 페이지 디자인",
-				"퍼블리싱 30%: HTML 구조 및 CSS 스타일링 일부 참여, 캠페인 뷰 및 메인 UI 마크업 일부 작업, Clipboard 위치 및 스타일링, ApexCharts 마크업 및 퍼블리싱 작업 등",
-				"프론트 및 백엔드: 제외"
-			],
-		},
-    screenshots: {
-			title: "스크린샷",
-			images: [
-				{
-					src: "/images/project/hivu1.jpg",
-					alt: "hivu1"
-				},
-				{
-					src: "/images/project/hivu2.jpg",
-					alt: "hivu2"
-				},
-				{
-					src: "/images/project/hivu3.jpg",
-					alt: "hivu3"
-				},
-				{
-					src: "/images/project/hivu4.jpg",
-					alt: "hivu4"
-				},
-				{
-					src: "/images/project/hivu5.jpg",
-					alt: "hivu5"
-				},
-				{
-					src: "/images/project/hivu6.jpg",
-					alt: "hivu6"
-				},
-				{
-					src: "/images/project/hivu7.jpg",
-					alt: "hivu7"
-				},
-				{
-					src: "/images/project/hivu8.jpg",
-					alt: "hivu8"
-				},
-				{
-					src: "/images/project/hivu9.jpg",
-					alt: "hivu9"
-				},
-				{
-					src: "/images/project/hivu10.jpg",
-					alt: "hivu10"
-				},
-			]
-    },
-    links: {
-      site: {
-        href: "https://www.hivu.co.kr/index.php",
-        text: "사이트"
-      }
-    }
-  },
-	{
     title: "엔아이 자사웹",
+		date: "2023년 11월",
 		className: "niweb",
 		type: "회사",
-		boxColor: "var(--thema)",
-		fontColor: "var(--black)",
-		skillBoxColor: "var(--whiteDE)",
-		skillFontColor: "var(--black)",
-		badgeBoxColor: "var(--whiteDE)",
-		badgeFontColor: "var(--black)",
-		linkBoxColor: "var(--whiteDE)",
-		linkFontColor: "var(--black)",
+		boxColor: "var(--themaDark)",
+		fontColor: "var(--whiteD)",
+		skillBoxColor: "var(--themaDeep)",
+		skillFontColor: "var(--whiteD)",
+		badgeBoxColor: "var(--themaDeep)",
+		badgeFontColor: "var(--whiteD)",
+		linkBoxColor: "var(--themaDeep)",
+		linkFontColor: "var(--whiteD)",
     techStack: {
       rows: [
         {
@@ -600,27 +486,27 @@ export const projectCodeData: CodeCardDataType[] = [
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project/niweb1.jpg",
+					src: "/images/project_code/niweb1.jpg",
 					alt: "niweb1"
 				},
 				{
-					src: "/images/project/niweb2.jpg",
+					src: "/images/project_code/niweb2.jpg",
 					alt: "niweb2"
 				},
 				{
-					src: "/images/project/niweb3.jpg",
+					src: "/images/project_code/niweb3.jpg",
 					alt: "niweb3"
 				},
 				{
-					src: "/images/project/niweb4.jpg",
+					src: "/images/project_code/niweb4.jpg",
 					alt: "niweb4"
 				},
 				{
-					src: "/images/project/niweb5.jpg",
+					src: "/images/project_code/niweb5.jpg",
 					alt: "niweb5"
 				},
 				{
-					src: "/images/project/niweb6.jpg",
+					src: "/images/project_code/niweb6.jpg",
 					alt: "niweb6"
 				},
 			]
@@ -633,17 +519,137 @@ export const projectCodeData: CodeCardDataType[] = [
     }
   },
 	{
+    title: "hivu",
+		date: "2023년 10월",
+		className: "hivu",
+		type: "회사",
+		boxColor: "var(--thema)",
+		fontColor: "var(--black)",
+		skillBoxColor: "var(--whiteD)",
+		skillFontColor: "var(--black)",
+		badgeBoxColor: "var(--whiteD)",
+		badgeFontColor: "var(--black)",
+		linkBoxColor: "var(--whiteD)",
+		linkFontColor: "var(--black)",
+    techStack: {
+      rows: [
+        {
+          title: "디바이스",
+          items: ["적응형(PC/Mobile)"]
+        },
+        {
+          title: "개발 언어",
+          items: ["JavaScript", "PHP"]
+        },
+        {
+          title: "라이브러리",
+          items: ["Clipboard", "ApexCharts"]
+        },
+				{
+          title: "기여도",
+          items: ["디자인 30%", "퍼블리싱 30%"]
+        }
+      ]
+    },
+    skills: {
+			title: "사용 기술",
+			images: [
+				{
+					src: "/images/skill/skill_html.png",
+					alt: "skill_html",
+					name: "HTML"
+				},
+				{
+					src: "/images/skill/skill_css.png",
+					alt: "skill_css",
+					name: "CSS"
+				},
+				{
+					src: "/images/skill/skill_javascript.png",
+					alt: "skill_javascript",
+					name: "JavaScript"
+				},
+			]
+		},
+    features: {
+			title: "프로젝트 개요",
+			body: [
+				"hivu는 다양한 지역 기반 체험형 마케팅 캠페인을 제공하는 플랫폼으로, 기업과 인플루언서를 연결하여 실시간 리뷰, 참여형 이벤트, 지도 기반 검색, 리뷰 통계 등 다양한 기능을 제공합니다. 신규 캠페인과 추천 캠페인 등 마케팅 콘텐츠를 시각적으로 풍부하게 구성하였으며, 슈퍼리뷰어 전용 페이지와 사용자 커뮤니티가 포함되어 있습니다.",
+			],
+		},
+		contribution: {
+			title: "기여도",
+			body: [
+				"디자인 30%: 캠페인 및 메인 배너 등 상시 작업, 플랫폼 UI 요소 중 아이콘 리디자인, 슈페리어 크리에이터 페이지 디자인",
+				"퍼블리싱 30%: HTML 구조 및 CSS 스타일링 일부 참여, 캠페인 뷰 및 메인 UI 마크업 일부 작업, Clipboard 위치 및 스타일링, ApexCharts 마크업 및 퍼블리싱 작업 등",
+				"프론트 및 백엔드: 제외"
+			],
+		},
+    screenshots: {
+			title: "스크린샷",
+			images: [
+				{
+					src: "/images/project_code/hivu1.jpg",
+					alt: "hivu1"
+				},
+				{
+					src: "/images/project_code/hivu2.jpg",
+					alt: "hivu2"
+				},
+				{
+					src: "/images/project_code/hivu3.jpg",
+					alt: "hivu3"
+				},
+				{
+					src: "/images/project_code/hivu4.jpg",
+					alt: "hivu4"
+				},
+				{
+					src: "/images/project_code/hivu5.jpg",
+					alt: "hivu5"
+				},
+				{
+					src: "/images/project_code/hivu6.jpg",
+					alt: "hivu6"
+				},
+				{
+					src: "/images/project_code/hivu7.jpg",
+					alt: "hivu7"
+				},
+				{
+					src: "/images/project_code/hivu8.jpg",
+					alt: "hivu8"
+				},
+				{
+					src: "/images/project_code/hivu9.jpg",
+					alt: "hivu9"
+				},
+				{
+					src: "/images/project_code/hivu10.jpg",
+					alt: "hivu10"
+				},
+			]
+    },
+    links: {
+      site: {
+        href: "https://www.hivu.co.kr/index.php",
+        text: "사이트"
+      }
+    }
+  },
+	{
     title: "TYCODE",
+		date: "2023년 7월",
 		className: "tycode",
 		type: "개인",
 		boxColor: "var(--black)",
-		fontColor: "var(--whiteDE)",
+		fontColor: "var(--whiteD)",
 		skillBoxColor: "var(--black333)",
-		skillFontColor: "var(--whiteEB)",
+		skillFontColor: "var(--whiteE)",
 		badgeBoxColor: "var(--black333)",
-		badgeFontColor: "var(--whiteEB)",
+		badgeFontColor: "var(--whiteE)",
 		linkBoxColor: "var(--black333)",
-		linkFontColor: "var(--whiteEB)",
+		linkFontColor: "var(--whiteE)",
     techStack: {
       rows: [
         {
@@ -714,23 +720,23 @@ export const projectCodeData: CodeCardDataType[] = [
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project/tycode1.jpg",
+					src: "/images/project_code/tycode1.jpg",
 					alt: "tycode1"
 				},
 				{
-					src: "/images/project/tycode2.jpg",
+					src: "/images/project_code/tycode2.jpg",
 					alt: "tycode2"
 				},
 				{
-					src: "/images/project/tycode3.jpg",
+					src: "/images/project_code/tycode3.jpg",
 					alt: "tycode3"
 				},
 				{
-					src: "/images/project/tycode4.jpg",
+					src: "/images/project_code/tycode4.jpg",
 					alt: "tycode4"
 				},
 				{
-					src: "/images/project/tycode5.jpg",
+					src: "/images/project_code/tycode5.jpg",
 					alt: "tycode5"
 				},
 			]
@@ -748,6 +754,7 @@ export const projectCodeData: CodeCardDataType[] = [
   },
 	{
     title: "MyDays",
+		date: "2025년 6월",
 		className: "mydays",
 		type: "개인",
 		boxColor: "var(--themaSub)",
@@ -828,39 +835,39 @@ export const projectCodeData: CodeCardDataType[] = [
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project/mydays1.jpg",
+					src: "/images/project_code/mydays1.jpg",
 					alt: "mydays1"
 				},
 				{
-					src: "/images/project/mydays2.jpg",
+					src: "/images/project_code/mydays2.jpg",
 					alt: "mydays2"
 				},
 				{
-					src: "/images/project/mydays3.jpg",
+					src: "/images/project_code/mydays3.jpg",
 					alt: "mydays3"
 				},
 				{
-					src: "/images/project/mydays4.jpg",
+					src: "/images/project_code/mydays4.jpg",
 					alt: "mydays4"
 				},
 				{
-					src: "/images/project/mydays5.jpg",
+					src: "/images/project_code/mydays5.jpg",
 					alt: "mydays5"
 				},
 				{
-					src: "/images/project/mydays6.jpg",
+					src: "/images/project_code/mydays6.jpg",
 					alt: "mydays6"
 				},
 				{
-					src: "/images/project/mydays7.jpg",
+					src: "/images/project_code/mydays7.jpg",
 					alt: "mydays7"
 				},
 				{
-					src: "/images/project/mydays8.jpg",
+					src: "/images/project_code/mydays8.jpg",
 					alt: "mydays8"
 				},
 				{
-					src: "/images/project/mydays9.jpg",
+					src: "/images/project_code/mydays9.jpg",
 					alt: "mydays9"
 				},
 			]
@@ -878,16 +885,17 @@ export const projectCodeData: CodeCardDataType[] = [
   },
   {
     title: "YOONDESIGN",
+		date: "2023년 5월",
 		className: "yoondesign",
 		type: "개인",
 		boxColor: "var(--themaDark)",
-		fontColor: "var(--whiteDE)",
+		fontColor: "var(--whiteD)",
 		skillBoxColor: "var(--themaDeep)",
 		skillFontColor: "var(--whiteDE)",
 		badgeBoxColor: "var(--themaDeep)",
-		badgeFontColor: "var(--whiteDE)",
+		badgeFontColor: "var(--whiteD)",
 		linkBoxColor: "var(--themaDeep)",
-		linkFontColor: "var(--whiteDE)",
+		linkFontColor: "var(--whiteD)",
     techStack: {
       rows: [
         {
@@ -944,19 +952,19 @@ export const projectCodeData: CodeCardDataType[] = [
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project/yoondesign1.jpg",
+					src: "/images/project_code/yoondesign1.jpg",
 					alt: "screenshot1"
 				},
 				{
-					src: "/images/project/yoondesign2.jpg",
+					src: "/images/project_code/yoondesign2.jpg",
 					alt: "screenshot2"
 				},
 				{
-					src: "/images/project/yoondesign3.jpg",
+					src: "/images/project_code/yoondesign3.jpg",
 					alt: "screenshot3"
 				},
 				{
-					src: "/images/project/yoondesign4.jpg",
+					src: "/images/project_code/yoondesign4.jpg",
 					alt: "screenshot4"
 				},
 			]
@@ -974,15 +982,16 @@ export const projectCodeData: CodeCardDataType[] = [
   },
 	{
     title: "netmarble",
+		date: "2023년 3월",
 		className: "netmarble",
 		type: "개인",
 		boxColor: "var(--thema)",
 		fontColor: "var(--black)",
-		skillBoxColor: "var(--whiteDE)",
+		skillBoxColor: "var(--whiteD)",
 		skillFontColor: "var(--black)",
-		badgeBoxColor: "var(--whiteDE)",
+		badgeBoxColor: "var(--whiteD)",
 		badgeFontColor: "var(--black)",
-		linkBoxColor: "var(--whiteDE)",
+		linkBoxColor: "var(--whiteD)",
 		linkFontColor: "var(--black)",
     techStack: {
       rows: [
@@ -1035,23 +1044,23 @@ export const projectCodeData: CodeCardDataType[] = [
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project/netmarble1.jpg",
+					src: "/images/project_code/netmarble1.jpg",
 					alt: "screenshot1"
 				},
 				{
-					src: "/images/project/netmarble2.jpg",
+					src: "/images/project_code/netmarble2.jpg",
 					alt: "screenshot2"
 				},
 				{
-					src: "/images/project/netmarble3.jpg",
+					src: "/images/project_code/netmarble3.jpg",
 					alt: "screenshot3"
 				},
 				{
-					src: "/images/project/netmarble4.jpg",
+					src: "/images/project_code/netmarble4.jpg",
 					alt: "screenshot4"
 				},
 				{
-					src: "/images/project/netmarble5.jpg",
+					src: "/images/project_code/netmarble5.jpg",
 					alt: "screenshot5"
 				}
 			]
@@ -1068,4 +1077,59 @@ export const projectCodeData: CodeCardDataType[] = [
     }
   },
 ]; 
-// 프로젝트 데이터 배열 END!!
+// project code 데이터 배열 END!!
+
+
+// project design 데이터 배열 START!!
+export const projectDesignData: DesignCardDataType[] = [
+	{
+    thumbnail: "/images/project_design/niweb1.jpg",
+    date: "2023.11",
+    type: "회사",
+		contribution: "전체 100%",
+		title: "엔아이 자사웹 웹페이지 디자인",
+    description: "엔아이 홈페이지 디자인은 광고 회사의 중요점 중 하나인 '신뢰'를 바탕으로 파란색 계열의 시각적 통일과 요소의 일관성을 중심으로 디자인하였다. 이어서 브랜드의 통일성을 유지하고 직관적이며 깔끔한 레이아웃으로 사용자가 쉽게 탐색할 수 있는 디자인에 초첨을 맞췄다."
+  },
+	{
+    thumbnail: "/images/project_design/hivu1.jpg",
+    date: "2023.10",
+    type: "회사",
+		contribution: "디자인 30%",
+		title: "하이뷰 웹사이트 리디자인",
+    description: "hivu 웹사이트의 문제점을 분석하여 hivu만의 브랜드 일관성을 고려한 디자인으로 진행하였다. 주어진 레이아웃에 맞추어 웹사이트의 일관성과 시각적 매력을 개선하여 브랜드 일관성을 확보하는 것에 중점을 두었다. 아이디어 구상 단계에서 'hivu'만의 컬러로 현대적인 느낌을 가미하기 위해서, 간단한 3D 디자인과 실사 이미지를 활용하여 통일성을 주기 위한 디자인을 진행하였다."
+  },
+	{
+    thumbnail: "/images/project_design/cheonghada1.jpg",
+    date: "2023.01",
+    type: "개인",
+		contribution: "전체 100%",
+    title: "청하다 브랜드 디자인",
+    description: "'청하다' 브랜드는 자연 친화적 청량감을 전달하기 위한 이미지를 담은 디자인으로 고객에게 웰빙의 이미지를 전달해준다. 해당 과일 음료 브랜드는 전통과 현대가 어우러진 로고와 패키징 디자인을 통해 자연의 맛과 가치를 전달하며, 생생한 색상의 선택으로 제품의 신선함을 강조한다. '청하다'는 일상 속 작은 변화를 통해 삶에 활력을 불어넣는 브랜드가 되고자 한다."
+  },
+	{
+    thumbnail: "/images/project_design/wayfinding1.jpg",
+    date: "2022.09",
+    type: "개인",
+		contribution: "전체 100%",
+    title: "Airport wayfinding iconography",
+    description: "웨이파인딩 아이코노그라피란, 물리적인 공간에서 아이콘으로 스스로 위치를 찾고 한 장소에서 다른 장소로 이동하는 방법을 말한다. 따라서 공항 아이콘의 정체성과 방향성을 가장 명확하게 표현하는 것을 중점으로 하여 점진적 성장을 은유적으로 나타내는 '점선'이라는 조형적 요소를 전체 아이콘에 대입하여 반영하였다."
+  },
+	{
+    thumbnail: "/images/project_design/medical1.jpg",
+    date: "2022.06",
+    type: "개인",
+		contribution: "디자인 100%",
+		research: "자료조사 50%",
+    title: "의료 기구의 두 얼굴",
+    description: "일생을 살아가며 병원에서 검진받을 일은 무수히 많다. 하지만 무분별한 의료 검사로 의료 기구 사용량이 매년 증가함에 따라 우리는 의료 기구에 의한 방사선 피폭을 피할 수 없는 상황에 직면하게 되었다."
+  },
+  {
+    thumbnail: "/images/project_design/swiss_style1.jpg",
+    date: "2021.06",
+    type: "개인",
+		contribution: "디자인 100%",
+    title: "Swiss modernism poster",
+    description: "스위스 모더니즘은 명확성, 가독성의 질서 및 보편적으로 이해되는 시각적 언어라고 불린다. 이는 깨끗하고 장식이 없는, 불필요한 것을 제거하고 필요한 것만 강조하는 미니멀리즘을 선호한 디자인 스타일이다. 해당 작품에서는 스위스 모더니즘의 틀을 유지하며 포스터를 현대적으로 리디자인하였다."
+  },
+];
+// project design 데이터 배열 END!!
