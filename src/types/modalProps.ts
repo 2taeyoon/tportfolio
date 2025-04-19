@@ -1,18 +1,16 @@
-export interface ImageModalProps {
+export interface SSModalProps {
   isOpen: boolean;
   onClose: () => void;
-  imageUrl: string[];
-  title?: string;
-  date?: string;
-  type?: string;
-  contribution?: string;
+  imageUrl: {
+		src: string;
+		alt: string
+	}[];
   currentImageIndex?: number;
   onPrev?: () => void;
   onNext?: () => void;
-	className?: string;
 } 
 
-export interface ModalButtonsProps {
+export interface SSModalButtonsProps {
   currentIndex: number;
   max: number;
   isZoomed: boolean;
@@ -20,20 +18,13 @@ export interface ModalButtonsProps {
   onNext: () => void;
 }
 
-export interface ModalImageProps {
+export interface SSModalImageProps {
   src: string;
-  alt?: string;
+  alt: string;
   onClick: () => void;
 }
 
-export interface ModalInfoProps {
-  title?: string;
-  date?: string;
-  type?: string;
-  contribution?: string;
-}
-
-export interface ModalOverlayProps {
+export interface SSModalOverlayProps {
 	children: React.ReactNode;
   onClose: () => void;
   className?: string;
