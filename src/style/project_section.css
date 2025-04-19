@@ -13,13 +13,13 @@
 /* 퍼블리싱 포트폴리오 카드 START!! */
 .typortfolio { left: -55rem; }
 .taeyoon { right: -55rem; }
-.krmx { left: -55rem; top: 55rem; }
-.niweb { right: -55rem; top: 55rem; }
-.hivu { scale: 0; }
-.tycode { scale: 0; }
-.mydays { left: 135rem; }
-.yoondesign { right: 135rem; }
-.netmarble { scale: 0; }
+.krmx { left: -55rem; }
+.niweb { right: -55rem; }
+.hivu { left: -55rem; }
+.tycode { right: -55rem; }
+.mydays { left: -55rem; }
+.yoondesign { right: -55rem; }
+.netmarble { left: -55rem; }
 /* 퍼블리싱 포트폴리오 카드 END!! */
 
 /* code_card_wrap, design_card_wrap 공통 코드 START!! */
@@ -134,7 +134,7 @@
 .code_card_wrap .code_card .link_shortcut a.black333:after { background: linear-gradient(70deg, var(--black999), #7c38d800); }
 /* 테마별 링크 박스 호버 효과 END!! */
 
-.design_card_wrap .design_card { display: flex; flex-direction: column;	gap: 2.4rem; width: calc(33.33% - 2.8rem); padding: 1.6rem; background-color: var(--whiteE); border-radius: 1.6rem; }
+.design_card_wrap .design_card { display: flex; flex-direction: column;	gap: 2.4rem; width: calc(33.33% - 2.8rem); padding: 1.6rem; background-color: var(--whiteE); border-radius: 1.6rem; cursor: pointer; }
 .design_card_wrap .design_card .thumbnail {	flex-shrink: 0; position: relative; overflow: hidden; height: 27rem; border-radius: 1.2rem; }
 .design_card_wrap .design_card .thumbnail img { width: 100%; height: 100%; object-fit: cover; }
 .design_card_wrap .design_card .content { display: flex; flex-direction: column; }
