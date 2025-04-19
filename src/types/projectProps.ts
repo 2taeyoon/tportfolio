@@ -23,13 +23,16 @@ export interface CodeCardDataType {
 // project design 카드 타입
 export interface DesignCardDataType {
   thumbnail: string;
+  images: {
+    src: string;
+    alt: string;
+  }[];
   date: string;
 	contribution: string;
 	research?: string;
   type: string;
   title: string;
   description: string;
-  images?: string[];
 }
 
 export interface TechStackProps {
@@ -93,8 +96,6 @@ export interface CodeCardProps {
 // DesignCard에서 쓰이는 props
 export interface DesignCardProps {
   project: DesignCardDataType;
-  index: number;
-  onClick: () => void;
 }
 
 // ScreenshotGallery 컴포넌트에서 쓰이는 props
