@@ -1083,53 +1083,237 @@ export const projectCodeData: CodeCardDataType[] = [
 // project design 데이터 배열 START!!
 export const projectDesignData: DesignCardDataType[] = [
 	{
-    thumbnail: "/images/project_design/niweb1.jpg",
+    thumbnail: "/images/project_design/niweb_thumbnail.jpg",
     date: "2023.11",
     type: "회사",
 		contribution: "전체 100%",
 		title: "엔아이 자사웹 웹페이지 디자인",
-    description: "엔아이 홈페이지 디자인은 광고 회사의 중요점 중 하나인 '신뢰'를 바탕으로 파란색 계열의 시각적 통일과 요소의 일관성을 중심으로 디자인하였다. 이어서 브랜드의 통일성을 유지하고 직관적이며 깔끔한 레이아웃으로 사용자가 쉽게 탐색할 수 있는 디자인에 초첨을 맞췄다."
+    description: "엔아이 홈페이지 디자인은 광고 회사의 중요점 중 하나인 '신뢰'를 바탕으로 파란색 계열의 시각적 통일과 요소의 일관성을 중심으로 디자인하였다. 이어서 브랜드의 통일성을 유지하고 직관적이며 깔끔한 레이아웃으로 사용자가 쉽게 탐색할 수 있는 디자인에 초첨을 맞췄다.",
+		images: [
+			{
+				src: "/images/project_design/niweb1.jpg",
+				alt: "niweb1"
+			},
+			{
+				src: "/images/project_design/niweb2.jpg",
+				alt: "niweb2"
+			},
+			{
+				src: "/images/project_design/niweb3.jpg",
+				alt: "niweb3"
+			},
+			{
+				src: "/images/project_design/niweb4.jpg",
+				alt: "niweb4"
+			},
+			{
+				src: "/images/project_design/niweb5.webp",
+				alt: "niweb5"
+			},
+			{
+				src: "/images/project_design/niweb6.jpg",
+				alt: "niweb6"
+			},
+			{
+				src: "/images/project_design/niweb7.jpg",
+				alt: "niweb7"
+			},
+			{
+				src: "/images/project_design/niweb8.webp",
+				alt: "niweb8"
+			},
+			{
+				src: "/images/project_design/niweb9.jpg",
+				alt: "niweb9"
+			},
+			{
+				src: "/images/project_design/niweb10.jpg",
+				alt: "niweb10"
+			},
+		],
   },
 	{
-    thumbnail: "/images/project_design/hivu1.jpg",
+    thumbnail: "/images/project_design/hivu_thumbnail.jpg",
     date: "2023.10",
     type: "회사",
 		contribution: "디자인 30%",
 		title: "하이뷰 웹사이트 리디자인",
-    description: "hivu 웹사이트의 문제점을 분석하여 hivu만의 브랜드 일관성을 고려한 디자인으로 진행하였다. 주어진 레이아웃에 맞추어 웹사이트의 일관성과 시각적 매력을 개선하여 브랜드 일관성을 확보하는 것에 중점을 두었다. 아이디어 구상 단계에서 'hivu'만의 컬러로 현대적인 느낌을 가미하기 위해서, 간단한 3D 디자인과 실사 이미지를 활용하여 통일성을 주기 위한 디자인을 진행하였다."
+    description: "hivu 웹사이트의 문제점을 분석하여 hivu만의 브랜드 일관성을 고려한 디자인으로 진행하였다. 주어진 레이아웃에 맞추어 웹사이트의 일관성과 시각적 매력을 개선하여 브랜드 일관성을 확보하는 것에 중점을 두었다. 아이디어 구상 단계에서 'hivu'만의 컬러로 현대적인 느낌을 가미하기 위해서, 간단한 3D 디자인과 실사 이미지를 활용하여 통일성을 주기 위한 디자인을 진행하였다.",
+		images: [
+			{
+				src: "/images/project_design/hivu1.jpg",
+				alt: "hivu1"
+			},
+			{
+				src: "/images/project_design/hivu2.jpg",
+				alt: "hivu2"
+			},
+			{
+				src: "/images/project_design/hivu3.jpg",
+				alt: "hivu3"
+			},
+			{
+				src: "/images/project_design/hivu4.jpg",
+				alt: "hivu4"
+			},
+			{
+				src: "/images/project_design/hivu5.jpg",
+				alt: "hivu5"
+			},
+		],
   },
 	{
-    thumbnail: "/images/project_design/cheonghada1.jpg",
+    thumbnail: "/images/project_design/cheonghada_thumbnail.jpg",
     date: "2023.01",
     type: "개인",
 		contribution: "전체 100%",
     title: "청하다 브랜드 디자인",
-    description: "'청하다' 브랜드는 자연 친화적 청량감을 전달하기 위한 이미지를 담은 디자인으로 고객에게 웰빙의 이미지를 전달해준다. 해당 과일 음료 브랜드는 전통과 현대가 어우러진 로고와 패키징 디자인을 통해 자연의 맛과 가치를 전달하며, 생생한 색상의 선택으로 제품의 신선함을 강조한다. '청하다'는 일상 속 작은 변화를 통해 삶에 활력을 불어넣는 브랜드가 되고자 한다."
+    description: "'청하다' 브랜드는 자연 친화적 청량감을 전달하기 위한 이미지를 담은 디자인으로 고객에게 웰빙의 이미지를 전달해준다. 해당 과일 음료 브랜드는 전통과 현대가 어우러진 로고와 패키징 디자인을 통해 자연의 맛과 가치를 전달하며, 생생한 색상의 선택으로 제품의 신선함을 강조한다. '청하다'는 일상 속 작은 변화를 통해 삶에 활력을 불어넣는 브랜드가 되고자 한다.",
+		images: [
+			{
+				src: "/images/project_design/cheonghada1.jpg",
+				alt: "cheonghada1"
+			},
+			{
+				src: "/images/project_design/cheonghada2.jpg",
+				alt: "cheonghada2"
+			},
+			{
+				src: "/images/project_design/cheonghada3.jpg",
+				alt: "cheonghada3"
+			},
+			{
+				src: "/images/project_design/cheonghada4.jpg",
+				alt: "cheonghada4"
+			},
+			{
+				src: "/images/project_design/cheonghada5.jpg",
+				alt: "cheonghada5"
+			},
+			{
+				src: "/images/project_design/cheonghada6.jpg",
+				alt: "cheonghada6"
+			},
+		],
   },
 	{
-    thumbnail: "/images/project_design/wayfinding1.jpg",
+    thumbnail: "/images/project_design/wayfinding_thumbnail.jpg",
     date: "2022.09",
     type: "개인",
 		contribution: "전체 100%",
     title: "Airport wayfinding iconography",
-    description: "웨이파인딩 아이코노그라피란, 물리적인 공간에서 아이콘으로 스스로 위치를 찾고 한 장소에서 다른 장소로 이동하는 방법을 말한다. 따라서 공항 아이콘의 정체성과 방향성을 가장 명확하게 표현하는 것을 중점으로 하여 점진적 성장을 은유적으로 나타내는 '점선'이라는 조형적 요소를 전체 아이콘에 대입하여 반영하였다."
+    description: "웨이파인딩 아이코노그라피란, 물리적인 공간에서 아이콘으로 스스로 위치를 찾고 한 장소에서 다른 장소로 이동하는 방법을 말한다. 따라서 공항 아이콘의 정체성과 방향성을 가장 명확하게 표현하는 것을 중점으로 하여 점진적 성장을 은유적으로 나타내는 '점선'이라는 조형적 요소를 전체 아이콘에 대입하여 반영하였다.",
+		images: [
+			{
+				src: "/images/project_design/wayfinding1.jpg",
+				alt: "wayfinding1"
+			},
+			{
+				src: "/images/project_design/wayfinding2.jpg",
+				alt: "wayfinding2"
+			},
+			{
+				src: "/images/project_design/wayfinding3.webp",
+				alt: "wayfinding3"
+			},
+			{
+				src: "/images/project_design/wayfinding4.jpg",
+				alt: "wayfinding4"
+			},
+			{
+				src: "/images/project_design/wayfinding5.jpg",
+				alt: "wayfinding5"
+			},
+			{
+				src: "/images/project_design/wayfinding6.jpg",
+				alt: "wayfinding6"
+			},
+			{
+				src: "/images/project_design/wayfinding7.jpg",
+				alt: "wayfinding7"
+			},
+			{
+				src: "/images/project_design/wayfinding8.jpg",
+				alt: "wayfinding8"
+			},
+			{
+				src: "/images/project_design/wayfinding9.jpg",
+				alt: "wayfinding9"
+			},
+		],
   },
 	{
-    thumbnail: "/images/project_design/medical1.jpg",
+    thumbnail: "/images/project_design/medical_thumbnail.jpg",
     date: "2022.06",
     type: "개인",
 		contribution: "디자인 100%",
 		research: "자료조사 50%",
     title: "의료 기구의 두 얼굴",
-    description: "일생을 살아가며 병원에서 검진받을 일은 무수히 많다. 하지만 무분별한 의료 검사로 의료 기구 사용량이 매년 증가함에 따라 우리는 의료 기구에 의한 방사선 피폭을 피할 수 없는 상황에 직면하게 되었다."
+    description: "일생을 살아가며 병원에서 검진받을 일은 무수히 많다. 하지만 무분별한 의료 검사로 의료 기구 사용량이 매년 증가함에 따라 우리는 의료 기구에 의한 방사선 피폭을 피할 수 없는 상황에 직면하게 되었다.",
+		images: [
+			{
+				src: "/images/project_design/medical1.jpg",
+				alt: "medical1"
+			},
+			{
+				src: "/images/project_design/medical2.jpg",
+				alt: "medical2"
+			},
+			{
+				src: "/images/project_design/medical3.jpg",
+				alt: "medical3"
+			},
+			{
+				src: "/images/project_design/medical4.jpg",
+				alt: "medical4"
+			},
+			{
+				src: "/images/project_design/medical5.jpg",
+				alt: "medical5"
+			},
+			{
+				src: "/images/project_design/medical6.jpg",
+				alt: "medical6"
+			},
+			{
+				src: "/images/project_design/medical7.jpg",
+				alt: "medical7"
+			},
+			{
+				src: "/images/project_design/medical8.jpg",
+				alt: "medical8"
+			}
+		],
   },
   {
-    thumbnail: "/images/project_design/swiss_style1.jpg",
+    thumbnail: "/images/project_design/swiss_style_thumbnail.jpg",
     date: "2021.06",
     type: "개인",
 		contribution: "디자인 100%",
     title: "Swiss modernism poster",
-    description: "스위스 모더니즘은 명확성, 가독성의 질서 및 보편적으로 이해되는 시각적 언어라고 불린다. 이는 깨끗하고 장식이 없는, 불필요한 것을 제거하고 필요한 것만 강조하는 미니멀리즘을 선호한 디자인 스타일이다. 해당 작품에서는 스위스 모더니즘의 틀을 유지하며 포스터를 현대적으로 리디자인하였다."
+    description: "스위스 모더니즘은 명확성, 가독성의 질서 및 보편적으로 이해되는 시각적 언어라고 불린다. 이는 깨끗하고 장식이 없는, 불필요한 것을 제거하고 필요한 것만 강조하는 미니멀리즘을 선호한 디자인 스타일이다. 해당 작품에서는 스위스 모더니즘의 틀을 유지하며 포스터를 현대적으로 리디자인하였다.",
+		images: [
+			{
+				src: "/images/project_design/swiss1.jpg",
+				alt: "swiss1"
+			},
+			{
+				src: "/images/project_design/swiss2.jpg",
+				alt: "swiss2"
+			},
+			{
+				src: "/images/project_design/swiss3.jpg",
+				alt: "swiss3"
+			},
+			{
+				src: "/images/project_design/swiss4.jpg",
+				alt: "swiss4"
+			},
+			{
+				src: "/images/project_design/swiss5.jpg",
+				alt: "swiss5"
+			},
+		],
   },
 ];
 // project design 데이터 배열 END!!
