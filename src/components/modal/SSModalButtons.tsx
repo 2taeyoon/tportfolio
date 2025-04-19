@@ -1,6 +1,6 @@
-import { ModalButtonsProps } from "@/types/modalProps";
+import { SSModalButtonsProps } from "@/types/modalProps";
 
-export default function ModalButtons({ currentIndex, max, isZoomed, onPrev, onNext }: ModalButtonsProps) {
+export default function SSModalButtons({ currentIndex, max, isZoomed, onPrev, onNext }: SSModalButtonsProps) {
   return (
     <>
       {!isZoomed && currentIndex > 0 && (
