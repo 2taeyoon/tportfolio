@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import ImageModal from "@/components/modal/ImageModal";
+import SSModal from "@/components/modal/SSModal";
 import { ScreenshotGalleryProps } from "@/types/projectProps";
 
 export default function ScreenshotGallery({ project, title, images, modalProps, onImageClick }: ScreenshotGalleryProps) {
@@ -34,14 +34,13 @@ export default function ScreenshotGallery({ project, title, images, modalProps, 
           </SwiperSlide>
         ))}
       </Swiper>
-      <ImageModal
+      <SSModal
         isOpen={modalProps.isModalOpen}
         onClose={modalProps.handleCloseModal}
-        imageUrl={images.map(img => img.src)}
+        imageUrl={images}
         currentImageIndex={modalProps.currentImageIndex}
         onPrev={modalProps.handlePrevImage}
         onNext={modalProps.handleNextImage}
-				className="code"
       />
     </div>
   );
