@@ -167,7 +167,6 @@ export default function ProjectSection() {
 
 			projectScroll.to(krmx, {
 				left: '0',
-				top: '0',
 				scrollTrigger: {
 					trigger: krmx,
 					start: "top bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
@@ -179,7 +178,6 @@ export default function ProjectSection() {
 
 			projectScroll.to(niweb, {
 				right: '0',
-				top: '0',
 				scrollTrigger: {
 					trigger: niweb,
 					start: "top bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
@@ -190,7 +188,7 @@ export default function ProjectSection() {
 			});
 
 			projectScroll.to(hivu, {
-				scale: '1',
+				left: '0',
 				scrollTrigger: {
 					trigger: hivu,
 					start: "top bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
@@ -201,7 +199,7 @@ export default function ProjectSection() {
 			});
 
 			projectScroll.to(tycode, {
-				scale: '1',
+				right: '0',
 				scrollTrigger: {
 					trigger: tycode,
 					start: "top bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
@@ -234,7 +232,7 @@ export default function ProjectSection() {
 			});
 
 			projectScroll.to(netmarble, {
-				scale: '1',
+				left: '0',
 				scrollTrigger: {
 					trigger: netmarble,
 					start: "top bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
