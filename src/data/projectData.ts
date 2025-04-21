@@ -1294,24 +1294,24 @@ export const projectDesignData: DesignCardDataType[] = [
     description: "스위스 모더니즘은 명확성, 가독성의 질서 및 보편적으로 이해되는 시각적 언어라고 불린다. 이는 깨끗하고 장식이 없는, 불필요한 것을 제거하고 필요한 것만 강조하는 미니멀리즘을 선호한 디자인 스타일이다. 해당 작품에서는 스위스 모더니즘의 틀을 유지하며 포스터를 현대적으로 리디자인하였다.",
 		images: [
 			{
-				src: "/images/project_design/swiss1.jpg",
-				alt: "swiss1"
+				src: "/images/project_design/swiss_style1.jpg",
+				alt: "swiss_style1"
 			},
 			{
-				src: "/images/project_design/swiss2.jpg",
-				alt: "swiss2"
+				src: "/images/project_design/swiss_style2.jpg",
+				alt: "swiss_style2"
 			},
 			{
-				src: "/images/project_design/swiss3.jpg",
-				alt: "swiss3"
+				src: "/images/project_design/swiss_style3.jpg",
+				alt: "swiss_style3"
 			},
 			{
-				src: "/images/project_design/swiss4.jpg",
-				alt: "swiss4"
+				src: "/images/project_design/swiss_style4.jpg",
+				alt: "swiss_style4"
 			},
 			{
-				src: "/images/project_design/swiss5.jpg",
-				alt: "swiss5"
+				src: "/images/project_design/swiss_style5.jpg",
+				alt: "swiss_style5"
 			},
 		],
   },
