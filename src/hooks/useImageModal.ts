@@ -4,7 +4,7 @@ export const useImageModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // 이미지 모달의 열림/닫힘 상태를 관리하는 state
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // 현재 보여지는 이미지의 인덱스를 관리하는 state
 
-  const handleImageClick = (index: number) => { // 썸네일 이미지 클릭 시 해당 이미지를 모달로 보여주는 핸들러
+  const handleImageClick = (index: number) => { // 클릭 시 클릭한 이미지를 활성화하는 핸들러
     setCurrentImageIndex(index); // 클릭된 이미지의 인덱스를 저장
     setIsModalOpen(true); // 모달 활성화
   };
