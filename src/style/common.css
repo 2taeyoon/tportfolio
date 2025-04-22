@@ -2,7 +2,7 @@
 .inner { max-width: 100%; width: 100%; height: 100%; padding: 12rem 16rem; }
 .pd_box { padding: 5rem 8rem; }
 
-.noise { position: absolute; overflow: hidden; inset: 0; z-index: 100; pointer-events: none; opacity: 0.15; }
+.noise { position: absolute; overflow: hidden; inset: 0; z-index: 100; pointer-events: none; opacity: 0.1; }
 .noise::after { content: ""; position: absolute; inset: 0; background-image: url("/images/noise.png"); pointer-events: none; }
 
 /* wave 컴포넌트 공통 코드 START!! */
@@ -37,20 +37,36 @@
 .skill_section .radial_gradient.left { left: 0px; top: 70%; transform: translateY(-50%); width: 15rem; height: 15rem; background: radial-gradient(circle at center, var(--themaSubDark) 50%, var(--themaSub) 100%); }
 .skill_section .radial_gradient.right { right: 0px; top: 50%; transform: translateY(-50%); width: 20rem; height: 20rem; background: radial-gradient(circle at center, var(--themaSubDark) 50%, var(--themaSub) 100%); }
 
-.modal_overlay { position: fixed; inset: 0; width: 100%; height: 100%; background: #111111ee; z-index: var(--z70); display: flex ; align-items: center; justify-content: center; }
-.modal_overlay .modal_content { display: flex; width: 50vw; height: 90vh; }
-.modal_overlay .modal_content .modal_image_container { position: relative; width: 100%; height: 100%; cursor: zoom-in; }
-.modal_overlay .modal_content button { display: flex; align-items: center; justify-content: center; position: absolute; z-index: var(--z100); top: 50%; transform: translateY(-50%); width: 45px; height: 45px; background-color: var(--black666); border-radius: 999px; transition: background-color .3s; }
-.modal_overlay .modal_content button:hover { background-color: var(--black999); }
-.modal_overlay .modal_content .modal_prev { left: 12rem; }
-.modal_overlay .modal_content .modal_next { right: 12rem; }
+/* 모달 컴포넌트 코드 START!! */
+.modal_overlay{ display: flex; justify-content: center; position: fixed; inset: 0; background: #111111ee; z-index: var(--z70); }
+.modal_overlay.screenshot_modal { align-items: center; width: 100%; height: 100%; }
+.modal_overlay.screenshot_modal .modal_content { display: flex; width: 50vw; height: 90vh; }
+.modal_overlay.screenshot_modal .modal_content .modal_image { position: relative; width: 100%; height: 100%; cursor: zoom-in; }
+.modal_overlay.screenshot_modal .modal_content button { display: flex; align-items: center; justify-content: center; position: absolute; z-index: var(--z100); top: 50%; transform: translateY(-50%); width: 45px; height: 45px; background-color: var(--black666); border-radius: 999px; transition: background-color .3s; }
+.modal_overlay.screenshot_modal .modal_content button:hover { background-color: var(--black999); }
+.modal_overlay.screenshot_modal .modal_content .modal_prev { left: 12rem; }
+.modal_overlay.screenshot_modal .modal_content .modal_next { right: 12rem; }
 
-.modal_overlay .modal_content.zoomed { width: 100vw; height: 100vh; overflow-y: scroll; }
-.modal_overlay .modal_content.zoomed .modal_image_container { cursor: zoom-out; }
-.modal_overlay .modal_content.zoomed.vertical .modal_image_container { height: 200%; }
-.modal_overlay .modal_content.zoomed.horizontal .modal_image_container { height: 100%; }
+.modal_overlay.screenshot_modal .modal_content.zoomed { width: 100vw; height: 100vh; overflow-y: scroll; }
+.modal_overlay.screenshot_modal .modal_content.zoomed .modal_image { cursor: zoom-out; }
+.modal_overlay.screenshot_modal .modal_content.zoomed.vertical .modal_image { height: 200%; }
+.modal_overlay.screenshot_modal .modal_content.zoomed.horizontal .modal_image { height: 100%; }
+
+.modal_overlay.popup_modal { overflow-y: auto; }
+.modal_overlay.popup_modal .modal_content { position: relative; z-index: var(--z100); overflow: hidden; width: 100%; max-width: 1280px; height: max-content; margin: 10rem 0 4rem; border-radius: 1.2rem; background: var(--whiteE); }
+.modal_overlay.popup_modal .modal_content .modal_header_wrap { display: flex; justify-content: space-between; padding: 2rem 3rem; }
+.modal_overlay.popup_modal .modal_content .modal_header_wrap .modal_header { display: flex; flex-direction: column; }
+.modal_overlay.popup_modal .modal_content .modal_header_wrap .modal_header .modal_title { font-size: 1.8rem; font-weight: bold; }
+.modal_overlay.popup_modal .modal_content .modal_header_wrap .modal_header .modal_date { font-size: 1.6rem; color: var(--black999); }
+.modal_overlay.popup_modal .modal_content .modal_header_wrap .modal_info { display: flex; align-items: center; gap: 1rem; }
+.modal_overlay.popup_modal .modal_content .modal_header_wrap .modal_info .modal_type { background-color: var(--themaSub); padding: 0.4rem 0.8rem; border-radius: 0.5rem; font-size: 1.4rem; }
+.modal_overlay.popup_modal .modal_content .modal_header_wrap .modal_info .modal_contribution { background-color: var(--themaSub); padding: 0.4rem 0.8rem; border-radius: 0.5rem; font-size: 1.4rem; }
+.modal_overlay.popup_modal .modal_content .modal_image { position: relative; width: 100%; }
+/* 모달 컴포넌트 코드 END!! */
 
 @media (max-width: 1536px) {
 	.inner { padding: 8rem 12rem; }
 	.pd_box { padding: 3rem 6rem; }
+
+	.modal_overlay.popup_modal .modal_content { max-width: 1024px; }
 }
