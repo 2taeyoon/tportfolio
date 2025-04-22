@@ -1,3 +1,11 @@
+import { DesignCardDataType } from "./projectProps";
+
+export interface ModalOverlayProps {
+	children: React.ReactNode;
+  onClose: () => void;
+  className?: string;
+}
+
 export interface SSModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -24,8 +32,8 @@ export interface SSModalImageProps {
   onClick: () => void;
 }
 
-export interface SSModalOverlayProps {
-	children: React.ReactNode;
+export interface PopupModalProps {
+  isOpen: boolean;
+  currentProject: DesignCardDataType;
   onClose: () => void;
-  className?: string;
 }
