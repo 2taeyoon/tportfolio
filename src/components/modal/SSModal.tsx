@@ -2,9 +2,9 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import { createPortal } from 'react-dom';
-import ModalOverlay from '@/components/modal/SSModalOverlay';
-import ModalImage from '@/components/modal/SSModalImage';
-import ModalButtons from '@/components/modal/SSModalButtons';
+import ModalOverlay from '@/components/modal/ModalOverlay';
+import SSModalImage from '@/components/modal/SSModalImage';
+import SSModalButtons from '@/components/modal/SSModalButtons';
 import { SSModalProps } from '@/types/modalProps';
 
 export default function SSModal({
@@ -96,10 +96,10 @@ export default function SSModal({
   const zoomClass = isZoomed ? imageRatio === 'horizontal' ? 'zoomed horizontal' : 'zoomed vertical' : '';
 
   return createPortal(
-    <ModalOverlay onClose={onClose}>
+    <ModalOverlay onClose={onClose} className="screenshot_modal">
       <div className={`modal_content ${zoomClass}`} onClick={(e) => e.stopPropagation()}>
-        <ModalButtons currentIndex={currentIndex} max={imageUrl.length} isZoomed={isZoomed} onPrev={handlePrev} onNext={handleNext}/>
-				<ModalImage src={imageUrl[currentIndex].src} alt={imageUrl[currentIndex].alt} onClick={() => setIsZoomed(!isZoomed)}/>
+        <SSModalButtons currentIndex={currentIndex} max={imageUrl.length} isZoomed={isZoomed} onPrev={handlePrev} onNext={handleNext}/>
+				<SSModalImage src={imageUrl[currentIndex].src} alt={imageUrl[currentIndex].alt} onClick={() => setIsZoomed(!isZoomed)}/>
       </div>
     </ModalOverlay>,document.body
   );
