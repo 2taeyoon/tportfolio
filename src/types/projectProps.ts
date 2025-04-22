@@ -96,6 +96,7 @@ export interface CodeCardProps {
 // DesignCard에서 쓰이는 props
 export interface DesignCardProps {
   project: DesignCardDataType;
+	onClick: () => void;
 }
 
 // ScreenshotGallery 컴포넌트에서 쓰이는 props
