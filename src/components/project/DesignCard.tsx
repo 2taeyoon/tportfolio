@@ -1,9 +1,9 @@
 import { DesignCardProps } from "@/types/projectProps"
 import Image from "next/image"
 
-export default function DesignCard({ project }: DesignCardProps) {
+export default function DesignCard({ project, onClick }: DesignCardProps) {
 	return (
-		<div className="design_card">
+		<div className="design_card" onClick={onClick}>
 			<div className="thumbnail">
 				<Image src={project.thumbnail} alt={project.title} draggable={false} fill
 					sizes="100%"
