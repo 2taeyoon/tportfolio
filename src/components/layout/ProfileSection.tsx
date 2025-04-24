@@ -2,8 +2,7 @@
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef, useState } from "react";
-import Noise from "@/components/common/Noise";
+import { useEffect, useState } from "react";
 import ProfileIntroduction from "@/components/profile/ProfileIntroduction";
 import { characterTextSplit } from "@/utils/textSplit";
 import ProfileVideo from "@/components/profile/ProfileVideo";
@@ -11,9 +10,8 @@ import ExperienceList from "@/components/profile/list/ExperienceList";
 import DividerWithIcons from "@/components/common/DividerWithIcons";
 import TextSplitWrap from "../common/TextSplitWrap";
 
-export default function ProfileSection() {
+export default function ProfileSection({profileScrollRef}: {profileScrollRef: React.RefObject<HTMLDivElement | null>}) {
 	const title = `PROFILE`;
-	const profileScrollRef = useRef<HTMLDivElement | null>(null); // 스크롤 애니메이션이 적용될 요소
 
 	const [dividerSrc, setDividerSrc] = useState('/images/divider_dark.png'); // 초기 이미지
 
@@ -21,6 +19,8 @@ export default function ProfileSection() {
 		gsap.registerPlugin(ScrollTrigger);
 
 		const ctx = gsap.context(() => {
+			if (!profileScrollRef?.current) return;
+
 			const q = gsap.utils.selector(profileScrollRef.current);
 			const profileWrapRef = q('.profile_wrap'); 
 			const profileTitleRef = q('.profile_title'); // profile_title 클래스 텍스트
@@ -263,7 +263,7 @@ export default function ProfileSection() {
 		});
 
 		return () => ctx.revert();
-	}, []);
+	}, [profileScrollRef]);
 
 	return (
 		<div className="profile_section section inner" ref={profileScrollRef}>
@@ -274,7 +274,6 @@ export default function ProfileSection() {
 				<DividerWithIcons dividerSrc={dividerSrc}/>
 				<ExperienceList/>
 			</div>
-			<Noise/>
 		</div>
 	)
 }
