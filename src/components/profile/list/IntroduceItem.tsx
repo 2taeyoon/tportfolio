@@ -1,14 +1,11 @@
+import TextSplitWrap from "@/components/common/TextSplitWrap";
 import { spaceTextSplit } from "@/utils/textSplit";
 
 export default function IntroduceItem({ question, answer }: { question: string, answer: string }) {
   return (
     <div className="qa_item">
-      <div className="title">
-				{spaceTextSplit(question, "clip")}
-      </div>
-      <div className="text">
-				{spaceTextSplit(answer, "clip")}
-      </div>
+			<TextSplitWrap text={question} className="title" splitFunction={spaceTextSplit}/>
+			<TextSplitWrap text={answer} className="text" splitFunction={spaceTextSplit}/>
     </div>
   );
 }
