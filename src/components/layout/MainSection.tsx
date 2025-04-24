@@ -1,7 +1,5 @@
 'use client';
 
-import Noise from "@/components/common/Noise";
-//import SlotMachineText from "@/components/ui/SlotMachineText";
 import BigCompass from "@/components/main/BigCompass";
 import SmallCompass from "@/components/main/SmallCompass";
 import Wave from "@/components/common/Wave";
@@ -9,24 +7,21 @@ import useMouseEffect from "@/hooks/useMouseEffect";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Grid from "@/components/main/Grid";
 import WordText from "@/components/main/WordText";
 
-export default function MainSection() {
+export default function MainSection({mainScrollRef}: {mainScrollRef: React.RefObject<HTMLDivElement | null>}) {
 	const { gMatrix, circleMatrix, rotation, handleMouseMove } = useMouseEffect(); // 마우스 이펙트 훅
-	const mainScrollRef = useRef<HTMLDivElement | null>(null); // 스크롤 애니메이션이 적용될 요소
 
-	// const textContents = useRef(null);
-	// const firstTextRefs = useRef<(HTMLDivElement | null)[]>([]);
-	// const secondTextRefs = useRef<(HTMLDivElement | null)[]>([]);
-	
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		const mm = gsap.matchMedia();
 
 		const ctx = gsap.context(() => {
-			const q = gsap.utils.selector(mainScrollRef.current); // mainScrollRef.current 내부에서 CSS 선택자를 기반으로 요소 선택하는 함수수
+			if (!mainScrollRef?.current) return;
+
+			const q = gsap.utils.selector(mainScrollRef.current); // mainScrollRef.current 내부에서 CSS 선택자를 기반으로 요소 선택하는 함수
 			const gridListRefs = q('.grid_list'); // Grid 컴포넌트의 grid_item의 ref 배열
 			const wordRefs = q('.word_svg'); // WordText 컴포넌트의 word_svg 클래스(PUBLISHER)
 			const typewriterRefs = q('.typewriter'); // Typewriter 컴포넌트의 typewriter 클래스
@@ -135,7 +130,7 @@ export default function MainSection() {
 		});
 
 		return () => ctx.revert();
-	}, []);
+	}, [mainScrollRef]);
 
 	return (
 		<div className="main_section section" onMouseMove={handleMouseMove} ref={mainScrollRef}>
@@ -173,7 +168,6 @@ export default function MainSection() {
 			<div className="word_wrap">
 				<WordText/>
 			</div>
-		<Noise/>
 	</div>
 	)
 }
