@@ -22,10 +22,10 @@
 
 .profile_wrap .introduce_wrap .introduce_list { display: flex; flex-direction: column; gap: 6rem }
 .profile_wrap .introduce_wrap .introduce_list .qa_item { display: flex; flex-direction: column; gap: 2rem; }
-.profile_wrap .introduce_wrap .introduce_list .qa_item .title .clip { font-size: 2.6rem; font-weight: 700; }
-.profile_wrap .introduce_wrap .introduce_list .qa_item .text .clip { line-height: 170%; font-size: 1.8rem; }
-.profile_wrap .introduce_wrap .introduce_list .qa_item .title .clip,
-.profile_wrap .introduce_wrap .introduce_list .qa_item .text .clip { background-size: 0; background-clip: text; -webkit-background-clip: text; background-image: linear-gradient(to right, var(--themaDark), var(--themaDark)); background-repeat: no-repeat; color: var(--themaDarkTrans); transition: background-image .3s; }
+.profile_wrap .introduce_wrap .introduce_list .qa_item .title .char { font-size: 2.6rem; font-weight: 700; }
+.profile_wrap .introduce_wrap .introduce_list .qa_item .text .char { line-height: 170%; font-size: 1.8rem; }
+.profile_wrap .introduce_wrap .introduce_list .qa_item .title .char,
+.profile_wrap .introduce_wrap .introduce_list .qa_item .text .char { background-size: 0; background-clip: text; -webkit-background-clip: text; background-image: linear-gradient(to right, var(--themaDark), var(--themaDark)); background-repeat: no-repeat; color: var(--themaDarkTrans); transition: background-image .3s; }
 .profile_wrap .introduce_wrap .introduce_list .quotes_wrap { display: flex; justify-content: flex-start; }
 .profile_wrap .introduce_wrap .introduce_list .quotes_wrap .quotes_svg { position: relative; height: 5rem; stroke-dasharray: 3px 1px; }
 .profile_wrap .introduce_wrap .introduce_list .quotes_wrap .margin { margin-left: 2.8rem; }
