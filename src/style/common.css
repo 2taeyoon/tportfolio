@@ -2,7 +2,7 @@
 .inner { max-width: 100%; width: 100%; height: 100%; padding: 12rem 16rem; }
 .pd_box { padding: 5rem 8rem; }
 
-.noise { position: absolute; overflow: hidden; inset: 0; z-index: 100; pointer-events: none; opacity: 0.1; }
+.noise { position: fixed; overflow: hidden; inset: 0; z-index: 100; pointer-events: none; opacity: 0.1; }
 .noise::after { content: ""; position: absolute; inset: 0; background-image: url("/images/noise.png"); pointer-events: none; }
 
 /* wave 컴포넌트 공통 코드 START!! */
@@ -20,6 +20,7 @@
 /* 차오르는 물결을 표시하기 위한 main_section내의 wave END!! */
 
 .skill_section .wave svg { position: absolute; bottom: 0; width: 150vw; left: 0; height: 5vmin; }
+.project_section .wave svg { position: absolute; bottom: 0; width: 150vw; left: 0; height: 5vmin; }
 
 .main_section .wave .parallax use:nth-child(1) { fill: #87BD89; }
 .main_section .wave .parallax use:nth-child(2) { fill: #87BD89d1; }
@@ -28,6 +29,10 @@
 .skill_section .wave .parallax use:nth-child(1) { fill: #99a06c; }
 .skill_section .wave .parallax use:nth-child(2) { fill: #99a06cd1; }
 .skill_section .wave .parallax use:nth-child(3) { fill: #99a06ca3; }
+
+.project_section .wave .parallax use:nth-child(1) { fill: #111111; }
+.project_section .wave .parallax use:nth-child(2) { fill: #111111d1; }
+.project_section .wave .parallax use:nth-child(3) { fill: #111111a3; }
 
 .divider_wrap { display: flex; align-items: center; justify-content: space-between; }
 .divider_wrap .divider { position: relative; width: 5rem; height: 5rem; }
