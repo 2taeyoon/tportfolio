@@ -26,12 +26,7 @@ export default function RootLayout({
 				<link rel="icon" href="/favicon.ico" title="icon"/>
       </head>
       <body>
-        {/* <Header /> */}
-        <main>
-					{children}
-					{/* <Footer /> */}
-        </main>
-        {/* Vercel 측정도구 */}
+				{children}	
         <Analytics />
       </body>
     </html>
