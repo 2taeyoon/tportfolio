@@ -2,18 +2,18 @@
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from 'react';
-import Noise from '@/components/common/Noise';
+import { useEffect } from 'react';
 import CodeCardWrap from "@/components/project/CodeCardWrap";
-import DesignCardWrap from "../project/DesignCardWrap";
+import DesignCardWrap from "@/components/project/DesignCardWrap";
+import Wave from "@/components/common/Wave";
 
-export default function ProjectSection() {
-	const projectScrollRef = useRef<HTMLDivElement | null>(null); // 스크롤 애니메이션이 적용될 요소
-
+export default function ProjectSection({projectScrollRef}: {projectScrollRef: React.RefObject<HTMLDivElement | null>}) {
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
 		const ctx = gsap.context(() => {
+			if (!projectScrollRef?.current) return;
+
 			const q = gsap.utils.selector(projectScrollRef.current);
 			const codeCardTitleRef = q('.code_card_title');
 			const codeCardSubtitleRef = q('.code_card_subtitle');
@@ -172,7 +172,7 @@ export default function ProjectSection() {
 					start: "top bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
 					end: "top bottom-=300", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
-					markers: true, // 스크롤 확인용(개발 모드에서만 사용)
+					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
 			});
 
@@ -183,7 +183,7 @@ export default function ProjectSection() {
 					start: "top bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
 					end: "top bottom-=300", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
-					markers: true, // 스크롤 확인용(개발 모드에서만 사용)
+					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
 			});
 
@@ -194,7 +194,7 @@ export default function ProjectSection() {
 					start: "top bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
 					end: "top bottom-=300", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
-					markers: true, // 스크롤 확인용(개발 모드에서만 사용)
+					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
 			});
 
@@ -205,7 +205,7 @@ export default function ProjectSection() {
 					start: "top bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
 					end: "top bottom-=300", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
-					markers: true, // 스크롤 확인용(개발 모드에서만 사용)
+					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
 			});
 
@@ -216,7 +216,7 @@ export default function ProjectSection() {
 					start: "top bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
 					end: "top bottom-=300", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
-					markers: true, // 스크롤 확인용(개발 모드에서만 사용)
+					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
 			});
 
@@ -227,7 +227,7 @@ export default function ProjectSection() {
 					start: "top bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
 					end: "top bottom-=300", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
-					markers: true, // 스크롤 확인용(개발 모드에서만 사용)
+					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
 			});
 
@@ -238,7 +238,7 @@ export default function ProjectSection() {
 					start: "top bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
 					end: "top bottom-=300", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
-					markers: true, // 스크롤 확인용(개발 모드에서만 사용)
+					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
 			});
 			// 포트폴리오 카드 애니메이션 END!!
@@ -247,13 +247,13 @@ export default function ProjectSection() {
 		});
 
 		return () => ctx.revert();
-	}, []);
+	}, [projectScrollRef]);
 
   return (
     <div className="project_section section inner" ref={projectScrollRef}>
 			<CodeCardWrap/>
 			<DesignCardWrap/>
-      <Noise />
+			<Wave />
     </div>
   );
 }
