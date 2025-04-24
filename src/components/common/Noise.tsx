@@ -1,3 +1,3 @@
-export default function NoiseBackground() {
+export default function Noise() {
 	return <div className="noise"></div>;
 }
