@@ -49,18 +49,7 @@ export default function ProjectSection({projectScrollRef}: {projectScrollRef: Re
 				scrollTrigger: {
 					trigger: codeCardTitleRef,
 					start: "top+=100 bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
-					end: "top bottom-=400", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
-					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
-					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
-				},
-			});
-
-			projectScroll.to(codeCardSubtitleRef, {
-				scale: '1',
-				scrollTrigger: {
-					trigger: codeCardSubtitleRef,
-					start: "top+=200 bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
-					end: "top bottom-=500", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
+					end: "top bottom-=300", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
 					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
@@ -73,6 +62,17 @@ export default function ProjectSection({projectScrollRef}: {projectScrollRef: Re
 				scrollTrigger: {
 					trigger: codeCardTitleCharRef,
 					start: "top+=100 bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
+					end: "top bottom-=300", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
+					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
+					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
+				},
+			});
+
+			projectScroll.to(codeCardSubtitleRef, {
+				scale: '1',
+				scrollTrigger: {
+					trigger: codeCardSubtitleRef,
+					start: "top+=200 bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
 					end: "top bottom-=400", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
 					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
@@ -86,7 +86,7 @@ export default function ProjectSection({projectScrollRef}: {projectScrollRef: Re
 				scrollTrigger: {
 					trigger: codeCardSubtitleCharRef,
 					start: "top+=200 bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
-					end: "top bottom-=500", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
+					end: "top bottom-=400", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
 					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
@@ -97,20 +97,9 @@ export default function ProjectSection({projectScrollRef}: {projectScrollRef: Re
 				scrollTrigger: {
 					trigger: designCardTitleRef,
 					start: "top+=100 bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
-					end: "top bottom-=400", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
-					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
-					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
-				},
-			});
-
-			projectScroll.to(designCardSubtitleRef, {
-				scale: '1',
-				scrollTrigger: {
-					trigger: designCardSubtitleRef,
-					start: "top+=200 bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
 					end: "top bottom-=500", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
-					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
+					markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
 			});
 
@@ -121,9 +110,20 @@ export default function ProjectSection({projectScrollRef}: {projectScrollRef: Re
 				scrollTrigger: {
 					trigger: designCardTitleCharRef,
 					start: "top+=100 bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
-					end: "top bottom-=400", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
+					end: "top bottom-=500", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
 					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
+				},
+			});
+
+			projectScroll.to(designCardSubtitleRef, {
+				scale: '1',
+				scrollTrigger: {
+					trigger: designCardSubtitleRef,
+					start: "top+=200 bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
+					end: "top bottom-=600", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
+					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
+					markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
 			});
 
@@ -134,7 +134,7 @@ export default function ProjectSection({projectScrollRef}: {projectScrollRef: Re
 				scrollTrigger: {
 					trigger: designCardSubtitleCharRef,
 					start: "top+=200 bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
-					end: "top bottom-=500", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
+					end: "top bottom-=600", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
 					//markers: true, // 스크롤 확인용(개발 모드에서만 사용)
 				},
