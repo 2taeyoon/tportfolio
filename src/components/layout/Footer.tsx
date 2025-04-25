@@ -1,19 +1,52 @@
 'use client';
 
 import Copyright from "@/components/common/Copyright"
-import { ScrollRefProps } from "@/types/props";
-import { useScrollToSection } from "@/hooks/useScrollToSection";
+import { ScrollRefProps } from "@/types/commonProps";
 import Image from "next/image"
+import { useKoreanTime } from "@/hooks/useKoreanTime";
+import Navigation from "@/components/common/Navigation";
+import TextSplitWrap from "../common/TextSplitWrap";
+import { characterTextSplit } from "@/utils/textSplit";
+import { useEffect } from "react";
 
-export default function Footer({profileScrollRef, skillScrollRef, projectScrollRef}: ScrollRefProps) {
-  const { scrollToSection } = useScrollToSection();
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+export default function Footer({profileScrollRef, skillScrollRef, projectScrollRef, footerScrollRef}: ScrollRefProps) {
+	const currentTime = useKoreanTime();
+	const title = "THANK YOU";
+
+	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		const ctx = gsap.context(() => {
+			if (!footerScrollRef?.current) return;
+
+			const q = gsap.utils.selector(footerScrollRef.current); // footerScrollRef.current 내부에서 CSS 선택자를 기반으로 요소 선택하는 함수
+			const thankCharRefs = q('.thank_you .char'); // thank_you_wrap 클래스의 스플릿 텍스트
+
+			thankCharRefs.forEach((char: HTMLSpanElement, index: number) => {
+				gsap.to(char, {
+					filter: `blur(3px)`,
+					delay: index * 0.25,
+					duration: 1.5,
+					repeat: -1,
+					yoyo: true,
+					ease: "power1.inOut"
+				});
+			});
+
+		});
+
+		return () => ctx.revert();
+	}, [footerScrollRef]);
 
 	return (
-		<footer className="footer pd_box section inner">
+		<footer className="footer pd_box section inner" ref={footerScrollRef}>
 			<div className="content">
 				<div className="logo_section">
 					<div className="logo">
-						<Image src="/favicon/favicon-96x96.png" alt="logo" fill draggable={false}
+						<Image src="/images/footer_logo.png" alt="logo" fill draggable={false}
 							sizes="100%"
 							style={{ objectFit: 'cover' }}
 							onDragStart={(e) => e.preventDefault()}
@@ -30,21 +63,20 @@ export default function Footer({profileScrollRef, skillScrollRef, projectScrollR
 						<div className="circle"></div>
 						<div className="nav_title">NAVIGATION</div>
 					</div>
-					<nav className="nav">
-						<ul>
-							{/* MainSection에서는 pin을 이용하여 스크롤 트리거를 적용중이라 scrollIntoView를 적용하면 */}
-							{/* 해당 요소의 끝에서 멈추므로 부득이하게 a태그의 #으로 대체 */}
-							<li><a href="#">Main</a></li>
-              <li onClick={() => profileScrollRef && scrollToSection(profileScrollRef)}>Profile</li>
-              <li onClick={() => skillScrollRef && scrollToSection(skillScrollRef)}>Skill</li>
-              <li onClick={() => projectScrollRef && scrollToSection(projectScrollRef)}>Project</li>
-						</ul>
-					</nav>
+					<Navigation profileScrollRef={profileScrollRef} skillScrollRef={skillScrollRef} projectScrollRef={projectScrollRef}/>
 				</div>
 			</div>
-			<div className="thank_you">
-				<p>LOCATED IN KOREA, // 37.409810°, 127.258260° // 1:56 AM</p>
-				<h1>THANK YOU</h1>
+			<div className="thank_you_wrap">
+				<div className="box_animation">
+					<Image src="/images/box_animation.gif" alt="box_animation" fill draggable={false}
+						sizes="100%"
+						style={{ objectFit: 'cover' }}
+						onDragStart={(e) => e.preventDefault()}
+						onContextMenu={(e) => e.preventDefault()}
+					/>
+				</div>
+				<p>LOCATED IN KOREA, // 37.409810°, 127.258260° // {currentTime}</p>
+				<TextSplitWrap text={title} className="thank_you" splitFunction={characterTextSplit}/>
 			</div>
 			<div className="line"></div>
 			<div className="credits">
