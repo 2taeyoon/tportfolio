@@ -6,6 +6,7 @@ import ModalOverlay from '@/components/modal/ModalOverlay';
 import SSModalImage from '@/components/modal/SSModalImage';
 import SSModalButtons from '@/components/modal/SSModalButtons';
 import { SSModalProps } from '@/types/modalProps';
+import { useModalStore } from "@/hooks/useModalStore";
 
 export default function SSModal({
   isOpen,
@@ -15,6 +16,13 @@ export default function SSModal({
   onPrev,
   onNext,
 }: SSModalProps) {
+  const { setModalOpen } = useModalStore();
+
+	useEffect(() => {
+    setModalOpen(isOpen);
+    return () => setModalOpen(false);
+  }, [isOpen, setModalOpen]);
+
   const [isZoomed, setIsZoomed] = useState(false); // 이미지 확대/축소 상태를 관리하는 state
   const [imageRatio, setImageRatio] = useState<'horizontal' | 'vertical' | null>(null); // 이미지 가로/세로 비율을 저장하는 state ('horizontal' | 'vertical' | null)
   const [currentIndex, setCurrentIndex] = useState(currentImageIndex); // 현재 보여지는 이미지의 인덱스를 관리하는 state
@@ -75,13 +83,13 @@ export default function SSModal({
     // 모달이 열려있을 때만 이벤트 리스너 등록 및 body 스크롤 방지
     if (isOpen) {
       document.addEventListener('keydown', handleKeyDown); // 키보드 이벤트 리스너 등록
-      document.body.style.overflow = 'hidden'; // 모달이 열려있는 동안 body 스크롤 방지
+      document.documentElement.style.overflow = 'hidden'; // 모달이 열려있는 동안 스크롤 방지
     }
 
     // 컴포넌트 언마운트 시 이벤트 리스너 제거 및 body 스크롤 복구
     return () => {
       document.removeEventListener('keydown', handleKeyDown); // 이벤트 리스너 제거
-      document.body.style.overflow = 'unset'; // body 스크롤 복구
+      document.documentElement.style.overflow = 'unset'; // 스크롤 복구
     };
   }, [isOpen, isZoomed, currentIndex, imageUrl.length, onClose, handlePrev, handleNext]);
 
