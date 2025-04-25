@@ -64,7 +64,7 @@
 		#ffffff44 60%,
 		#ffffff00 60%,
 		#ffffff00 100%
-	); background-size: 200% 100%; background-position-x: 150%; transition: scale .3s; color: var(--themaSub); font-size: 3.6rem; }
+	); background-size: 200% 100%; background-position-x: 150%; transition: scale .3s; color: var(--themaSub); font-size: 2.4rem; }
 	.profile_wrap .experience_wrap .copyright .text:hover { scale: 1.01; animation: shimmering 1s forwards; }
 
 .square_grid_wrap .square_grid { display: flex ; flex-direction: column; justify-content: space-between; position: absolute; inset: 0; }
@@ -108,7 +108,7 @@
 	.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_meta { gap: 0.8rem; }
 	.profile_wrap .experience_wrap .experience_item .content_wrap .content .content_meta .content_meta_item { font-size: 1.3rem; }
 
-	.profile_wrap .experience_wrap .copyright .text { padding: 0.8rem 1.6rem; border-radius: 1.2rem; font-size: 2.6rem; }
+	.profile_wrap .experience_wrap .copyright .text { padding: 0.8rem 1.6rem; border-radius: 1.2rem; font-size: 2rem; }
 
 	.profile_wrap .experience_wrap .shape_quote_dots_wrap .shape_quote_dots.left { left: -20%; }
 	.profile_wrap .experience_wrap .shape_quote_dots_wrap .shape_quote_dots.right { right: -20%; }
