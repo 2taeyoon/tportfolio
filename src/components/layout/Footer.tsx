@@ -46,7 +46,7 @@ export default function Footer({profileScrollRef, skillScrollRef, projectScrollR
 			<div className="content">
 				<div className="logo_section">
 					<div className="logo">
-						<Image src="/images/footer_logo.png" alt="logo" fill draggable={false}
+						<Image src="/images/logo.png" alt="logo" fill draggable={false}
 							sizes="100%"
 							style={{ objectFit: 'cover' }}
 							onDragStart={(e) => e.preventDefault()}
