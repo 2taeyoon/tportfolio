@@ -2,7 +2,7 @@
 
 .footer .content { display: flex; justify-content: space-between; gap: 1rem; }
 .footer .content .logo_section { display: flex; flex-direction: column; gap: 2rem; }
-.footer .content .logo_section .logo { position: relative; width: 8rem; height: 8rem; }
+.footer .content .logo_section .logo { position: relative; width: 5rem; height: 5rem; }
 .footer .content .logo_section .contact { display: flex; flex-direction: column; }
 .footer .content .logo_section .contact .comment { color: var(--black333); font-size: 1.8rem; }
 .footer .content .logo_section .contact .email { color: var(--white); font-size: 1.8rem; }
@@ -15,9 +15,13 @@
 .footer .content .nav_wrap .nav ul li { color: var(--white); font-size: 2.4rem; cursor: pointer; }
 .footer .content .nav_wrap .nav ul li a { color: var(--white); font-size: 2.4rem; }
 
-.footer .thank_you { position: relative; text-align: center; }
-.footer .thank_you p { position: absolute; top: 4rem; left: 50%; transform: translateX(-50%); color: var(--black666); font-size: 1.8rem; }
-.footer .thank_you h1 { color: var(--white); font-size: 21.6rem; }
+.footer .thank_you_wrap { position: relative; }
+.footer .thank_you_wrap .box_animation { position: relative; left: 50%; transform: translateX(-50%); width: 8rem; height: 8rem; filter: blur(1px); }
+.footer .thank_you_wrap p { position: absolute; top: 10rem; left: 50%; transform: translateX(-50%); width: 100%; color: var(--black666); font-size: 1.8rem; text-align: center; }
+.footer .thank_you_wrap .thank_you { position: relative; color: var(--white); width: 100%; margin-bottom: 4rem; font-size: 21.6rem; text-align: center; }
+.footer .thank_you_wrap .thank_you .char { font-size: 21.6rem; }
+.footer .thank_you_wrap .thank_you::before { content: ""; position: absolute; left: 0; width: 5rem; height: 5rem; border-top: 1px solid var(--white); border-left: 1px solid var(--white); }
+.footer .thank_you_wrap .thank_you::after { content: ""; position: absolute; right: 0; bottom: 0; width: 5rem; height: 5rem; border-right: 1px solid var(--white); border-bottom: 1px solid var(--white); }
 
 .footer .line { width: 100%; border-top-style: dotted; border-top-width: 1px; border-top-color: var(--white); }
 .footer .credits { display: flex; justify-content: space-between; padding-top: 3rem; }
@@ -28,7 +32,7 @@
 @media (max-width: 1536px) {
 	.footer { padding: 3rem 6rem 0.8rem; }
 	
-	.footer .content .logo_section .logo { width: 7rem; height: 7rem; }
+	.footer .content .logo_section .logo { width: 4rem; height: 4rem; }
 	.footer .content .logo_section .contact .comment { font-size: 1.6rem; }
 	.footer .content .logo_section .contact .email { font-size: 1.6rem; }
 
@@ -36,6 +40,10 @@
 	.footer .content .nav_wrap .nav ul li { font-size: 2rem; }
 	.footer .content .nav_wrap .nav ul li a { font-size: 2rem; }
 
-	.footer .thank_you p { top: 3rem; font-size: 1.6rem; }
-	.footer .thank_you h1 { font-size: 17.2rem; }
+	.footer .thank_you_wrap .box_animation { top: 3rem }
+	.footer .thank_you_wrap p { top: 14rem; font-size: 1.6rem; }
+	.footer .thank_you_wrap .thank_you { margin-bottom: 2rem; }
+	.footer .thank_you_wrap .thank_you .char { font-size: 17.2rem; }
+	.footer .thank_you_wrap .thank_you::before { width: 4rem; height: 4rem; }
+	.footer .thank_you_wrap .thank_you::after { width: 4rem; height: 4rem; }
 }
