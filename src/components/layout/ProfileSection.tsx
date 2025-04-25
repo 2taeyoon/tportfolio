@@ -25,7 +25,7 @@ export default function ProfileSection({profileScrollRef}: {profileScrollRef: Re
 			const profileWrapRef = q('.profile_wrap'); 
 			const profileTitleRef = q('.profile_title'); // profile_title 클래스 텍스트
 			const profileTitleCharRef = q('.profile_title .char'); // profile_title_span 클래스 텍스트
-			const clipRef = q('.clip'); // IntroduceItem 컴포넌트의 clip 클래스 텍스트
+			const introduceCharRef = q('.qa_item .char'); // IntroduceItem 컴포넌트의 clip 클래스 텍스트
 			const profileCardRef = q('.profile_card'); // IntroduceItem 컴포넌트의 profile_card 클래스
 			const profileCardNameRef = q('.name'); // IntroduceItem 컴포넌트의 name 클래스
 			const profileCardAgeRef = q('.age'); // IntroduceItem 컴포넌트의 age 클래스
@@ -79,12 +79,12 @@ export default function ProfileSection({profileScrollRef}: {profileScrollRef: Re
 			});
 
 			// IntroduceItem 컴포넌트의 clip 클래스 텍스트(텍스트 채워지는 애니메이션션)
-			profileScroll.to(clipRef, {
+			profileScroll.to(introduceCharRef, {
 				backgroundSize: '100%',
 				duration: 10,
 				stagger: 1,
 				scrollTrigger: {
-					trigger: clipRef,
+					trigger: introduceCharRef,
 					start: "bottom+=300 bottom", // 트리거 요소의 A가 뷰포트(windiw)의 B에 닿을 때 시작
 					end: "top top+=200", // 트리거 요소의 A가 뷰포트(window)의 B에 닿을 때 종료					
 					scrub: 3, // 값이 클수록 더 부드럽게 움직임(기본값 true)(스크롤 반대 시에도 애니메이션 작동)
@@ -115,7 +115,7 @@ export default function ProfileSection({profileScrollRef}: {profileScrollRef: Re
 				},
 			});
 
-			profileScroll.to(clipRef, {
+			profileScroll.to(introduceCharRef, {
 				backgroundImage: 'linear-gradient(to right, var(--thema), var(--thema))',
 				scrollTrigger: {
 					trigger: profileScrollRef.current,
