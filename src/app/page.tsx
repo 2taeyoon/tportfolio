@@ -15,6 +15,7 @@ export default function Home() {
 	const profileScrollRef = useRef<HTMLDivElement | null>(null);
 	const skillScrollRef = useRef<HTMLDivElement | null>(null);
 	const projectScrollRef = useRef<HTMLDivElement | null>(null);
+	const footerScrollRef = useRef<HTMLDivElement | null>(null);
 
   return (
     <>
@@ -24,7 +25,7 @@ export default function Home() {
 				<SkillSection skillScrollRef={skillScrollRef}/>
 				<ProjectSection projectScrollRef={projectScrollRef}/>
 			</main>
-			<Footer mainScrollRef={mainScrollRef} profileScrollRef={profileScrollRef} skillScrollRef={skillScrollRef} projectScrollRef={projectScrollRef}/>
+			<Footer mainScrollRef={mainScrollRef} profileScrollRef={profileScrollRef} skillScrollRef={skillScrollRef} projectScrollRef={projectScrollRef} footerScrollRef={footerScrollRef}/>
 			<NoiseBackground/>
 		</>
   );
