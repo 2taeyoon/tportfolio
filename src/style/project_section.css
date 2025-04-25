@@ -1,13 +1,13 @@
 .project_section { padding: 36rem 16rem; background-color: var(--themaSubDark); }
 
 .code_card_wrap { display: grid ; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: center; position: relative; }
-.design_card_wrap { display: flex; flex-wrap: wrap; gap: 2.8rem; position: relative; padding-top: 48rem; }
+.design_card_wrap { display: flex; flex-wrap: wrap; gap: 2.8rem; position: relative; padding-top: 40rem; }
 
 /* publishing portfolio, code portfolio 텍스트 START!!*/
 .code_card_wrap .code_card_title { top: -35rem; }
 .code_card_wrap .code_card_subtitle { top: -20rem; }
-.design_card_wrap .design_card_title { top: 7rem; }
-.design_card_wrap .design_card_subtitle { top: 22rem; }
+.design_card_wrap .design_card_title { top: 2rem; }
+.design_card_wrap .design_card_subtitle { top: 17rem; }
 /* publishing portfolio, code portfolio 텍스트 END!!*/
 
 /* 퍼블리싱 포트폴리오 카드 START!! */
@@ -151,7 +151,7 @@
 
 
 @media (max-width: 1536px) {
-	.project_section { padding: 28rem 16rem; }
+	.project_section { padding: 28rem 12rem; }
 
 	.code_card_wrap .code_card_title .char,
 	.code_card_wrap .code_card_subtitle .char,
@@ -205,8 +205,8 @@
 
 	.code_card_wrap .code_card_title { top: -26rem; }
 	.code_card_wrap .code_card_subtitle { top: -16rem; }
-	.design_card_wrap .design_card_title { top: 5rem; }
-	.design_card_wrap .design_card_subtitle { top: 15rem; }
+	.design_card_wrap .design_card_title { top: 2rem; }
+	.design_card_wrap .design_card_subtitle { top: 12rem; }
 
 	.code_card_wrap .code_card { padding: 2rem 2.8rem; }
 	.code_card_wrap .code_card .skill_container .skill_list .skill_item { padding: .2rem .4rem; margin: 0 4px 4px 0px; }
@@ -214,7 +214,7 @@
 
 	.code_card_wrap .code_card .link_shortcut a { padding: 0.8rem 2.8rem; border-radius: 0.8rem; }
 
-	.design_card_wrap { padding-top: 32rem; gap: 1.6rem; }
+	.design_card_wrap { padding-top: 28rem; gap: 1.6rem; }
 	.design_card_wrap .design_card { width: calc(33.33% - 1.6rem); gap: 1.8rem }
 	.design_card_wrap .design_card .thumbnail { height: 16rem; }
 
