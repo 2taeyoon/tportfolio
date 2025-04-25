@@ -1,4 +1,4 @@
-.footer { min-height: unset; background-color: var(--black); padding: 5rem 8rem 1rem; }
+.footer { min-height: unset; background-color: var(--black); padding: 5rem 16rem 1rem; }
 
 .footer .content { display: flex; justify-content: space-between; gap: 1rem; }
 .footer .content .logo_section { display: flex; flex-direction: column; gap: 2rem; }
@@ -30,7 +30,7 @@
 .footer .credits .byline { color: var(--white); font-size: 1.6rem; }
 
 @media (max-width: 1536px) {
-	.footer { padding: 3rem 6rem 0.8rem; }
+	.footer { padding: 3rem 12rem 0.8rem; }
 	
 	.footer .content .logo_section .logo { width: 4rem; height: 4rem; }
 	.footer .content .logo_section .contact .comment { font-size: 1.6rem; }
