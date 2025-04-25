@@ -3,7 +3,7 @@ export default function Copyright({ translate }: { translate?: { x: string; y: s
 
 	return (
 		<div className="copyright pd_box" style={{ transform: `translate(${translate?.x}, ${translate?.y})` }}>
-			<div className="text">Copyright {currentYear} LEE TAE YOON</div>
+			<div className="text">Copyright {currentYear} 2taeyoon All rights reserved</div>
 		</div>
 	)
 }
