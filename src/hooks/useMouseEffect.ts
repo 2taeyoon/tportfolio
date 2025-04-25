@@ -36,11 +36,18 @@ const useMouseEffect = () => {
     let animationFrameId: number;
 
     const updateMouseEffect = () => {
-      setGMatrix({ ...gMatrixRef.current });
-      setCircleMatrix({ ...circleMatrixRef.current });
-      setRotation(rotationRef.current);
-			setTranslate({ ...translateRef.current });
-			setTranslate2({ ...translateRef2.current });
+			const g = gMatrixRef.current;
+			const c = circleMatrixRef.current;
+			const r = rotationRef.current;
+			const t1 = translateRef.current;
+			const t2 = translateRef2.current;
+	
+			// 이전 상태와 다를 때만 setState 호출
+			setGMatrix((prev) => JSON.stringify(prev) !== JSON.stringify(g) ? { ...g } : prev);
+			setCircleMatrix((prev) => JSON.stringify(prev) !== JSON.stringify(c) ? { ...c } : prev);
+			setRotation((prev) => prev !== r ? r : prev);
+			setTranslate((prev) => JSON.stringify(prev) !== JSON.stringify(t1) ? { ...t1 } : prev);
+			setTranslate2((prev) => JSON.stringify(prev) !== JSON.stringify(t2) ? { ...t2 } : prev);
 
 			// 다음 프레임에서 updateMouseEffect 다시 실행 (애니메이션 루프)
       animationFrameId = requestAnimationFrame(updateMouseEffect);
