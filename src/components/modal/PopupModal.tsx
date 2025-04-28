@@ -7,24 +7,13 @@ import { PopupModalProps } from "@/types/modalProps";
 import { useEffect, useState } from 'react';
 import { useModalStore } from "@/hooks/useModalStore";
 
-export default function PopupModal({ isOpen, currentProject, onClose }: PopupModalProps) {
+export default function PopupModal({ isModalOpen, currentProject, onClose }: PopupModalProps) {
 	const { setModalOpen } = useModalStore();
 
-	useEffect(() => {
-		if (isOpen) {
-			document.documentElement.style.overflow = 'hidden';
-		} else {
-			document.documentElement.style.overflow = 'unset';
-		}
-
-    setModalOpen(isOpen);
-
-		return () => {
-			setModalOpen(false);
-			document.documentElement.style.overflow = 'unset';
-		};
-  }, [isOpen, setModalOpen]);
-
+  useEffect(() => {
+    setModalOpen(isModalOpen);
+    return () => setModalOpen(false);
+  }, [isModalOpen, setModalOpen]);
 
   // Array(length).fill('auto')는 length 길이의 배열을 생성하고 모든 요소를 'auto'로 채움(기본값이 auto)
   const [containerHeights, setContainerHeights] = useState<number[]>(Array(currentProject?.images?.length || 0).fill('auto'));
@@ -45,7 +34,7 @@ export default function PopupModal({ isOpen, currentProject, onClose }: PopupMod
     });
   };
 
-	if (!isOpen) return null;
+	if (!isModalOpen) return null;
 
   return createPortal(
     <SSModalOverlay onClose={onClose} className="popup_modal">
