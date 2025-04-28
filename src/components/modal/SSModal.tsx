@@ -9,7 +9,7 @@ import { SSModalProps } from '@/types/modalProps';
 import { useModalStore } from "@/hooks/useModalStore";
 
 export default function SSModal({
-  isOpen,
+  isModalOpen,
   onClose,
   imageUrl,
   currentImageIndex = 0,
@@ -19,9 +19,9 @@ export default function SSModal({
   const { setModalOpen } = useModalStore();
 
 	useEffect(() => {
-    setModalOpen(isOpen);
+    setModalOpen(isModalOpen);
     return () => setModalOpen(false);
-  }, [isOpen, setModalOpen]);
+  }, [isModalOpen, setModalOpen]);
 
   const [isZoomed, setIsZoomed] = useState(false); // 이미지 확대/축소 상태를 관리하는 state
   const [imageRatio, setImageRatio] = useState<'horizontal' | 'vertical' | null>(null); // 이미지 가로/세로 비율을 저장하는 state ('horizontal' | 'vertical' | null)
@@ -81,22 +81,19 @@ export default function SSModal({
     };
 
     // 모달이 열려있을 때만 이벤트 리스너 등록 및 body 스크롤 방지
-    if (isOpen) {
+    if (isModalOpen) {
       document.addEventListener('keydown', handleKeyDown); // 키보드 이벤트 리스너 등록
-      document.documentElement.style.overflow = 'hidden'; // 모달이 열려있는 동안 스크롤 방지
     }
 
     // 컴포넌트 언마운트 시 이벤트 리스너 제거 및 body 스크롤 복구
     return () => {
       document.removeEventListener('keydown', handleKeyDown); // 이벤트 리스너 제거
-      document.documentElement.style.overflow = 'unset'; // 스크롤 복구
     };
-  }, [isOpen, isZoomed, currentIndex, imageUrl.length, onClose, handlePrev, handleNext]);
+  }, [isModalOpen, isZoomed, currentIndex, imageUrl.length, onClose, handlePrev, handleNext]);
 
   // 모달이 닫혀있으면 null 반환
-  if (!isOpen) return null;
+  if (!isModalOpen) return null;
 
-  
   // 이미지 확대 상태와 비율에 따른 클래스명 설정
   // isZoomed가 true일 경우: imageRatio가 'horizontal'이면 'zoomed horizontal' 클래스 적용
 	// imageRatio가 'vertical'이면 'zoomed vertical' 클래스 적용
