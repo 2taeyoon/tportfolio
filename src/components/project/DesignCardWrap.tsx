@@ -1,7 +1,7 @@
 import { characterTextSplit } from '@/utils/textSplit';
 import TextSplitWrap from '@/components/common/TextSplitWrap';
 import { projectDesignData } from "@/data/projectData";
-import DesignCard from "./DesignCard";
+import DesignCard from "@/components/project/DesignCard";
 import PopupModal from '@/components/modal/PopupModal';
 import { useImageModal } from "@/hooks/useImageModal";
 
@@ -19,7 +19,7 @@ export default function DesignCardWrap() {
 				<DesignCard key={index} project={project} onClick={() => handleImageClick(index)}/>
 			))}
 			<PopupModal
-				isOpen={isModalOpen}
+				isModalOpen={isModalOpen}
 				currentProject={projectDesignData[currentImageIndex]}
 				onClose={handleCloseModal}
 			/>
