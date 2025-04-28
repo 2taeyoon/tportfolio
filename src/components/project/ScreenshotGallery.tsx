@@ -35,7 +35,7 @@ export default function ScreenshotGallery({ project, title, images, modalProps, 
         ))}
       </Swiper>
       <SSModal
-        isOpen={modalProps.isModalOpen}
+        isModalOpen={modalProps.isModalOpen}
         onClose={modalProps.handleCloseModal}
         imageUrl={images}
         currentImageIndex={modalProps.currentImageIndex}
