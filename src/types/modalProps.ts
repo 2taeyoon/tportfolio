@@ -7,7 +7,7 @@ export interface ModalOverlayProps {
 }
 
 export interface SSModalProps {
-  isOpen: boolean;
+  isModalOpen: boolean;
   onClose: () => void;
   imageUrl: {
 		src: string;
@@ -33,7 +33,7 @@ export interface SSModalImageProps {
 }
 
 export interface PopupModalProps {
-  isOpen: boolean;
+  isModalOpen: boolean;
   currentProject: DesignCardDataType;
   onClose: () => void;
 }
