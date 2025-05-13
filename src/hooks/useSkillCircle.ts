@@ -48,48 +48,26 @@ export function useSkillCircle({setActiveIndex}: {setActiveIndex: React.Dispatch
 		prevAngleRef.current = currentAngle; // 내가 회전 시킨 값을 다음 계산을 위해 prevAngle에 저장함
 	}, []);
 
-	const handleMouseUp = useCallback(()=>{
-		isDraggingRef.current = false; // 마우스를 떼서 드래그 상태 비활성화
-
-		setRotation((prev) => {
-			// 📌 회전값 보정 - 스냅 유지
-			// 📌 현재 회전된 각도에 가장 가까운 이미지 인덱스를 계산
-			const normalized = normalize(prev); // 이전 회전 각도를 0~360도 사이 값으로 정리
-			// ex) normalized가 540일 때(원래는 normalized를 거치면 540이 180으로 바뀜):
-			// (540 / 20) = 27인데 totalItems가 현재는 18이므로 나머지는 9, 나중에 이미지 추가하면 소수점 나올 것을 대비하여 반올림도 추가
-			const indexByStep = Math.round(normalized / angleStep) % totalItems;
-			// 9 * 20 = 180, 즉 9번째 index 이미지가 정확히 원형 최상단에 위치하려면 회전값이 180도가 되어야 한다는 뜻
-			const snappedRotation = indexByStep * angleStep;
-			const newRotation = prev - (normalized - snappedRotation); // ex) prev - (170 - 180) => prev - (-10) => prev + 10
-
-			// 📌 원형이 rotate된 상태에서 최상단을 구해도 rotate된 상태로 최상단이 구해지기 때문에
-			// 📌 activeIndex는 angleMap을 따로 만들어서 기준으로 설정해야함
-			const angleMap = [ // 인덱스별 고정 위치 각도 리스트
-				0, 340, 320, 300, 280, 260, 240, 220, 200,
-				180, 160, 140, 120, 100, 80, 60, 40, 20
-			];
-
-			let closestIndex = 0; // 인덱스를 저장하는 변수
-			let smallestDiff = Infinity; // smallestDiff는 가장 작은 차이를 저장
-
-			angleMap.forEach((angle, index) => {
-				// 현재 원이 정렬된 회전값 - 인덱스별 고정 회전값을 절대값으로 출력
-				const diff = Math.abs(normalize(snappedRotation - angle));
-				if (diff < smallestDiff) { // 더 가까운 값이 나오면 갱신
-					smallestDiff = diff; // 새로운 최소 거리로 저장
-					closestIndex = index; // 해당하는 인덱스를 closestIndex에 저장
-				}
-			});
-
-			//❗ Cannot update a component (SkillSection) while rendering a different component (SkillCircle) 오류 해결
-			// requestAnimationFrame로 React의 렌더링이 완전히 끝난 후에 안전하게 실행
+	const handleMouseUp = useCallback(() => {
+		isDraggingRef.current = false;
+	
+		setRotation((prevRotation) => {
+			const normalizedRotation = normalize(prevRotation); // 현재 회전 각도를 0~360 사이로 정리
+	
+			// 현재 회전 상태에서 가장 위(0도)에 가까운 인덱스를 계산
+			const index = Math.floor((360 - normalizedRotation + angleStep / 2) / angleStep) % totalItems;
+	
+			// 해당 인덱스가 위쪽에 정확히 오도록 회전값 보정
+			const snappedRotation = -index * angleStep;
+	
 			requestAnimationFrame(() => {
-				setActiveIndex(closestIndex);
+				setActiveIndex(index);
 			});
-			return newRotation; // 회전값 보정 후 적용
+	
+			return snappedRotation;
 		});
-
-	}, [angleStep, totalItems, setActiveIndex])
+	}, [angleStep, totalItems, setActiveIndex]);
+	
 
 	return { angleStep, skillCircleRef, isDraggingRef, rotation, normalize, handleMouseDown, handleMouseMove, handleMouseUp, };
 }
