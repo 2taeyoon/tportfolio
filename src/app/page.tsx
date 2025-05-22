@@ -52,7 +52,7 @@ export default function Home() {
 			onEnterBack: () => navWrap.classList.add('profile'),   // 위로 스크롤해서 다시 들어올 때
 			onLeave: () => navWrap.classList.remove('profile'),    // 아래로 나갈 때
 			onLeaveBack: () => navWrap.classList.remove('profile'),// 위로 나갈 때
-			markers: true,
+			//markers: true,
 		});
 	}, [profileScrollRef]);
 
