@@ -12,8 +12,10 @@
 .footer .content .nav_wrap .nav_header .circle { width: 0.4rem; height: 0.4rem; margin-right: 1rem; border-radius: 999px; background-color: var(--thema); }
 .footer .content .nav_wrap .nav_header .nav_title { color: var(--white); font-size: 1.8rem; }
 .footer .content .nav_wrap .nav ul { display: flex; flex-direction: column; gap: 1rem; }
-.footer .content .nav_wrap .nav ul li { color: var(--white); font-size: 2.4rem; cursor: pointer; transition: .3s; }
-.footer .content .nav_wrap .nav ul li:hover { color: var(--thema); }
+.footer .content .nav_wrap .nav ul li .scroll,
+.footer .content .nav_wrap .nav ul li .another { color: var(--white); font-size: 2.4rem; cursor: pointer; transition: .3s; }
+.footer .content .nav_wrap .nav ul li .scroll:hover,
+.footer .content .nav_wrap .nav ul li .another:hover { color: var(--thema); }
 
 .footer .thank_you_wrap { position: relative; }
 .footer .thank_you_wrap .box_animation { position: relative; left: 50%; transform: translateX(-50%); width: 8rem; height: 8rem; filter: blur(1px); }
