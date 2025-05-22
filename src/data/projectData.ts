@@ -80,8 +80,24 @@ export const projectCodeData: CodeCardDataType[] = [
 			title: "스크린샷",
 			images: [
 				{
-					src: "/images/project_code/niweb1.jpg",
-					alt: "niweb1"
+					src: "/images/project_code/typortfolio1.jpg",
+					alt: "typortfolio1"
+				},
+				{
+					src: "/images/project_code/typortfolio2.jpg",
+					alt: "typortfolio2"
+				},
+				{
+					src: "/images/project_code/typortfolio3.jpg",
+					alt: "typortfolio3"
+				},
+				{
+					src: "/images/project_code/typortfolio4.jpg",
+					alt: "typortfolio4"
+				},
+				{
+					src: "/images/project_code/typortfolio5.jpg",
+					alt: "typortfolio5"
 				},
 			]
     },
