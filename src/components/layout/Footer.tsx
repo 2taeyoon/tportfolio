@@ -70,6 +70,8 @@ export default function Footer({profileScrollRef, skillScrollRef, projectScrollR
 				<div className="box_animation">
 					<Image src="/images/box_animation.gif" alt="box_animation" fill draggable={false}
 						sizes="100%"
+						priority
+						loading="eager"
 						style={{ objectFit: 'cover' }}
 						onDragStart={(e) => e.preventDefault()}
 						onContextMenu={(e) => e.preventDefault()}
