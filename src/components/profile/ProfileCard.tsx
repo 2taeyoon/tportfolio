@@ -9,12 +9,13 @@ export default function ProfileCard() {
 			<div className="profile_image">
 				<Image src={`/images/profile/profile${imageNumber}.jpg`} alt="profile_image" draggable={false} fill
 					sizes="(max-width: 1536px) 28rem, 35rem"
-					style={{ objectFit: "cover" }}
+					style={{ objectFit: "cover", borderRadius: ".8rem" }} 
 					onDragStart={(e) => e.preventDefault()}
 					onContextMenu={(e) => e.preventDefault()}
 				/>
 			</div>
-			<div className="profile_content">
+			{ /* Image 컴포넌트의 borderRadius는 나중에 이직 시 제거해야함 */ }
+			{/* <div className="profile_content">
 				<div className="profile_header">
 					<div className="name">이태윤&#40;李太綸&#41;</div>
 					<div className="profile_info">
@@ -23,7 +24,7 @@ export default function ProfileCard() {
 					</div>
 				</div>
 				<div className="contact">vpdlvj90@naver.com</div>
-			</div>
+			</div> */}
 		</div>
 	)
 }
