@@ -44,6 +44,15 @@ export const careerData = [
       third: "퍼블리셔",
     },
   },
+	{
+    subTitle: "메드소프트",
+    body: "메드소프트에서 웹 퍼블리셔로 근무하며~~",
+    meta: {
+      first: "2025.05 ~ ????.??",
+      second: "???",
+      third: "퍼블리셔",
+    },
+  },
 ];
 
 export const educationData = [
