@@ -4,8 +4,10 @@
 .header .nav_wrap .nav_item:hover { background-color: var(--whiteE); }
 .header .nav_wrap .nav { visibility: hidden; opacity: 0; transition: opacity .3s; }
 .header .nav_wrap .nav ul { display: flex; flex-direction: row; gap: 2rem; }
-.header .nav_wrap .nav ul li { width: max-content; padding: 0.4rem 1.2rem; border-radius: 999px; border: 2px solid var(--black); background-color: var(--whiteE); color: var(--black); font-size: 1.8rem; cursor: pointer; transition: .3s; }
-.header .nav_wrap .nav ul li:hover { background-color: var(--thema); }
+.header .nav_wrap .nav ul li .scroll,
+.header .nav_wrap .nav ul li .another { display: block; width: max-content; padding: 0.4rem 1.2rem; border-radius: 999px; border: 2px solid var(--black); background-color: var(--whiteE); color: var(--black); font-size: 1.8rem; cursor: pointer; transition: .3s; }
+.header .nav_wrap .nav ul li .scroll:hover,
+.header .nav_wrap .nav ul li .another:hover { background-color: var(--thema); }
 
 .header .nav_wrap.click .nav_item { background-color: var(--whiteE); }
 .header .nav_wrap.click .nav_item:hover { background-color: var(--thema); }
